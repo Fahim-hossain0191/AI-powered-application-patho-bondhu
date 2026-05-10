@@ -17,7 +17,11 @@ const register = async ({ name, email, password, class_level, gender, phone_numb
   const userId = await authModel.createUser({
     name, email, password_hash, class_level, gender, phone_number,
   });
-
+  await Promise.all([
+    authModel.saveUserHobbies(userId, hobbies),
+    authModel.saveUserFavSubjects(userId, favourite_subjects),
+    authModel.saveUserLearnStyles(userId, learning_styles),
+  ]);
   // Tokens তৈরি করো
   const payload = { id: userId, email };
   const accessToken  = jwtUtils.generateAccessToken(payload);
