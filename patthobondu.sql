@@ -69,3 +69,86 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE refresh_tokens (
+  id         INT AUTO_INCREMENT PRIMARY KEY,
+  user_id    INT NOT NULL UNIQUE,
+  token      TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE user_devices (
+  id            INT AUTO_INCREMENT PRIMARY KEY,
+  user_id       INT NOT NULL,
+  device_token  VARCHAR(255) NOT NULL,  -- Browser এ store হওয়া unique token
+  device_type   ENUM('mobile','tablet','desktop') NOT NULL,
+  browser       VARCHAR(100),           -- "Chrome", "Firefox"
+  last_seen     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  first_seen    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY unique_user_device (user_id, device_token),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE hobbies (
+  id         INT AUTO_INCREMENT PRIMARY KEY,
+  name       VARCHAR(100) NOT NULL,   -- "ক্রিকেট"
+  category   ENUM(
+               'sports',      -- খেলাধুলা
+               'creative',    -- সৃজনশীল
+               'academic',    -- পড়াশোনা সংক্রান্ত
+               'technology'   -- প্রযুক্তি
+             ) NOT NULL,
+  icon       VARCHAR(50)              -- emoji বা icon name
+);
+
+-- Default Data:
+INSERT INTO hobbies (name, category, icon) VALUES
+-- খেলাধুলা
+('ক্রিকেট',       'sports',     '🏏'),
+('ফুটবল',         'sports',     '⚽'),
+('ব্যাডমিন্টন',   'sports',     '🏸'),
+('সাঁতার',        'sports',     '🏊'),
+('দাবা',          'sports',     '♟️'),
+
+-- সৃজনশীল
+('ছবি আঁকা',      'creative',   '🎨'),
+('গান গাওয়া',    'creative',   '🎵'),
+('গিটার বাজানো', 'creative',   '🎸'),
+('অভিনয়',        'creative',   '🎭'),
+('ফটোগ্রাফি',    'creative',   '📷'),
+
+-- পড়াশোনা সংক্রান্ত
+('বই পড়া',       'academic',   '📚'),
+('গল্প লেখা',    'academic',   '✍️'),
+('কবিতা লেখা',   'academic',   '📝'),
+('বিজ্ঞান চর্চা','academic',   '🔬'),
+
+-- প্রযুক্তি
+('গেমিং',         'technology', '🎮'),
+('কোডিং',         'technology', '💻'),
+('ইউটিউব দেখা',  'technology', '📺');
+
+CREATE TABLE user_hobbies (
+  id         INT AUTO_INCREMENT PRIMARY KEY,
+  user_id    INT NOT NULL,
+  hobby_id   INT NOT NULL,
+  UNIQUE KEY unique_user_hobby (user_id, hobby_id),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (hobby_id) REFERENCES hobbies(id)
+);
+
+-- উদাহরণ: রাফি ক্রিকেট আর কোডিং বেছেছে
+-- INSERT INTO user_hobbies VALUES (NULL, 1, 1), (NULL, 1, 15);
+
+CREATE TABLE user_favourite_subjects (
+  id          INT AUTO_INCREMENT PRIMARY KEY,
+  user_id     INT NOT NULL,
+  subject_id  INT NOT NULL,
+  UNIQUE KEY unique_user_subject (user_id, subject_id),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (subject_id) REFERENCES subjects(id)
+);
+
+-- উদাহরণ: রাফির favourite গণিত আর English
+-- INSERT INTO user_favourite_subjects VALUES (NULL, 1, 1), (NULL, 1, 3);
