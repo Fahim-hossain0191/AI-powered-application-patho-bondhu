@@ -1,0 +1,109 @@
+ইয়ের অধ্যায় ৩ "বীজগাণিতিক রাশি" থেকে সংগৃহীত সব সূত্র নিচে দেওয়া হলো:
+বর্গ সংবলিত সূত্রাবলি ও অনুসিদ্ধান্ত:
+FORMULA_1: (a+b)^2 = a^2 + 2ab + b^2
+FORMULA_1_WHEN: দুটি রাশির যোগফলের বর্গ নির্ণয়ে
+FORMULA_1_VARIABLES: a এবং b হলো যেকোনো দুটি বীজগাণিতিক রাশি
+FORMULA_1_IMPORTANCE: high
+FORMULA_2: (a-b)^2 = a^2 - 2ab + b^2
+FORMULA_2_WHEN: দুটি রাশির বিয়োগফলের বর্গ নির্ণয়ে
+FORMULA_2_VARIABLES: a এবং b হলো যেকোনো দুটি বীজগাণিতিক রাশি
+FORMULA_2_IMPORTANCE: high
+FORMULA_3: a^2 + b^2 = (a+b)^2 - 2ab
+FORMULA_3_WHEN: রাশির বর্গের সমষ্টির মান নির্ণয়ে (যখন যোগফল ও গুণফল জানা থাকে)
+FORMULA_3_VARIABLES: a এবং b দুটি রাশি
+FORMULA_3_IMPORTANCE: high
+FORMULA_4: a^2 + b^2 = (a-b)^2 + 2ab
+FORMULA_4_WHEN: রাশির বর্গের সমষ্টির মান নির্ণয়ে (যখন বিয়োগফল ও গুণফল জানা থাকে)
+FORMULA_4_VARIABLES: a এবং b দুটি রাশি
+FORMULA_4_IMPORTANCE: high
+FORMULA_5: (a+b)^2 = (a-b)^2 + 4ab
+FORMULA_5_WHEN: যোগফলের বর্গের মান নির্ণয়ে যখন বিয়োগফল ও গুণফল জানা থাকে
+FORMULA_5_VARIABLES: a এবং b দুটি রাশি
+FORMULA_5_IMPORTANCE: medium
+FORMULA_6: (a-b)^2 = (a+b)^2 - 4ab
+FORMULA_6_WHEN: বিয়োগফলের বর্গের মান নির্ণয়ে যখন যোগফল ও গুণফল জানা থাকে
+FORMULA_6_VARIABLES: a এবং b দুটি রাশি
+FORMULA_6_IMPORTANCE: medium
+FORMULA_7: a^2 + b^2 = ((a+b)^2 + (a-b)^2) / 2
+FORMULA_7_WHEN: বর্গের সমষ্টি নির্ণয়ে যখন যোগফল ও বিয়োগফল জানা থাকে
+FORMULA_7_VARIABLES: a এবং b দুটি রাশি
+FORMULA_7_IMPORTANCE: medium
+FORMULA_8: ab = ((a+b)/2)^2 - ((a-b)/2)^2
+FORMULA_8_WHEN: দুটি রাশির গুণফলকে দুটি বর্গের অন্তররূপে প্রকাশ করতে
+FORMULA_8_VARIABLES: a ও b দুটি রাশি
+FORMULA_8_IMPORTANCE: high
+FORMULA_9: a^2 - b^2 = (a+b)(a-b)
+FORMULA_9_WHEN: দুটি বর্গের অন্তর বা রাশির উৎপাদকে বিশ্লেষণে
+FORMULA_9_VARIABLES: a এবং b দুটি রাশি
+FORMULA_9_IMPORTANCE: high
+FORMULA_10: (x+a)(x+b) = x^2 + (a+b)x + ab
+FORMULA_10_WHEN: দুটি দ্বিপদী রাশির গুণফল নির্ণয়ে
+FORMULA_10_VARIABLES: x সাধারণ চলক, a ও b ধ্রুবক
+FORMULA_10_IMPORTANCE: high
+FORMULA_11: (a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca
+FORMULA_11_WHEN: তিনটি রাশির যোগফলের বর্গ নির্ণয়ে
+FORMULA_11_VARIABLES: a, b, c তিনটি ভিন্ন রাশি
+FORMULA_11_IMPORTANCE: high
+FORMULA_12: a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab + bc + ca)
+FORMULA_12_WHEN: তিনটি রাশির বর্গের সমষ্টির মান নির্ণয়ে
+FORMULA_12_VARIABLES: a, b, c তিনটি রাশি
+FORMULA_12_IMPORTANCE: high
+FORMULA_13: 2(ab + bc + ca) = (a+b+c)^2 - (a^2 + b^2 + c^2)
+FORMULA_13_WHEN: দুটি করে রাশির গুণফলের সমষ্টির মান নির্ণয়ে
+FORMULA_13_VARIABLES: a, b, c তিনটি রাশি
+FORMULA_13_IMPORTANCE: medium
+ঘন সংবলিত সূত্রাবলি ও অনুসিদ্ধান্ত:
+FORMULA_14: (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+FORMULA_14_WHEN: দুটি রাশির যোগফলের ঘন নির্ণয়ে
+FORMULA_14_VARIABLES: a ও b দুটি রাশি
+FORMULA_14_IMPORTANCE: high
+FORMULA_15: (a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+FORMULA_15_WHEN: দুটি রাশির বিয়োগফলের ঘন নির্ণয়ে
+FORMULA_15_VARIABLES: a ও b দুটি রাশি
+FORMULA_15_IMPORTANCE: high
+FORMULA_16: a^3 + b^3 = (a+b)^3 - 3ab(a+b)
+FORMULA_16_WHEN: ঘনের সমষ্টির মান নির্ণয়ে
+FORMULA_16_VARIABLES: a ও b দুটি রাশি
+FORMULA_16_IMPORTANCE: high
+FORMULA_17: a^3 - b^3 = (a-b)^3 + 3ab(a-b)
+FORMULA_17_WHEN: ঘনের অন্তরের মান নির্ণয়ে
+FORMULA_17_VARIABLES: a ও b দুটি রাশি
+FORMULA_17_IMPORTANCE: high
+FORMULA_18: a^3 + b^3 = (a+b)(a^2 - ab + b^2)
+FORMULA_18_WHEN: ঘনের সমষ্টির উৎপাদকে বিশ্লেষণে
+FORMULA_18_VARIABLES: a ও b দুটি রাশি
+FORMULA_18_IMPORTANCE: high
+FORMULA_19: a^3 - b^3 = (a-b)(a^2 + ab + b^2)
+FORMULA_19_WHEN: ঘনের অন্তরের উৎপাদকে বিশ্লেষণে
+FORMULA_19_VARIABLES: a ও b দুটি রাশি
+FORMULA_19_IMPORTANCE: high
+ভাগশেষ ও উৎপাদক উপপাদ্য:
+FORMULA_20: f(a) = r
+FORMULA_20_WHEN: ভাগশেষ উপপাদ্য অনুযায়ী কোনো বহুপদীকে (x-a) দ্বারা ভাগের ভাগশেষ নির্ণয়ে
+FORMULA_20_VARIABLES: f(x) একটি বহুপদী, a একটি ধ্রুবক, r ভাগশেষ
+FORMULA_20_IMPORTANCE: high
+বাস্তব সমস্যা সমাধানে ব্যবহৃত সূত্রাবলি:
+FORMULA_21: A = qn
+FORMULA_21_WHEN: জনপ্রতি টাকা এবং লোকসংখ্যা থেকে মোট টাকা নির্ণয়ে
+FORMULA_21_VARIABLES: A মোট টাকা, q জনপ্রতি টাকা, n লোকসংখ্যা
+FORMULA_21_IMPORTANCE: medium
+FORMULA_22: W = qnx
+FORMULA_22_WHEN: সময়ের কাজে কাজের পরিমাণ নির্ণয়ে
+FORMULA_22_VARIABLES: W কাজ, q কাজের হার, n জন সংখ্যা, x সময়
+FORMULA_22_IMPORTANCE: low
+FORMULA_23: d = vt
+FORMULA_23_WHEN: সময় ও দূরত্ব বিষয়ক অংকে মোট দূরত্ব নির্ণয়ে
+FORMULA_23_VARIABLES: d দূরত্ব, v গতিবেগ, t সময়
+FORMULA_23_IMPORTANCE: high
+FORMULA_24: I = Pnr
+FORMULA_24_WHEN: সরল মুনাফা নির্ণয়ে
+FORMULA_24_VARIABLES: I মুনাফা, P মূলধন, n সময় (বছর), r মুনাফার হার
+FORMULA_24_IMPORTANCE: high
+FORMULA_25: A = P(1+nr)
+FORMULA_25_WHEN: সরল মুনাফাসহ আসল (সবৃদ্বিমূল) নির্ণয়ে
+FORMULA_25_VARIABLES: A সবৃদ্বিমূল, P মূলধন, n সময়, r মুনাফার হার
+FORMULA_25_IMPORTANCE: high
+FORMULA_26: C = P(1+r)^n
+FORMULA_26_WHEN: চক্রবৃদ্ধি মুনাফায় সবৃদ্বিমূল নির্ণয়ে
+FORMULA_26_VARIABLES: C চক্রবৃদ্ধি সবৃদ্বিমূল, P মূলধন, r মুনাফার হার, n সময়
+FORMULA_26_IMPORTANCE: high
