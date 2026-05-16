@@ -1,0 +1,64 @@
+এই PDF এর অধ্যায় ৩-এর অনুশীলনী ৩.৩ থেকে সব প্রশ্ন নিচে দেওয়া হলো:
+উৎপাদকে বিশ্লেষণ কর (১ - ৩০):
+Q1_TEXT: ab(x - y) - bc(x - y)
+Q1_PATTERN: FACTORIZE
+Q2_TEXT: 9x^2 + 24x + 16
+Q2_PATTERN: FACTORIZE
+Q3_TEXT: a^4 - 27a^2 + 1
+Q3_PATTERN: FACTORIZE
+Q4_TEXT: x^4 - 6x^2*y^2 + y^4
+Q4_PATTERN: FACTORIZE
+Q5_TEXT: (a^2 - b^2)(x^2 - y^2) + 4abxy
+Q5_PATTERN: FACTORIZE
+Q6_TEXT: 4a^2 - 12ab + 9b^2 - 4c^2
+Q6_PATTERN: FACTORIZE
+Q7_TEXT: a^2 + 6a + 8 - y^2 + 2y
+Q7_PATTERN: FACTORIZE
+Q8_TEXT: 16x^2 - 25y^2 - 8xz + 10yz
+Q8_PATTERN: FACTORIZE
+Q9_TEXT: x^2 + 13x + 36
+Q9_PATTERN: FACTORIZE
+Q10_TEXT: x^4 + x^2 - 20
+Q10_PATTERN: FACTORIZE
+Q11_TEXT: a^2 - 30a + 216
+Q11_PATTERN: FACTORIZE
+Q12_TEXT: a^8 - a^4 - 2
+Q12_PATTERN: FACTORIZE
+Q13_TEXT: x^2 - 37x - 650
+Q13_PATTERN: FACTORIZE
+Q14_TEXT: 9x^2y^2 - 5x*y^2 - 14y^2
+Q14_PATTERN: FACTORIZE
+Q15_TEXT: 4x^4 - 27x^2 - 81
+Q15_PATTERN: FACTORIZE
+Q16_TEXT: ax^2 + (a^2 + 1)x + a
+Q16_PATTERN: FACTORIZE
+Q17_TEXT: 3(a^2 + 2a)^2 - 22(a^2 + 2a) + 40
+Q17_PATTERN: FACTORIZE
+Q18_TEXT: (a - 1)x^2 + a^2xy + (a + 1)y^2
+Q18_PATTERN: FACTORIZE
+Q19_TEXT: x^3 + 3x^2 + 3x + 2
+Q19_PATTERN: FACTORIZE
+Q20_TEXT: a^3 - 6a^2 + 12a - 9
+Q20_PATTERN: FACTORIZE
+Q21_TEXT: a^3 - 9b^3 + (a + b)^3
+Q21_PATTERN: FACTORIZE
+Q22_TEXT: 8x^3 + 12x^2 + 6x - 63
+Q22_PATTERN: FACTORIZE
+Q23_TEXT: 8a^3 + b^3 / 27
+Q23_PATTERN: FACTORIZE
+Q24_TEXT: a^6 / 27 - b^6
+Q24_PATTERN: FACTORIZE
+Q25_TEXT: 4a^2 + 1 / (4a^2) - 2 + 4a - 1/a
+Q25_PATTERN: FACTORIZE
+Q26_TEXT: (3a + 1)^3 - (2a - 3)^3
+Q26_PATTERN: FACTORIZE
+Q27_TEXT: (x + 2)(x + 3)(x + 4)(x + 5) - 48
+Q27_PATTERN: FACTORIZE
+Q28_TEXT: (x - 1)(x - 3)(x - 5)(x - 7) - 65
+Q28_PATTERN: FACTORIZE
+Q29_TEXT: 2b^2c^2 + 2c^2a^2 + 2a^2b^2 - a^4 - b^4 - c^4
+Q29_PATTERN: FACTORIZE
+Q30_TEXT: 14(x + z)^2 - 29(x + z)(x + 1) - 15(x + 1)^2
+Q30_PATTERN: FACTORIZE
+Q31_TEXT: দেখাও যে, (x + 1)(x + 2)(3x - 1)(3x - 4) = (3x^2 + 2x - 1)(3x^2 + 2x - 8)
+Q31_PATTERN: PROVE

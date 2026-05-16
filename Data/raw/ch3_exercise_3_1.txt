@@ -1,0 +1,45 @@
+অধ্যায় ৩-এর অনুশীলনী ৩.১ থেকে সব প্রশ্ন নিচে দেওয়া হলো:
+Q1_TEXT: সূত্রের সাহায্যে বর্গ নির্ণয় কর:
+ক) 2a + 3b
+খ) x^2 + 2/y^2
+গ) 4y - 5x
+ঘ) 5x^2 - y
+ঙ) 3b - 5c - 2a
+চ) ax - by - cz
+ছ) 2a + 3x - 2y - 5z
+জ) 1007
+Q1_PATTERN: FIND_VALUE
+Q2_TEXT: সরল কর:
+ক) (7p + 3q - 5r)^2 - 2(7p + 3q - 5r)(8p - 4q - 5r) + (8p - 4q - 5r)^2
+খ) (2m + 3n - p)^2 + (2m - 3n + p)^2 - 2(2m + 3n - p)(2m - 3n + p)
+গ) 6.35 * 6.35 + 2 * 6.35 * 3.65 + 3.65 * 3.65
+ঘ) (2345 * 2345 - 759 * 759) / (2345 - 759)
+Q2_PATTERN: SIMPLIFY
+Q3_TEXT: a - b = 4 এবং ab = 60 হলে, a + b এর মান কত?
+Q3_PATTERN: FIND_VALUE
+Q4_TEXT: a + b = 9m এবং ab = 18m^2 হলে, a - b এর মান কত?
+Q4_PATTERN: FIND_VALUE
+Q5_TEXT: x - 1/x = 4 হলে, প্রমাণ কর যে, x^4 + 1/x^4 = 322
+Q5_PATTERN: PROVE
+Q6_TEXT: 2x + 2/x = 3 হলে, x^2 + 1/x^2 এর মান কত?
+Q6_PATTERN: FIND_VALUE
+Q7_TEXT: a + 1/a = 2 হলে, দেখাও যে, a^2 + 1/a^2 = a^4 + 1/a^4
+Q7_PATTERN: PROVE
+Q8_TEXT: a + b = sqrt(7) এবং a - b = sqrt(5) হলে, প্রমাণ কর যে, 8ab(a^2 + b^2) = 24
+Q8_PATTERN: PROVE
+Q9_TEXT: a + b + c = 9 এবং ab + bc + ca = 31 হলে, a^2 + b^2 + c^2 এর মান নির্ণয় কর।
+Q9_PATTERN: FIND_VALUE
+Q10_TEXT: a^2 + b^2 + c^2 = 9 এবং ab + bc + ca = 8 হলে, (a + b + c)^2 এর মান কত?
+Q10_PATTERN: FIND_VALUE
+Q11_TEXT: a + b + c = 6 এবং a^2 + b^2 + c^2 = 14 হলে, (a - b)^2 + (b - c)^2 + (c - a)^2 = কত?
+Q11_PATTERN: FIND_VALUE
+Q12_TEXT: x = 3, y = 4 এবং z = 5 হলে, 9x^2 + 16y^2 + 4z^2 - 24xy - 16yz + 12zx = কত?
+Q12_PATTERN: FIND_VALUE
+Q13_TEXT: (a + 2b)(3a + 2c) কে দুইটি বর্গের বিয়োগফলরূপে প্রকাশ কর।
+Q13_PATTERN: OTHER
+Q14_TEXT: x^2 + 10x + 24 কে দুইটি বর্গের বিয়োগফলরূপে প্রকাশ কর।
+Q14_PATTERN: OTHER
+Q15_TEXT: a^4 + a^2*b^2 + b^4 = 8 এবং a^2 + ab + b^2 = 4 হলে,
+ক) a^2 + b^2 এর মান কত?
+খ) ab এর মান কত?
+Q15_PATTERN: FIND_VALUE
