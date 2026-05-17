@@ -1,0 +1,109 @@
+NCTB গণিত বইয়ের অনুশীলনী ৩.২ এর সমাধান নিচে দেওয়া হলো:
+Q1_A_SOLUTION:
+STEP_1: প্রশ্ন হলো (2x^2 + 3y^2) এর ঘন নির্ণয়।
+STEP_2: ঘন সূত্র: (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+STEP_3: এখানে a = 2x^2 এবং b = 3y^2।
+STEP_4: (2x^2 + 3y^2)^3 = (2x^2)^3 + 3*(2x^2)^2*(3y^2) + 3*(2x^2)(3y^2)^2 + (3y^2)^3
+STEP_5: = 8x^6 + 3(4x^4)(3y^2) + 3(2x^2)(9y^4) + 27y^6
+STEP_6: = 8x^6 + 36x^4y^2 + 54x^2y^4 + 27y^6
+FINAL_ANSWER: 8x^6 + 36x^4y^2 + 54x^2*y^4 + 27y^6
+Q1_B_SOLUTION:
+STEP_1: প্রশ্ন হলো (7m^2 - 2n) এর ঘন নির্ণয়।
+STEP_2: ঘন সূত্র: (a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+STEP_3: এখানে a = 7m^2 এবং b = 2n।
+STEP_4: (7m^2 - 2n)^3 = (7m^2)^3 - 3*(7m^2)^2*(2n) + 3*(7m^2)(2n)^2 - (2n)^3
+STEP_5: = 343m^6 - 3(49m^4)(2n) + 3(7m^2)(4n^2) - 8n^3
+STEP_6: = 343m^6 - 294m^4n + 84m^2n^2 - 8n^3
+FINAL_ANSWER: 343m^6 - 294m^4n + 84m^2*n^2 - 8n^3
+Q1_C_SOLUTION:
+STEP_1: প্রশ্ন হলো (2a - b - 3c) এর ঘন নির্ণয়।
+STEP_2: ধরি, a = (2a - b) এবং b = 3c।
+STEP_3: ঘন সূত্র: (a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+STEP_4: {(2a - b) - 3c}^3 = (2a - b)^3 - 3*(2a - b)^2*(3c) + 3*(2a - b)(3c)^2 - (3c)^3
+STEP_5: = {(2a)^3 - 3(2a)^2b + 3(2a)b^2 - b^3} - 9c(4a^2 - 4ab + b^2) + 3*(2a - b)(9c^2) - 27c^3
+STEP_6: = 8a^3 - 12a^2b + 6ab^2 - b^3 - 36a^2c + 36abc - 9b^2c + 54ac^2 - 27bc^2 - 27c^3
+FINAL_ANSWER: 8a^3 - b^3 - 27c^3 - 12a^2b - 36a^2c + 6ab^2 - 9b^2*c + 54ac^2 - 27bc^2 + 36abc
+Q2_A_SOLUTION:
+STEP_1: প্রশ্ন: (7x + 3b)^3 - (5x + 3b)^3 - 6x(7x + 3b)(5x + 3b)
+STEP_2: ধরি, 7x + 3b = a এবং 5x + 3b = b
+STEP_3: বিয়োগ করে, a - b = (7x + 3b) - (5x + 3b) = 2x
+STEP_4: রাশিটি দাঁড়ায়, a^3 - b^3 - 3*(2x)ab = a^3 - b^3 - 3(a - b)ab
+STEP_5: এটি (a - b)^3 এর সূত্র।
+STEP_6: মান বসিয়ে, (2x)^3 = 8x^3
+FINAL_ANSWER: 8x^3
+Q2_B_SOLUTION:
+STEP_1: প্রশ্ন: (a + b + c)^3 - (a - b - c)^3 - 6(b + c){a^2 - (b + c)^2}
+STEP_2: ধরি, a + b + c = x এবং a - b - c = y
+STEP_3: বিয়োগ করে, x - y = (a + b + c) - (a - b - c) = 2b + 2c = 2(b + c)
+STEP_4: এখানে, 6(b + c) = 3 * 2(b + c) = 3(x - y)
+STEP_5: এবং a^2 - (b + c)^2 = (a + b + c)(a - b - c) = x*y
+STEP_6: রাশিটি দাঁড়ায়, x^3 - y^3 - 3(x - y)*xy = (x - y)^3
+STEP_7: মান বসিয়ে, {2(b + c)}^3 = 8(b + c)^3
+FINAL_ANSWER: 8(b + c)^3
+Q3_SOLUTION:
+STEP_1: দেওয়া আছে, a - b = 5 এবং ab = 36
+STEP_2: মান নির্ণয় করতে হবে a^3 - b^3 এর।
+STEP_3: সূত্র: a^3 - b^3 = (a - b)^3 + 3ab(a - b)
+STEP_4: মান বসিয়ে, (5)^3 + 3365
+STEP_5: = 125 + 540 = 665
+FINAL_ANSWER: 665
+Q4_SOLUTION:
+STEP_1: দেওয়া আছে, a^3 - b^3 = 513 এবং a - b = 3
+STEP_2: আমরা জানি, a^3 - b^3 = (a - b)^3 + 3ab(a - b)
+STEP_3: বা, 513 = (3)^3 + 3ab3
+STEP_4: বা, 513 = 27 + 9ab
+STEP_5: বা, 9ab = 513 - 27 = 486
+STEP_6: বা, ab = 486 / 9 = 54
+FINAL_ANSWER: 54
+Q5_SOLUTION:
+STEP_1: দেওয়া আছে, x = 19 এবং y = -12
+STEP_2: রাশি: 8x^3 + 36x^2y + 54xy^2 + 27y^3
+STEP_3: সূত্র অনুযায়ী সাজিয়ে, (2x)^3 + 3*(2x)^2*(3y) + 3*(2x)(3y)^2 + (3y)^3
+STEP_4: এটি (2x + 3y)^3 এর সূত্র।
+STEP_5: মান বসিয়ে, {219 + 3*(-12)}^3
+STEP_6: = (38 - 36)^3 = (2)^3 = 8
+FINAL_ANSWER: 8
+Q7_SOLUTION:
+STEP_1: দেওয়া আছে, a + b = m, a^2 + b^2 = n এবং a^3 + b^3 = p^3
+STEP_2: বামপক্ষ = m^3 + 2p^3
+STEP_3: = (a + b)^3 + 2(a^3 + b^3)
+STEP_4: = a^3 + 3a^2b + 3ab^2 + b^3 + 2a^3 + 2b^3
+STEP_5: = 3a^3 + 3a^2b + 3ab^2 + 3b^3
+STEP_6: = 3{a^2*(a + b) + b^2*(a + b)}
+STEP_7: = 3(a + b)(a^2 + b^2)
+STEP_8: = 3 * m * n = 3mn (প্রমাণিত)
+FINAL_ANSWER: m^3 + 2p^3 = 3mn
+Q10_SOLUTION:
+STEP_1: দেওয়া আছে, m + 1/m = a
+STEP_2: মান নির্ণয় করতে হবে m^3 + 1/m^3 এর।
+STEP_3: সূত্র: x^3 + y^3 = (x + y)^3 - 3xy(x + y)
+STEP_4: m^3 + 1/m^3 = (m + 1/m)^3 - 3m(1/m)(m + 1/m)
+STEP_5: = a^3 - 31*a = a^3 - 3a
+FINAL_ANSWER: a^3 - 3a
+Q12_SOLUTION:
+STEP_1: দেওয়া আছে, a - 1/a = 1
+STEP_2: বামপক্ষ = a^3 - 1/a^3
+STEP_3: সূত্র: (a - 1/a)^3 + 3a(1/a)(a - 1/a)
+STEP_4: মান বসিয়ে, (1)^3 + 31*(1)
+STEP_5: = 1 + 3 = 4 (প্রমাণিত)
+FINAL_ANSWER: 4
+Q15_SOLUTION:
+STEP_1: দেওয়া আছে, 2x - 2/x = 3
+STEP_2: বা, 2(x - 1/x) = 3
+STEP_3: বা, x - 1/x = 3/2
+STEP_4: বামপক্ষ = 8(x^3 - 1/x^3)
+STEP_5: = 8{(x - 1/x)^3 + 3x(1/x)(x - 1/x)}
+STEP_6: মান বসিয়ে, 8{(3/2)^3 + 3(3/2)}
+STEP_7: = 8{27/8 + 9/2} = 8{(27 + 36)/8}
+STEP_8: = 8 * (63/8) = 63 (প্রমাণিত)
+FINAL_ANSWER: 63
+Q16_SOLUTION:
+STEP_1: দেওয়া আছে, a = sqrt(6) + sqrt(5)
+STEP_2: তবে, 1/a = 1 / (sqrt(6) + sqrt(5))
+STEP_3: হর ও লবকে (sqrt(6) - sqrt(5)) দ্বারা গুণ করে, 1/a = sqrt(6) - sqrt(5)
+STEP_4: a - 1/a = (sqrt(6) + sqrt(5)) - (sqrt(6) - sqrt(5)) = 2sqrt(5)
+STEP_5: প্রদত্ত রাশি = (a^6 - 1) / a^3 = a^3 - 1/a^3
+STEP_6: সূত্র: (a - 1/a)^3 + 3(a - 1/a)
+STEP_7: মান বসিয়ে, (2sqrt(5))^3 + 3*(2sqrt(5))
+STEP_8: = 8 * 5sqrt(5) + 6sqrt(5) = 40sqrt(5) + 6sqrt(5) = 46sqrt(5)
+FINAL_ANSWER: 46*sqrt(5)

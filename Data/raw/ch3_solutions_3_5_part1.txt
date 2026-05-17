@@ -1,0 +1,116 @@
+Q1_SOLUTION:
+STEP_1: Given f(x) = x^2 - 4x + 4.
+STEP_2: Substitute x = 2 into the function: f(2) = 2^2 - 4*2 + 4.
+STEP_3: Calculate: 4 - 8 + 4 = 0.
+FINAL_ANSWER: 0
+Q2_SOLUTION:
+STEP_1: Expression = 1/2 * ((a+b)^2 - (a-b)^2).
+STEP_2: Using the formula (a+b)^2 - (a-b)^2 = 4ab.
+STEP_3: Simplify: 1/2 * 4ab = 2ab.
+FINAL_ANSWER: 2ab
+Q3_SOLUTION:
+STEP_1: Given x + 2/x = 3. We need to find x^3 + 8/x^3.
+STEP_2: x^3 + 8/x^3 = x^3 + (2/x)^3.
+STEP_3: Using formula a^3 + b^3 = (a+b)^3 - 3ab(a+b).
+STEP_4: (x + 2/x)^3 - 3 * x * (2/x) * (x + 2/x) = 3^3 - 3 * 2 * 3.
+STEP_5: 27 - 18 = 9.
+FINAL_ANSWER: 9
+Q4_SOLUTION:
+STEP_1: Expression = p^4 + p^2 + 1.
+STEP_2: Rearrange as (p^2)^2 + 2*p^2 + 1 - p^2.
+STEP_3: This matches (p^2 + 1)^2 - p^2.
+STEP_4: Using a^2 - b^2 = (a+b)(a-b): (p^2 + 1 + p)(p^2 + 1 - p).
+STEP_5: Simplified form: (p^2 + p + 1)(p^2 - p + 1).
+FINAL_ANSWER: (p^2 + p + 1)(p^2 - p + 1)
+Q5_SOLUTION:
+STEP_1: Given x = 2 - sqrt(3).
+STEP_2: x^2 = (2 - sqrt(3))^2.
+STEP_3: x^2 = 2^2 - 2 * 2 * sqrt(3) + (sqrt(3))^2.
+STEP_4: x^2 = 4 - 4sqrt(3) + 3 = 7 - 4sqrt(3).
+FINAL_ANSWER: 7 - 4*sqrt(3)
+Q6_SOLUTION:
+STEP_1: Given f(x) = x^2 - 5x + 6 and f(x) = 0.
+STEP_2: x^2 - 5x + 6 = 0.
+STEP_3: Factorizing: x^2 - 3x - 2x + 6 = 0.
+STEP_4: x(x - 3) - 2(x - 3) = 0 => (x - 3)(x - 2) = 0.
+FINAL_ANSWER: 2, 3
+Q7_SOLUTION:
+STEP_1: Expression = 9x^2 + 16y^2 = (3x)^2 + (4y)^2.
+STEP_2: To complete the square (a^2 + b^2 + 2ab), we need 2ab.
+STEP_3: 2 * 3x * 4y = 24xy.
+FINAL_ANSWER: 24xy
+Q8_SOLUTION:
+STEP_1: Given x^4 - x^2 + 1 = 0.
+STEP_2: x^4 + 1 = x^2.
+STEP_3: Dividing both sides by x^2: x^2 + 1/x^2 = 1.
+FINAL_ANSWER: 1
+Q9_SOLUTION:
+STEP_1: From x^2 + 1/x^2 = 1, we need (x + 1/x)^2.
+STEP_2: (x + 1/x)^2 = x^2 + 1/x^2 + 2 = 1 + 2 = 3.
+FINAL_ANSWER: 3
+Q10_SOLUTION:
+STEP_1: x^3 + 1/x^3 = (x + 1/x)(x^2 - 1 + 1/x^2).
+STEP_2: From Q8, we know x^2 + 1/x^2 = 1.
+STEP_3: Formula becomes (x + 1/x)(1 - 1) = 0.
+FINAL_ANSWER: 0
+Q11_SOLUTION:
+STEP_1: Given a^2 + b^2 = 9, ab = 3.
+STEP_2: (i) (a-b)^2 = a^2 + b^2 - 2ab = 9 - 6 = 3 (Correct).
+STEP_3: (ii) (a+b)^2 = a^2 + b^2 + 2ab = 9 + 6 = 15 (Correct).
+STEP_4: (iii) a^2 + b^2 + a^2*b^2 = 9 + 3^2 = 9 + 9 = 18 (Correct).
+FINAL_ANSWER: i, ii, iii (Choice ঘ)
+Q12_SOLUTION:
+STEP_1: Given 3a^5 - 6a^4 + 3a + 14.
+STEP_2: (i) Variable is 'a' (Correct).
+STEP_3: (ii) Degree is 5 (Correct).
+STEP_4: (iii) Coeff of a^4 is -6, not 6 (Incorrect).
+FINAL_ANSWER: i, ii (Choice ক)
+Q13_SOLUTION:
+STEP_1: p^3 - 1/64 = p^3 - (1/4)^3.
+STEP_2: Factors: (p - 1/4)(p^2 + p/4 + 1/16).
+STEP_3: (i) is correct, (ii) is incorrect (should be 1/16), (iii) is correct.
+FINAL_ANSWER: i, iii (Choice খ)
+Q14_SOLUTION:
+STEP_1: K in p days, Kh in 2p days. Rates: 1/p and 1/2p.
+STEP_2: Together in 1 day: 1/p + 1/2p = 3/2p.
+STEP_3: Let they work x days together. Work = 3x/2p.
+STEP_4: Remaining work = 1 - 3x/2p = (2p-3x)/2p.
+STEP_5: Kh finishes in r days: (2p-3x)/2p = r*(1/2p) => 2p - 3x = r => x = (2p-r)/3.
+STEP_6: Total time = x + r = (2p - r)/3 + r = (2p + 2r)/3.
+FINAL_ANSWER: 2(p+r)/3
+Q15_SOLUTION:
+STEP_1: Total work in person-hours = 10 persons * 7 days * 6 hours = 420.
+STEP_2: New case: 14 persons * 6 days * h hours = 420.
+STEP_3: 84h = 420 => h = 5.
+FINAL_ANSWER: 5 hours
+Q16_SOLUTION:
+STEP_1: Mita 1 day: 1/10. Rita 1 day: 1/15.
+STEP_2: Together 1 day: 1/10 + 1/15 = 5/30 = 1/6.
+STEP_3: Time = 1 / (1/6) = 6 days.
+FINAL_ANSWER: 6 days
+Q17_SOLUTION:
+STEP_1: Rent = 5700. Let x people supposed to go. Fare = 5700/x.
+STEP_2: (x-5) went. Fare = 5700/(x-5).
+STEP_3: 5700/(x-5) - 5700/x = 3.
+STEP_4: Solving: 5700*5 = 3x(x-5) => x^2 - 5x - 9500 = 0.
+STEP_5: (x-100)(x+95) = 0 => x = 100.
+STEP_6: Actually went: 100 - 5 = 95.
+FINAL_ANSWER: 95
+Q18_SOLUTION:
+STEP_1: Boat speed x, current speed y.
+STEP_2: Upstream speed: x - y = d/p.
+STEP_3: Downstream speed: x + y = d/q.
+STEP_4: Adding: 2x = d/p + d/q => x = d(p+q)/2pq.
+STEP_5: Subtracting: 2y = d/q - d/p => y = d(p-q)/2pq.
+FINAL_ANSWER: Boat speed = d(p+q)/2pq, current speed = d(p-q)/2pq
+Q19_SOLUTION:
+STEP_1: Total time = 15/(x+y) + 15/(x-y) = 4.
+STEP_2: Distances 5 and 3 in same time: 5/(x+y) = 3/(x-y) => 2x = 8y => x = 4y.
+STEP_3: 15/5y + 15/3y = 4 => 3/y + 5/y = 4 => 8/y = 4 => y = 2.
+STEP_4: x = 4 * 2 = 8.
+FINAL_ANSWER: Boat speed = 8 km/h, current speed = 2 km/h
+Q20_SOLUTION:
+STEP_1: 1st fills 1/t1 portion in 1 min. 2nd empties 1/t2 portion in 1 min.
+STEP_2: Combined rate = 1/t1 - 1/t2 = (t2 - t1)/(t1t2).
+STEP_3: Total time to fill = (t1t2)/(t2 - t1).
+FINAL_ANSWER: (t1*t2)/(t2 - t1)
