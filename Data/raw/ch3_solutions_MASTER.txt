@@ -1,0 +1,915 @@
+========================================
+CHAPTER 3 — বীজগাণিতিক রাশি
+SOLUTIONS MASTER FILE
+========================================
+
+=== EXERCISE 3.1 SOLUTIONS ===
+অনুশীলনী ৩.১-এর সকল প্রশ্নের সমাধান নিচে দেওয়া হলো:
+Q1A_SOLUTION:
+STEP_1: রাশিটি হলো (2a + 3b)
+STEP_2: বর্গ নির্ণয়ের সূত্র (x + y)^2 = x^2 + 2xy + y^2 ব্যবহার করে পাই, (2a + 3b)^2 = (2a)^2 + 2 * (2a) * (3b) + (3b)^2
+STEP_3: ক্যালকুলেশন করি, 4a^2 + 12ab + 9b^2
+FINAL_ANSWER: 4a^2 + 12ab + 9b^2
+Q1B_SOLUTION:
+STEP_1: রাশিটি হলো (x^2 + 2/y^2)
+STEP_2: বর্গের সূত্র প্রয়োগ করে, (x^2 + 2/y^2)^2 = (x^2)^2 + 2 * (x^2) * (2/y^2) + (2/y^2)^2
+STEP_3: ক্যালকুলেশন করি, x^4 + 4x^2/y^2 + 4/y^4
+FINAL_ANSWER: x^4 + 4x^2/y^2 + 4/y^4
+Q1C_SOLUTION:
+STEP_1: রাশিটি হলো (4y - 5x)
+STEP_2: (x - y)^2 = x^2 - 2xy + y^2 সূত্র ব্যবহার করে পাই, (4y - 5x)^2 = (4y)^2 - 2 * (4y) * (5x) + (5x)^2
+STEP_3: ক্যালকুলেশন করি, 16y^2 - 40xy + 25x^2
+FINAL_ANSWER: 16y^2 - 40xy + 25x^2
+Q1D_SOLUTION:
+STEP_1: রাশিটি হলো (5x^2 - y)
+STEP_2: বর্গের সূত্র প্রয়োগ করে, (5x^2 - y)^2 = (5x^2)^2 - 2 * (5x^2) * (y) + (y)^2
+STEP_3: ক্যালকুলেশন করি, 25x^4 - 10x^2y + y^2
+FINAL_ANSWER: 25x^4 - 10x^2y + y^2
+Q1E_SOLUTION:
+STEP_1: রাশিটি হলো (3b - 5c - 2a)
+STEP_2: সূত্র (a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca অনুযায়ী, (3b - 5c - 2a)^2 = (3b)^2 + (-5c)^2 + (-2a)^2 + 2(3b)(-5c) + 2(-5c)(-2a) + 2(-2a)(3b)
+STEP_3: ক্যালকুলেশন করি, 9b^2 + 25c^2 + 4a^2 - 30bc + 20ca - 12ab
+FINAL_ANSWER: 4a^2 + 9b^2 + 25c^2 - 12ab - 30bc + 20ca
+Q1F_SOLUTION:
+STEP_1: রাশিটি হলো (ax - by - cz)
+STEP_2: সূত্র প্রয়োগ করে পাই, (ax - by - cz)^2 = (ax)^2 + (-by)^2 + (-cz)^2 + 2(ax)(-by) + 2(-by)(-cz) + 2(-cz)(ax)
+STEP_3: ক্যালকুলেশন করি, a^2x^2 + b^2y^2 + c^2z^2 - 2abxy + 2bcyz - 2aczx
+FINAL_ANSWER: a^2x^2 + b^2y^2 + c^2z^2 - 2abxy + 2bcyz - 2aczx
+Q1G_SOLUTION:
+STEP_1: রাশিটি হলো (2a + 3x - 2y - 5z)
+STEP_2: দুই অংশে ভাগ করে পাই, {(2a + 3x) - (2y + 5z)}^2
+STEP_3: (m - n)^2 সূত্র প্রয়োগ করি, (2a + 3x)^2 - 2(2a + 3x)(2y + 5z) + (2y + 5z)^2
+STEP_4: ক্যালকুলেশন করি, (4a^2 + 12ax + 9x^2) - 2(4ay + 10az + 6xy + 15xz) + (4y^2 + 20yz + 25z^2)
+STEP_5: গুণ করে পাই, 4a^2 + 9x^2 + 4y^2 + 25z^2 + 12ax - 8ay - 20az - 12xy - 30xz + 20yz
+FINAL_ANSWER: 4a^2 + 9x^2 + 4y^2 + 25z^2 + 12ax - 8ay - 20az - 12xy - 30xz + 20yz
+Q1H_SOLUTION:
+STEP_1: রাশিটি হলো 1007 = (1000 + 7)
+STEP_2: বর্গ করি, (1000 + 7)^2 = 1000^2 + 2 * 1000 * 7 + 7^2
+STEP_3: ক্যালকুলেশন করি, 1000000 + 14000 + 49 = 1014049
+FINAL_ANSWER: 1014049
+Q2A_SOLUTION:
+STEP_1: রাশিটি হলো (7p + 3q - 5r)^2 - 2(7p + 3q - 5r)(8p - 4q - 5r) + (8p - 4q - 5r)^2
+STEP_2: ধরি, a = 7p + 3q - 5r এবং b = 8p - 4q - 5r
+STEP_3: রাশিটি দাঁড়ায়, a^2 - 2ab + b^2 = (a - b)^2
+STEP_4: মান বসিয়ে পাই, (7p + 3q - 5r - (8p - 4q - 5r))^2 = (7p + 3q - 5r - 8p + 4q + 5r)^2
+STEP_5: সরল করি, (7q - p)^2 = 49q^2 - 14pq + p^2
+FINAL_ANSWER: p^2 - 14pq + 49q^2
+Q2B_SOLUTION:
+STEP_1: রাশি হলো (2m + 3n - p)^2 + (2m - 3n + p)^2 - 2(2m + 3n - p)(2m - 3n + p)
+STEP_2: ধরি, a = 2m + 3n - p এবং b = 2m - 3n + p
+STEP_3: রাশিটি হলো a^2 + b^2 - 2ab = (a - b)^2
+STEP_4: মান বসিয়ে পাই, (2m + 3n - p - (2m - 3n + p))^2 = (2m + 3n - p - 2m + 3n - p)^2
+STEP_5: সরল করি, (6n - 2p)^2 = 36n^2 - 24np + 4p^2
+FINAL_ANSWER: 36n^2 - 24np + 4p^2
+Q2C_SOLUTION:
+STEP_1: রাশি হলো 6.35 * 6.35 + 2 * 6.35 * 3.65 + 3.65 * 3.65
+STEP_2: ধরি, a = 6.35 এবং b = 3.65
+STEP_3: রাশিটি হলো a^2 + 2ab + b^2 = (a + b)^2
+STEP_4: মান বসিয়ে পাই, (6.35 + 3.65)^2 = (10)^2 = 100
+FINAL_ANSWER: 100
+Q2D_SOLUTION:
+STEP_1: রাশি হলো (2345 * 2345 - 759 * 759) / (2345 - 759)
+STEP_2: ধরি, a = 2345 এবং b = 759
+STEP_3: রাশিটি হলো (a^2 - b^2) / (a - b)
+STEP_4: সূত্র অনুযায়ী, (a + b)(a - b) / (a - b) = a + b
+STEP_5: মান বসিয়ে পাই, 2345 + 759 = 3104
+FINAL_ANSWER: 3104
+Q3_SOLUTION:
+STEP_1: দেওয়া আছে, a - b = 4 এবং ab = 60
+STEP_2: আমরা জানি, (a + b)^2 = (a - b)^2 + 4ab
+STEP_3: মান বসিয়ে পাই, (a + b)^2 = 4^2 + 4 * 60 = 16 + 240 = 256
+STEP_4: বর্গমূল করে পাই, a + b = sqrt(256) = 16
+FINAL_ANSWER: 16
+Q4_SOLUTION:
+STEP_1: দেওয়া আছে, a + b = 9m এবং ab = 18m^2
+STEP_2: আমরা জানি, (a - b)^2 = (a + b)^2 - 4ab
+STEP_3: মান বসিয়ে পাই, (a - b)^2 = (9m)^2 - 4 * 18m^2 = 81m^2 - 72m^2 = 9m^2
+STEP_4: বর্গমূল করে পাই, a - b = sqrt(9m^2) = 3m
+FINAL_ANSWER: 3m
+Q5_SOLUTION:
+STEP_1: দেওয়া আছে, x - 1/x = 4
+STEP_2: উভয় পক্ষকে বর্গ করি, (x - 1/x)^2 = 4^2
+STEP_3: x^2 - 2 * x * (1/x) + 1/x^2 = 16 => x^2 + 1/x^2 = 16 + 2 = 18
+STEP_4: পুনরায় বর্গ করি, (x^2 + 1/x^2)^2 = 18^2
+STEP_5: x^4 + 2 * x^2 * (1/x^2) + 1/x^4 = 324 => x^4 + 1/x^4 = 324 - 2 = 322
+FINAL_ANSWER: প্রমানিত
+Q6_SOLUTION:
+STEP_1: দেওয়া আছে, 2x + 2/x = 3 => 2(x + 1/x) = 3 => x + 1/x = 3/2
+STEP_2: রাশিটি হলো x^2 + 1/x^2 = (x + 1/x)^2 - 2 * x * (1/x)
+STEP_3: মান বসিয়ে পাই, (3/2)^2 - 2 = 9/4 - 2 = (9 - 8) / 4 = 1/4
+FINAL_ANSWER: 1/4
+Q7_SOLUTION:
+STEP_1: দেওয়া আছে, a + 1/a = 2
+STEP_2: বামপক্ষ অংশের প্রথম ভাগ: a^2 + 1/a^2 = (a + 1/a)^2 - 2 = 2^2 - 2 = 4 - 2 = 2
+STEP_3: ডানপক্ষ অংশ: a^4 + 1/a^4 = (a^2 + 1/a^2)^2 - 2
+STEP_4: মান বসিয়ে পাই, 2^2 - 2 = 4 - 2 = 2. অর্থাৎ বামপক্ষ = ডানপক্ষ।
+FINAL_ANSWER: দেখানো হলো
+Q8_SOLUTION:
+STEP_1: দেওয়া আছে, a + b = sqrt(7) এবং a - b = sqrt(5)
+STEP_2: বামপক্ষ = 8ab(a^2 + b^2) = (4ab) * {2(a^2 + b^2)}
+STEP_3: সূত্র প্রয়োগ করি, 4ab = (a + b)^2 - (a - b)^2 = (sqrt(7))^2 - (sqrt(5))^2 = 7 - 5 = 2
+STEP_4: 2(a^2 + b^2) = (a + b)^2 + (a - b)^2 = (sqrt(7))^2 + (sqrt(5))^2 = 7 + 5 = 12
+STEP_5: গুণ করি, 2 * 12 = 24. অর্থাৎ বামপক্ষ = ডানপক্ষ।
+FINAL_ANSWER: প্রমানিত
+Q9_SOLUTION:
+STEP_1: দেওয়া আছে, a + b + c = 9 এবং ab + bc + ca = 31
+STEP_2: আমরা জানি, a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca)
+STEP_3: মান বসিয়ে পাই, 9^2 - 2 * 31 = 81 - 62 = 19
+FINAL_ANSWER: 19
+Q10_SOLUTION:
+STEP_1: দেওয়া আছে, a^2 + b^2 + c^2 = 9 এবং ab + bc + ca = 8
+STEP_2: সূত্র অনুযায়ী, (a + b + c)^2 = (a^2 + b^2 + c^2) + 2(ab + bc + ca)
+STEP_3: মান বসিয়ে পাই, 9 + 2 * 8 = 9 + 16 = 25
+FINAL_ANSWER: 25
+Q11_SOLUTION:
+STEP_1: দেওয়া আছে, a + b + c = 6 এবং a^2 + b^2 + c^2 = 14
+STEP_2: সূত্র প্রয়োগ করে পাই, 2(ab + bc + ca) = (a + b + c)^2 - (a^2 + b^2 + c^2)
+STEP_3: মান বসিয়ে, 2(ab + bc + ca) = 6^2 - 14 = 36 - 14 = 22
+STEP_4: রাশিটি হলো (a - b)^2 + (b - c)^2 + (c - a)^2 = (a^2 - 2ab + b^2) + (b^2 - 2bc + c^2) + (c^2 - 2ca + a^2)
+STEP_5: সরল করি, 2(a^2 + b^2 + c^2) - 2(ab + bc + ca) = 2 * 14 - 22 = 28 - 22 = 6
+FINAL_ANSWER: 6
+Q12_SOLUTION:
+STEP_1: দেওয়া আছে, x = 3, y = 4, z = 5
+STEP_2: রাশি হলো 9x^2 + 16y^2 + 4z^2 + 24xy - 16yz - 12zx
+STEP_3: একে সাজালে পাই, (3x)^2 + (4y)^2 + (-2z)^2 + 2(3x)(4y) + 2(4y)(-2z) + 2(-2z)(3x) = (3x + 4y - 2z)^2
+STEP_4: মান বসিয়ে পাই, (3 * 3 + 4 * 4 - 2 * 5)^2 = (9 + 16 - 10)^2 = (15)^2 = 225
+FINAL_ANSWER: 225
+Q13_SOLUTION:
+STEP_1: ধরি, x = a + 2b এবং y = 3a + 2c
+STEP_2: সূত্র xy = {(x + y) / 2}^2 - {(x - y) / 2}^2 প্রয়োগ করি
+STEP_3: মান বসিয়ে, x + y = a + 2b + 3a + 2c = 4a + 2b + 2c. অর্থাৎ (x + y) / 2 = 2a + b + c
+STEP_4: x - y = a + 2b - (3a + 2c) = 2b - 2a - 2c. অর্থাৎ (x - y) / 2 = b - a - c
+STEP_5: বর্গের বিয়োগফল হলো (2a + b + c)^2 - (b - a - c)^2
+FINAL_ANSWER: (2a + b + c)^2 - (b - a - c)^2
+Q14_SOLUTION:
+STEP_1: রাশিটি হলো x^2 + 10x + 24
+STEP_2: একে সাজালে পাই, x^2 + 2 * x * 5 + 5^2 - 1
+STEP_3: (x + 5)^2 - 1^2
+FINAL_ANSWER: (x + 5)^2 - 1^2
+Q15_SOLUTION:
+STEP_1: দেওয়া আছে, a^4 + a^2b^2 + b^4 = 8 এবং a^2 + ab + b^2 = 4
+STEP_2: আমরা জানি, a^4 + a^2b^2 + b^4 = (a^2 + ab + b^2)(a^2 - ab + b^2)
+STEP_3: মান বসিয়ে, 8 = 4 * (a^2 - ab + b^2) => a^2 - ab + b^2 = 2
+STEP_4: (ক) বের করতে যোগ করি, (a^2 + ab + b^2) + (a^2 - ab + b^2) = 4 + 2 => 2(a^2 + b^2) = 6 => a^2 + b^2 = 3
+STEP_5: (খ) বের করতে বিয়োগ করি, (a^2 + ab + b^2) - (a^2 - ab + b^2) = 4 - 2 => 2ab = 2 => ab = 1
+FINAL_ANSWER: (ক) 3, (খ) 1
+
+=== EXERCISE 3.2 SOLUTIONS ===
+অনুশীলনী ৩.২-এর প্রতিটা প্রশ্নের step by step সমাধান নিচে দেওয়া হলো:
+Q1_SOLUTION:
+(ক) 2x^2 + 3y^2 এর ঘন:
+STEP_1: আমরা জানি, (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+STEP_2: এখানে a = 2x^2 এবং b = 3y^2 বসিয়ে পাই: (2x^2 + 3y^2)^3 = (2x^2)^3 + 3*(2x^2)^2*(3y^2) + 3*(2x^2)(3y^2)^2 + (3y^2)^3
+STEP_3: ক্যালকুলেশন করে পাই: 8x^6 + 3(4x^4)(3y^2) + 3(2x^2)*(9y^4) + 27y^6
+FINAL_ANSWER: 8x^6 + 36x^4y^2 + 54x^2y^4 + 27y^6
+(খ) 7m^2 - 2n এর ঘন:
+STEP_1: আমরা জানি, (a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+STEP_2: এখানে a = 7m^2 এবং b = 2n বসিয়ে পাই: (7m^2 - 2n)^3 = (7m^2)^3 - 3*(7m^2)^2*(2n) + 3*(7m^2)(2n)^2 - (2n)^3
+STEP_3: ক্যালকুলেশন করে পাই: 343m^6 - 3(49m^4)(2n) + 3(7m^2)*(4n^2) - 8n^3
+FINAL_ANSWER: 343m^6 - 294m^4n + 84m^2n^2 - 8n^3
+(গ) 2a - b - 3c এর ঘন:
+STEP_1: ধরি, (2a - b) = x এবং 3c = y। তাহলে ঘনটি হলো (x - y)^3
+STEP_2: (2a - b - 3c)^3 = (2a - b)^3 - 3*(2a - b)^2*(3c) + 3*(2a - b)(3c)^2 - (3c)^3
+STEP_3: মান বিস্তার করে পাই: (8a^3 - 12a^2b + 6ab^2 - b^3) - 9c(4a^2 - 4ab + b^2) + 3*(2a - b)*(9c^2) - 27c^3
+FINAL_ANSWER: 8a^3 - b^3 - 27c^3 - 12a^2b - 36a^2c + 6ab^2 + 36abc - 9b^2c + 54ac^2 - 27bc^2
+Q2_SOLUTION:
+(ক) সরল কর: (7x + 3b)^3 - (5x + 3b)^3 - 6x(7x + 3b)(5x + 3b)
+STEP_1: ধরি, 7x + 3b = a এবং 5x + 3b = b। তাহলে, a - b = (7x + 3b) - (5x + 3b) = 2x
+STEP_2: প্রদত্ত রাশি = a^3 - b^3 - 3*(a - b)ab = (a - b)^3
+STEP_3: a - b এর মান বসিয়ে পাই: (2x)^3 = 8x^3
+FINAL_ANSWER: 8x^3
+(খ) সরল কর: (a + b + c)^3 - (a - b - c)^3 - 6(b + c){a^2 - (b + c)^2}
+STEP_1: ধরি, a + b + c = x এবং a - b - c = y। তাহলে, x - y = (a + b + c) - (a - b - c) = 2(b + c)
+STEP_2: প্রদত্ত রাশি = x^3 - y^3 - 3*(x - y)xy = (x - y)^3
+STEP_3: x - y এর মান বসিয়ে পাই: {2(b + c)}^3 = 8(b + c)^3
+FINAL_ANSWER: 8(b + c)^3
+(গ) সরল কর: (m + n)^6 - (m - n)^6 - 12mn(m^2 - n^2)^2
+STEP_1: ধরি, (m + n)^2 = a এবং (m - n)^2 = b। তাহলে, a - b = (m + n)^2 - (m - n)^2 = 4mn
+STEP_2: প্রদত্ত রাশি = a^3 - b^3 - 3*(a - b)*ab = (a - b)^3
+STEP_3: a - b এর মান বসিয়ে পাই: (4mn)^3 = 64m^3n^3
+FINAL_ANSWER: 64m^3n^3
+(ঘ) সরল কর: (x + y)(x^2 - xy + y^2) + (y + z)(y^2 - yz + z^2) + (z + x)(z^2 - zx + x^2)
+STEP_1: আমরা জানি, a^3 + b^3 = (a + b)(a^2 - ab + b^2)
+STEP_2: প্রদত্ত রাশি = (x^3 + y^3) + (y^3 + z^3) + (z^3 + x^3)
+STEP_3: যোগ করে পাই: 2x^3 + 2y^3 + 2z^3
+FINAL_ANSWER: 2(x^3 + y^3 + z^3)
+(ঙ) সরল কর: (2x + 3y - 4z)^3 + (2x - 3y + 4z)^3 + 12x{4x^2 - (3y - 4z)^2}
+STEP_1: ধরি, 2x + 3y - 4z = a এবং 2x - 3y + 4z = b। তাহলে, a + b = (2x + 3y - 4z) + (2x - 3y + 4z) = 4x
+STEP_2: প্রদত্ত রাশি = a^3 + b^3 + 3*(a + b)*ab = (a + b)^3
+STEP_3: a + b এর মান বসিয়ে পাই: (4x)^3 = 64x^3
+FINAL_ANSWER: 64x^3
+Q3_SOLUTION:
+STEP_1: দেওয়া আছে, a - b = 5 এবং ab = 36
+STEP_2: আমরা জানি, a^3 - b^3 = (a - b)^3 + 3ab*(a - b)
+STEP_3: মান বসিয়ে পাই: 5^3 + 3365 = 125 + 540 = 665
+FINAL_ANSWER: 665
+Q4_SOLUTION:
+STEP_1: দেওয়া আছে, a^3 - b^3 = 513 এবং a - b = 3
+STEP_2: আমরা জানি, a^3 - b^3 = (a - b)^3 + 3ab*(a - b)
+STEP_3: মান বসিয়ে পাই: 513 = 3^3 + 3ab3 => 513 = 27 + 9ab
+STEP_4: 9ab = 513 - 27 = 486 => ab = 486 / 9 = 54
+FINAL_ANSWER: 54
+Q5_SOLUTION:
+STEP_1: রাশিটি হলো: 8x^3 + 36x^2y + 54xy^2 + 27y^3
+STEP_2: এটিকে সাজিয়ে পাই: (2x)^3 + 3*(2x)^2*(3y) + 3*(2x)(3y)^2 + (3y)^3 = (2x + 3y)^3
+STEP_3: x = 19 এবং y = -12 বসিয়ে পাই: (219 + 3*(-12))^3 = (38 - 36)^3 = 2^3 = 8
+FINAL_ANSWER: 8
+Q6_SOLUTION:
+STEP_1: রাশিটি হলো: 8a^3 + 60a^2 + 150a + 130
+STEP_2: এটিকে সাজিয়ে পাই: (2a)^3 + 3*(2a)^25 + 3(2a)5^2 + 5^3 + 5 = (2a + 5)^3 + 5
+STEP_3: a = 15 বসিয়ে পাই: (215 + 5)^3 + 5 = (30 + 5)^3 + 5 = 35^3 + 5
+STEP_4: 35^3 = 42875, তাই 42875 + 5 = 42880
+FINAL_ANSWER: 42880
+Q7_SOLUTION:
+STEP_1: দেওয়া আছে: (a + b) = m, (a^2 + b^2) = n, (a^3 + b^3) = p^3
+STEP_2: LHS = m^3 + 2p^3 = (a + b)^3 + 2(a^3 + b^3)
+STEP_3: = a^3 + 3a^2b + 3ab^2 + b^3 + 2a^3 + 2b^3 = 3a^3 + 3a^2b + 3ab^2 + 3b^3
+STEP_4: = 3(a^3 + a^2b + ab^2 + b^3) = 3{a^2(a + b) + b^2(a + b)} = 3(a + b)(a^2 + b^2)
+STEP_5: = 3mn = RHS (প্রমাণিত)
+FINAL_ANSWER: 3mn
+Q8_SOLUTION:
+(ক) a^2 - ab + b^2 এর মান:
+STEP_1: a+b=3, ab=2
+STEP_2: রাশি = (a^2 + b^2) - ab = {(a + b)^2 - 2ab} - ab = (a + b)^2 - 3ab
+STEP_3: মান বসিয়ে: 3^2 - 3*2 = 9 - 6 = 3
+FINAL_ANSWER: 3
+(খ) a^3 + b^3 এর মান:
+STEP_1: মান = (a + b)^3 - 3ab(a + b)
+STEP_2: মান বসিয়ে: 3^3 - 323 = 27 - 18 = 9
+FINAL_ANSWER: 9
+Q9_SOLUTION:
+(ক) a^2 + ab + b^2 এর মান:
+STEP_1: a-b=5, ab=36
+STEP_2: রাশি = (a^2 + b^2) + ab = {(a - b)^2 + 2ab} + ab = (a - b)^2 + 3ab
+STEP_3: মান বসিয়ে: 5^2 + 3*36 = 25 + 108 = 133
+FINAL_ANSWER: 133
+(খ) a^3 - b^3 এর মান:
+STEP_1: মান = (a - b)^3 + 3ab(a - b)
+STEP_2: মান বসিয়ে: 5^3 + 3365 = 125 + 540 = 665
+FINAL_ANSWER: 665
+Q10_SOLUTION:
+STEP_1: দেওয়া আছে, m + 1/m = a
+STEP_2: m^3 + 1/m^3 = (m + 1/m)^3 - 3m(1/m)(m + 1/m)
+STEP_3: মান বসিয়ে পাই: a^3 - 31*a = a^3 - 3a
+FINAL_ANSWER: a^3 - 3a
+Q11_SOLUTION:
+STEP_1: দেওয়া আছে, x - 1/x = p
+STEP_2: x^3 - 1/x^3 = (x - 1/x)^3 + 3x(1/x)(x - 1/x)
+STEP_3: মান বসিয়ে পাই: p^3 + 31*p = p^3 + 3p
+FINAL_ANSWER: p^3 + 3p
+Q12_SOLUTION:
+STEP_1: দেওয়া আছে, a - 1/a = 1
+STEP_2: LHS = a^3 - 1/a^3 = (a - 1/a)^3 + 3a(1/a)(a - 1/a)
+STEP_3: মান বসিয়ে পাই: 1^3 + 31*1 = 1 + 3 = 4 = RHS (প্রমাণিত)
+FINAL_ANSWER: 4
+Q13_SOLUTION:
+(ক) প্রমাণ কর: a^3 + b^3 + c^3 = 3abc
+STEP_1: দেওয়া আছে, a + b + c = 0 => a + b = -c
+STEP_2: (a + b)^3 = (-c)^3 => a^3 + b^3 + 3ab(a + b) = -c^3
+STEP_3: a^3 + b^3 + 3ab(-c) = -c^3 => a^3 + b^3 - 3abc = -c^3
+STEP_4: a^3 + b^3 + c^3 = 3abc (প্রমাণিত)
+FINAL_ANSWER: 3abc
+(খ) প্রমাণ কর: (b+c)^2 / 3bc + (c+a)^2 / 3ca + (a+b)^2 / 3ab = 1
+STEP_1: আমরা জানি, b + c = -a, c + a = -b, a + b = -c
+STEP_2: LHS = (-a)^2 / 3bc + (-b)^2 / 3ca + (-c)^2 / 3ab = a^2 / 3bc + b^2 / 3ca + c^2 / 3ab
+STEP_3: ল’সাগু 3abc হলে রাশিটি হয়: (a^3 + b^3 + c^3) / 3abc
+STEP_4: (ক) থেকে জানি a^3 + b^3 + c^3 = 3abc, তাই 3abc / 3abc = 1 = RHS (প্রমাণিত)
+FINAL_ANSWER: 1
+Q14_SOLUTION:
+STEP_1: দেওয়া আছে, p - q = r
+STEP_2: (p - q)^3 = r^3 => p^3 - q^3 - 3pq(p - q) = r^3
+STEP_3: r এর মান বসিয়ে: p^3 - q^3 - 3pq(r) = r^3 => p^3 - q^3 - 3pqr = r^3
+STEP_4: p^3 - q^3 - r^3 = 3pqr (প্রমাণিত)
+FINAL_ANSWER: 3pqr
+Q15_SOLUTION:
+STEP_1: দেওয়া আছে, 2x - 2/x = 3 => 2(x - 1/x) = 3 => x - 1/x = 3/2
+STEP_2: LHS = 8(x^3 - 1/x^3) = 8{(x - 1/x)^3 + 3x(1/x)(x - 1/x)}
+STEP_3: x - 1/x এর মান বসিয়ে: 8{(3/2)^3 + 3(3/2)} = 8{27/8 + 9/2}
+STEP_4: = 8{(27 + 36) / 8} = 8 * (63 / 8) = 63 = RHS (প্রমাণিত)
+FINAL_ANSWER: 63
+Q16_SOLUTION:
+STEP_1: a = sqrt(6) + sqrt(5), তাই 1/a = 1 / (sqrt(6) + sqrt(5)) = sqrt(6) - sqrt(5)
+STEP_2: a - 1/a = (sqrt(6) + sqrt(5)) - (sqrt(6) - sqrt(5)) = 2sqrt(5)
+STEP_3: (a^6 - 1) / a^3 = a^3 - 1/a^3 = (a - 1/a)^3 + 3a*(1/a)(a - 1/a)
+STEP_4: মান বসিয়ে: (2sqrt(5))^3 + 3*(2sqrt(5)) = 40sqrt(5) + 6sqrt(5) = 46sqrt(5)
+FINAL_ANSWER: 46*sqrt(5)
+Q17_SOLUTION:
+(ক) প্রমাণ কর: x^2 - sqrt(3)x = 1
+STEP_1: x - 1/x = sqrt(3) => (x^2 - 1) / x = sqrt(3)
+STEP_2: x^2 - 1 = sqrt(3)x => x^2 - sqrt(3)x = 1 (প্রমাণিত)
+FINAL_ANSWER: 1
+(খ) প্রমাণ কর: 23(x^2 + 1/x^2) = 5(x^4 + 1/x^4)
+STEP_1: x^2 + 1/x^2 = (x - 1/x)^2 + 2 = (sqrt(3))^2 + 2 = 3 + 2 = 5
+STEP_2: x^4 + 1/x^4 = (x^2 + 1/x^2)^2 - 2 = 5^2 - 2 = 23
+STEP_3: LHS = 23 * 5 = 115, RHS = 5 * 23 = 115. (প্রমাণিত)
+FINAL_ANSWER: 115
+(গ) x^6 + 1/x^6 এর মান:
+STEP_1: x^6 + 1/x^6 = (x^2)^3 + (1/x^2)^3 = (x^2 + 1/x^2)^3 - 3x^2(1/x^2)(x^2 + 1/x^2)
+STEP_2: x^2 + 1/x^2 = 5 বসিয়ে পাই: 5^3 - 31*5 = 125 - 15 = 110
+FINAL_ANSWER: 110
+
+
+=== EXERCISE 3.3 SOLUTIONS ===
+অনুশীলনী ৩.৩ এর সবগুলা প্রশ্নের সমাধান নিচে দেওয়া হলো:
+Q1_SOLUTION:
+STEP_1: প্রশ্ন ab(x - y) - bc(x - y)
+STEP_2: উভয় পদ থেকে সাধারণ উৎপাদক (x - y) কমন নিলে পাই, (x - y)(ab - bc)
+STEP_3: দ্বিতীয় অংশ (ab - bc) থেকে b কমন নিলে পাই, b(a - c)
+FINAL_ANSWER: b(a - c)(x - y)
+Q2_SOLUTION:
+STEP_1: প্রশ্ন 9x^2 + 24x + 16
+STEP_2: একে বর্গের সূত্রে সাজালে পাই, (3x)^2 + 2 * (3x) * 4 + 4^2
+STEP_3: এখানে a = 3x এবং b = 4 ধরলে (a + b)^2 এর সূত্র অনুযায়ী পাই, (3x + 4)^2
+FINAL_ANSWER: (3x + 4)(3x + 4)
+Q3_SOLUTION:
+STEP_1: প্রশ্ন a^4 - 27a^2 + 1
+STEP_2: একে পূর্ণবর্গ করার চেষ্টা করি, (a^2)^2 - 2 * a^2 * 1 + 1^2 - 25a^2
+STEP_3: (a^2 - 1)^2 - (5a)^2
+STEP_4: a^2 - b^2 এর সূত্র (a + b)(a - b) প্রয়োগ করে পাই, (a^2 - 1 + 5a)(a^2 - 1 - 5a)
+FINAL_ANSWER: (a^2 + 5a - 1)(a^2 - 5a - 1)
+Q4_SOLUTION:
+STEP_1: প্রশ্ন x^4 - 6x^2y^2 + y^4
+STEP_2: একে সাজালে পাই, (x^2)^2 - 2 * x^2 * y^2 + (y^2)^2 - 4x^2y^2
+STEP_3: (x^2 - y^2)^2 - (2xy)^2
+STEP_4: (a + b)(a - b) সূত্র প্রয়োগ করে পাই, (x^2 - y^2 + 2xy)(x^2 - y^2 - 2xy)
+FINAL_ANSWER: (x^2 + 2xy - y^2)(x^2 - 2xy - y^2)
+Q5_SOLUTION:
+STEP_1: প্রশ্ন (a^2 - b^2)(x^2 - y^2) + 4abxy
+STEP_2: গুণ করে পাই, a^2x^2 - a^2y^2 - b^2x^2 + b^2y^2 + 4abxy
+STEP_3: সাজিয়ে পাই, (a^2x^2 + 2abxy + b^2y^2) - (a^2y^2 - 2abxy + b^2x^2)
+STEP_4: (ax + by)^2 - (ay - bx)^2
+STEP_5: (ax + by + ay - bx)(ax + by - ay + bx)
+FINAL_ANSWER: (ax - bx + ay + by)(ax + bx - ay + by)
+Q6_SOLUTION:
+STEP_1: প্রশ্ন 4a^2 - 12ab + 9b^2 - 4c^2
+STEP_2: প্রথম তিনটি পদকে বর্গের সূত্রে লিখলে পাই, (2a)^2 - 2 * (2a) * (3b) + (3b)^2 - (2c)^2
+STEP_3: (2a - 3b)^2 - (2c)^2
+STEP_4: a^2 - b^2 এর সূত্র প্রয়োগ করে পাই, (2a - 3b + 2c)(2a - 3b - 2c)
+FINAL_ANSWER: (2a - 3b + 2c)(2a - 3b - 2c)
+Q7_SOLUTION:
+STEP_1: প্রশ্ন a^2 + 6a + 8 - y^2 + 2y
+STEP_2: সাজিয়ে পাই, (a^2 + 6a + 9) - (y^2 - 2y + 1)
+STEP_3: (a + 3)^2 - (y - 1)^2
+STEP_4: (a + 3 + y - 1)(a + 3 - y + 1)
+FINAL_ANSWER: (a + y + 2)(a - y + 4)
+Q8_SOLUTION:
+STEP_1: প্রশ্ন 16x^2 - 25y^2 - 8xz + 10yz
+STEP_2: (4x)^2 - (5y)^2 - 2z(4x - 5y)
+STEP_3: (4x + 5y)(4x - 5y) - 2z(4x - 5y)
+STEP_4: (4x - 5y) কমন নিলে পাই, (4x - 5y)(4x + 5y - 2z)
+FINAL_ANSWER: (4x - 5y)(4x + 5y - 2z)
+Q9_SOLUTION:
+STEP_1: প্রশ্ন x^2 + 13x + 36
+STEP_2: মিডল টার্ম ব্রেকিং, x^2 + 9x + 4x + 36
+STEP_3: x(x + 9) + 4(x + 9)
+FINAL_ANSWER: (x + 9)(x + 4)
+Q10_SOLUTION:
+STEP_1: প্রশ্ন x^4 + x^2 - 20
+STEP_2: ধরি, x^2 = a, তাহলে রাশিটি হয় a^2 + a - 20
+STEP_3: মিডল টার্ম করে পাই, a^2 + 5a - 4a - 20 = a(a + 5) - 4(a + 5) = (a + 5)(a - 4)
+STEP_4: মান বসিয়ে পাই, (x^2 + 5)(x^2 - 4)
+STEP_5: (x^2 + 5)(x + 2)(x - 2)
+FINAL_ANSWER: (x^2 + 5)(x + 2)(x - 2)
+Q11_SOLUTION:
+STEP_1: প্রশ্ন a^2 - 30a + 216
+STEP_2: মিডল টার্ম ব্রেকিং (12 * 18 = 216), a^2 - 18a - 12a + 216
+STEP_3: a(a - 18) - 12(a - 18)
+FINAL_ANSWER: (a - 18)(a - 12)
+Q12_SOLUTION:
+STEP_1: প্রশ্ন a^8 - a^4 - 2
+STEP_2: মিডল টার্ম করে পাই, a^8 - 2a^4 + a^4 - 2
+STEP_3: a^4(a^4 - 2) + 1(a^4 - 2)
+FINAL_ANSWER: (a^4 - 2)(a^4 + 1)
+Q13_SOLUTION:
+STEP_1: প্রশ্ন x^2 - 37x - 650
+STEP_2: মিডল টার্ম (50 * 13 = 650), x^2 - 50x + 13x - 650
+STEP_3: x(x - 50) + 13(x - 50)
+FINAL_ANSWER: (x - 50)(x + 13)
+Q14_SOLUTION:
+STEP_1: প্রশ্ন 9x^2y^2 - 5xy^2 - 14y^2
+STEP_2: y^2 কমন নিলে পাই, y^2(9x^2 - 5x - 14)
+STEP_3: মিডল টার্ম (9 * 14 = 126), y^2(9x^2 - 14x + 9x - 14)
+STEP_4: y^2[x(9x - 14) + 1(9x - 14)]
+FINAL_ANSWER: y^2(x + 1)(9x - 14)
+Q15_SOLUTION:
+STEP_1: প্রশ্ন 4x^4 - 27x^2 - 81
+STEP_2: মিডল টার্ম (4 * 81 = 324, 36 * 9 = 324), 4x^4 - 36x^2 + 9x^2 - 81
+STEP_3: 4x^2(x^2 - 9) + 9(x^2 - 9)
+STEP_4: (x^2 - 9)(4x^2 + 9) = (x + 3)(x - 3)(4x^2 + 9)
+FINAL_ANSWER: (x + 3)(x - 3)(4x^2 + 9)
+Q16_SOLUTION:
+STEP_1: প্রশ্ন ax^2 + (a^2 + 1)x + a
+STEP_2: x দিয়ে গুণ করে পাই, ax^2 + a^2x + x + a
+STEP_3: কমন নিলে পাই, ax(x + a) + 1(x + a)
+FINAL_ANSWER: (x + a)(ax + 1)
+Q17_SOLUTION:
+STEP_1: প্রশ্ন 3(a^2 + 2a)^2 - 22(a^2 + 2a) + 40
+STEP_2: ধরি a^2 + 2a = x, তাহলে রাশিটি হয় 3x^2 - 22x + 40
+STEP_3: মিডল টার্ম (3 * 40 = 120, 12 * 10 = 120), 3x^2 - 12x - 10x + 40
+STEP_4: 3x(x - 4) - 10(x - 4) = (x - 4)(3x - 10)
+STEP_5: x এর মান বসিয়ে পাই, (a^2 + 2a - 4)(3(a^2 + 2a) - 10)
+FINAL_ANSWER: (a^2 + 2a - 4)(3a^2 + 6a - 10)
+Q18_SOLUTION:
+STEP_1: প্রশ্ন (a - 1)x^2 + a^2xy + (a + 1)y^2
+STEP_2: ধরি a - 1 = m এবং a + 1 = n, তাহলে mn = a^2 - 1 বা a^2 = mn + 1
+STEP_3: মান বসিয়ে পাই, mx^2 + (mn + 1)xy + ny^2 = mx^2 + mnxy + xy + ny^2
+STEP_4: mx(x + ny) + y(x + ny) = (x + ny)(mx + y)
+STEP_5: m ও n এর মান পুনরায় বসিয়ে পাই, (x + (a + 1)y)((a - 1)x + y)
+FINAL_ANSWER: (x + ay + y)(ax - x + y)
+Q19_SOLUTION:
+STEP_1: প্রশ্ন x^3 + 3x^2 + 3x + 2
+STEP_2: সাজালে পাই, (x^3 + 3x^2 + 3x + 1) + 1
+STEP_3: (x + 1)^3 + 1^3
+STEP_4: a^3 + b^3 এর সূত্র অনুযায়ী, (x + 1 + 1)((x + 1)^2 - (x + 1) * 1 + 1^2)
+STEP_5: (x + 2)(x^2 + 2x + 1 - x - 1 + 1)
+FINAL_ANSWER: (x + 2)(x^2 + x + 1)
+Q20_SOLUTION:
+STEP_1: প্রশ্ন a^3 - 6a^2 + 12a - 9
+STEP_2: সাজালে পাই, (a^3 - 3 * a^2 * 2 + 3 * a * 2^2 - 2^3) - 1
+STEP_3: (a - 2)^3 - 1^3
+STEP_4: (a - 2 - 1)((a - 2)^2 + (a - 2) * 1 + 1^2)
+STEP_5: (a - 3)(a^2 - 4a + 4 + a - 2 + 1)
+FINAL_ANSWER: (a - 3)(a^2 - 3a + 3)
+Q21_SOLUTION:
+STEP_1: প্রশ্ন a^3 - 9b^3 + (a + b)^3
+STEP_2: সাজালে পাই, (a^3 - b^3) + (a + b)^3 - 8b^3
+STEP_3: (a - b)(a^2 + ab + b^2) + (a + b)^3 - (2b)^3
+STEP_4: (a - b)(a^2 + ab + b^2) + (a + b - 2b)((a + b)^2 + (a + b)(2b) + (2b)^2)
+STEP_5: (a - b)(a^2 + ab + b^2) + (a - b)(a^2 + 2ab + b^2 + 2ab + 2b^2 + 4b^2)
+STEP_6: (a - b) কমন নিলে, (a^2 + ab + b^2 + a^2 + 4ab + 7b^2)
+FINAL_ANSWER: (a - b)(2a^2 + 5ab + 8b^2)
+Q22_SOLUTION:
+STEP_1: প্রশ্ন 8x^3 + 12x^2 + 6x - 63
+STEP_2: সাজালে পাই, (2x)^3 + 3 * (2x)^2 * 1 + 3 * (2x) * 1^2 + 1^3 - 64
+STEP_3: (2x + 1)^3 - 4^3
+STEP_4: (2x + 1 - 4)((2x + 1)^2 + (2x + 1) * 4 + 4^2)
+STEP_5: (2x - 3)(4x^2 + 4x + 1 + 8x + 4 + 16)
+FINAL_ANSWER: (2x - 3)(4x^2 + 12x + 21)
+Q23_SOLUTION:
+STEP_1: প্রশ্ন 8a^3 + b^3/27
+STEP_2: সাজালে পাই, (2a)^3 + ( b/3 )^3
+STEP_3: a^3 + b^3 এর সূত্র ব্যবহার করে, (2a + b/3 )((2a)^2 - (2a) * ( b/3 ) + ( b/3 )^2)
+FINAL_ANSWER: (2a + b/3 )(4a^2 - 2ab/3 + b^2/9)
+Q24_SOLUTION:
+STEP_1: প্রশ্ন a^6/27 - b^6
+STEP_2: সাজালে পাই, (a^2/3)^3 - (b^2)^3
+STEP_3: a^3 - b^3 এর সূত্র ব্যবহার করে, (a^2/3 - b^2)((a^2/3)^2 + (a^2/3) * b^2 + (b^2)^2)
+FINAL_ANSWER: (a^2/3 - b^2)(a^4/9 + a^2b^2/3 + b^4)
+Q25_SOLUTION:
+STEP_1: প্রশ্ন 4a^2 + 1/(4a^2) - 2 + 4a - 1/a
+STEP_2: (2a - 1/(2a))^2 + 2 * (2a - 1/(2a))
+STEP_3: (2a - 1/(2a))(2a - 1/(2a) + 2)
+FINAL_ANSWER: (2a - 1/(2a))(2a - 1/(2a) + 2)
+Q26_SOLUTION:
+STEP_1: প্রশ্ন (3a + 1)^3 - (2a - 3)^3
+STEP_2: ধরি 3a + 1 = x এবং 2a - 3 = y
+STEP_3: x^3 - y^3 = (x - y)(x^2 + xy + y^2)
+STEP_4: মান বসিয়ে পাই, (3a+1-2a+3)((3a+1)^2 + (3a+1)(2a-3) + (2a-3)^2)
+STEP_5: (a + 4)(9a^2 + 6a + 1 + 6a^2 - 9a + 2a - 3 + 4a^2 - 12a + 9)
+FINAL_ANSWER: (a + 4)(19a^2 - 13a + 7)
+Q27_SOLUTION:
+STEP_1: প্রশ্ন (x + 2)(x + 3)(x + 4)(x + 5) - 48
+STEP_2: সাজিয়ে গুণ করি, [(x + 2)(x + 5)][(x + 3)(x + 4)] - 48
+STEP_3: (x^2 + 7x + 10)(x^2 + 7x + 12) - 48
+STEP_4: ধরি x^2 + 7x = a, তাহলে রাশিটি হয় (a + 10)(a + 12) - 48
+STEP_5: a^2 + 22a + 120 - 48 = a^2 + 22a + 72
+STEP_6: মিডল টার্ম (18 * 4 = 72), (a + 18)(a + 4)
+STEP_7: মান বসিয়ে পাই, (x^2 + 7x + 18)(x^2 + 7x + 4)
+FINAL_ANSWER: (x^2 + 7x + 18)(x^2 + 7x + 4)
+Q28_SOLUTION:
+STEP_1: প্রশ্ন (x - 1)(x - 3)(x - 5)(x - 7) - 65
+STEP_2: সাজিয়ে পাই, [(x - 1)(x - 7)][(x - 3)(x - 5)] - 65
+STEP_3: (x^2 - 8x + 7)(x^2 - 8x + 15) - 65
+STEP_4: ধরি x^2 - 8x = a, তাহলে রাশিটি হয় (a + 7)(a + 15) - 65
+STEP_5: a^2 + 22a + 105 - 65 = a^2 + 22a + 40
+STEP_6: মিডল টার্ম (20 * 2 = 40), (a + 20)(a + 2)
+STEP_7: মান বসিয়ে পাই, (x^2 - 8x + 20)(x^2 - 8x + 2)
+FINAL_ANSWER: (x^2 - 8x + 20)(x^2 - 8x + 2)
+Q29_SOLUTION:
+STEP_1: প্রশ্ন 2b^2c^2 + 2c^2a^2 + 2a^2b^2 - a^4 - b^4 - c^4
+STEP_2: সাজালে পাই, 4b^2c^2 - (a^2 - b^2 - c^2)^2
+STEP_3: (2bc)^2 - (a^2 - b^2 - c^2)^2
+STEP_4: (2bc + a^2 - b^2 - c^2)(2bc - a^2 + b^2 + c^2)
+STEP_5: (a^2 - (b - c)^2)((b + c)^2 - a^2)
+FINAL_ANSWER: (a + b - c)(a - b + c)(b + c + a)(b + c - a)
+Q30_SOLUTION:
+STEP_1: প্রশ্ন 14(x + z)^2 - 29(x + z)(x + 1) - 15(x + 1)^2
+STEP_2: ধরি x + z = a এবং x + 1 = b, তাহলে হয় 14a^2 - 29ab - 15b^2
+STEP_3: মিডল টার্ম (14 * 15 = 210, 35 * 6 = 210), 14a^2 - 35ab + 6ab - 15b^2
+STEP_4: 7a(2a - 5b) + 3b(2a - 5b) = (2a - 5b)(7a + 3b)
+STEP_5: মান বসিয়ে পাই, (2(x+z) - 5(x+1))(7(x+z) + 3(x+1))
+FINAL_ANSWER: (2z - 3x - 5)(10x + 7z + 3)
+Q31_SOLUTION:
+STEP_1: প্রশ্ন প্রমাণ করো যে, (x + 1)(x + 2)(3x - 1)(3x - 4) = (3x^2 + 2x - 1)(3x^2 + 2x - 8)
+STEP_2: বামপক্ষ থেকে পাই, [(x + 1)(3x - 1)][(x + 2)(3x - 4)]
+STEP_3: গুণ করে পাই, (3x^2 - x + 3x - 1)(3x^2 - 4x + 6x - 8)
+STEP_4: সরল করলে পাই, (3x^2 + 2x - 1)(3x^2 + 2x - 8)
+FINAL_ANSWER: বামপক্ষ = ডানপক্ষ (প্রমাণিত)
+
+=== EXERCISE 3.4 SOLUTIONS ===
+অনুশীলনী ৩.৪ এর সকল ১০টি (এবং পরবর্তীগুলোসহ মোট ১৬টি) প্রশ্নের পর্যায়ক্রমিক সমাধান নিচে দেওয়া হলো:
+Q1_SOLUTION:
+STEP_1: ধরি, f(a) = 3a^3 + 2a + 5
+STEP_2: f(-1) = 3*(-1)^3 + 2*(-1) + 5 = -3 - 2 + 5 = 0
+STEP_3: যেহেতু f(-1) = 0, তাই (a + 1) হলো f(a) এর একটি উৎপাদক।
+STEP_4: 3a^3 + 2a + 5 = 3a^3 + 3a^2 - 3a^2 - 3a + 5a + 5
+STEP_5: = 3a^2(a + 1) - 3a(a + 1) + 5(a + 1)
+FINAL_ANSWER: (a + 1)(3a^2 - 3a + 5)
+Q2_SOLUTION:
+STEP_1: ধরি, f(x) = x^3 - 7xy^2 - 6y^3
+STEP_2: f(-y) = (-y)^3 - 7(-y)y^2 - 6y^3 = -y^3 + 7y^3 - 6y^3 = 0
+STEP_3: সুতরাং (x + y) হলো f(x) এর একটি উৎপাদক।
+STEP_4: x^3 + x^2y - x^2y - xy^2 - 6xy^2 - 6y^3
+STEP_5: = x^2(x + y) - xy(x + y) - 6y^2(x + y) = (x + y)(x^2 - xy - 6y^2)
+STEP_6: = (x + y)(x^2 - 3xy + 2xy - 6y^2) = (x + y){x(x - 3y) + 2y(x - 3y)}
+FINAL_ANSWER: (x + y)(x - 3y)(x + 2y)
+Q3_SOLUTION:
+STEP_1: ধরি, f(x) = x^3 + 2x^2 - 5x - 6
+STEP_2: f(-1) = (-1)^3 + 2*(-1)^2 - 5*(-1) - 6 = -1 + 2 + 5 - 6 = 0
+STEP_3: সুতরাং (x + 1) হলো f(x) এর একটি উৎপাদক।
+STEP_4: x^3 + x^2 + x^2 + x - 6x - 6
+STEP_5: = x^2(x + 1) + x(x + 1) - 6(x + 1) = (x + 1)(x^2 + x - 6)
+STEP_6: = (x + 1)(x^2 + 3x - 2x - 6) = (x + 1)(x + 3)(x - 2)
+FINAL_ANSWER: (x + 1)(x + 3)(x - 2)
+Q4_SOLUTION:
+STEP_1: ধরি, f(x) = x^3 + 4x^2 + x - 6
+STEP_2: f(1) = 1^3 + 4*1^2 + 1 - 6 = 1 + 4 + 1 - 6 = 0
+STEP_3: সুতরাং (x - 1) হলো f(x) এর একটি উৎপাদক।
+STEP_4: x^3 - x^2 + 5x^2 - 5x + 6x - 6
+STEP_5: = x^2(x - 1) + 5x(x - 1) + 6(x - 1) = (x - 1)(x^2 + 5x + 6)
+STEP_6: = (x - 1)(x^2 + 3x + 2x + 6)
+FINAL_ANSWER: (x - 1)(x + 3)(x + 2)
+Q5_SOLUTION:
+STEP_1: ধরি, f(a) = a^3 + 3a + 36
+STEP_2: f(-3) = (-3)^3 + 3*(-3) + 36 = -27 - 9 + 36 = 0
+STEP_3: সুতরাং (a + 3) হলো f(a) এর একটি উৎপাদক।
+STEP_4: a^3 + 3a^2 - 3a^2 - 9a + 12a + 36
+STEP_5: = a^2(a + 3) - 3a(a + 3) + 12(a + 3)
+FINAL_ANSWER: (a + 3)(a^2 - 3a + 12)
+Q6_SOLUTION:
+STEP_1: ধরি, f(a) = a^4 - 4a + 3
+STEP_2: f(1) = 1^4 - 4*1 + 3 = 1 - 4 + 3 = 0
+STEP_3: সুতরাং (a - 1) হলো f(a) এর একটি উৎপাদক।
+STEP_4: a^4 - a^3 + a^3 - a^2 + a^2 - a - 3a + 3
+STEP_5: = a^3(a - 1) + a^2(a - 1) + a(a - 1) - 3(a - 1) = (a - 1)(a^3 + a^2 + a - 3)
+STEP_6: আবার, g(a) = a^3 + a^2 + a - 3 হলে g(1) = 0. তাই (a - 1) আবারও উৎপাদক।
+STEP_7: (a - 1)(a^3 - a^2 + 2a^2 - 2a + 3a - 3) = (a - 1){a^2(a - 1) + 2a(a - 1) + 3(a - 1)}
+FINAL_ANSWER: (a - 1)^2(a^2 + 2a + 3)
+Q7_SOLUTION:
+STEP_1: ধরি, f(a) = a^3 - a^2 - 10a - 8
+STEP_2: f(-1) = (-1)^3 - (-1)^2 - 10*(-1) - 8 = -1 - 1 + 10 - 8 = 0
+STEP_3: সুতরাং (a + 1) একটি উৎপাদক।
+STEP_4: a^3 + a^2 - 2a^2 - 2a - 8a - 8
+STEP_5: = a^2(a + 1) - 2a(a + 1) - 8(a + 1) = (a + 1)(a^2 - 2a - 8)
+STEP_6: = (a + 1)(a^2 - 4a + 2a - 8) = (a + 1)(a - 4)(a + 2)
+FINAL_ANSWER: (a + 1)(a - 4)(a + 2)
+Q8_SOLUTION:
+STEP_1: ধরি, f(x) = x^3 - 3x^2 + 4x - 4
+STEP_2: f(2) = 2^3 - 32^2 + 42 - 4 = 8 - 12 + 8 - 4 = 0
+STEP_3: সুতরাং (x - 2) একটি উৎপাদক।
+STEP_4: x^3 - 2x^2 - x^2 + 2x + 2x - 4
+STEP_5: = x^2(x - 2) - x(x - 2) + 2(x - 2)
+FINAL_ANSWER: (x - 2)(x^2 - x + 2)
+Q9_SOLUTION:
+STEP_1: ধরি, f(a) = a^3 - 7a^2 + 7a - 6
+STEP_2: f(6) = 6^3 - 76^2 + 76 - 6 = 216 - 252 + 42 - 6 = 0
+STEP_3: সুতরাং (a - 6) একটি উৎপাদক।
+STEP_4: a^3 - 6a^2 - a^2 + 6a + a - 6
+STEP_5: = a^2(a - 6) - a(a - 6) + 1(a - 6)
+FINAL_ANSWER: (a - 6)(a^2 - a + 1)
+Q10_SOLUTION:
+STEP_1: x^4 - 2x^2 + 1 = (x^2)^2 - 2x^21 + 1^2
+STEP_2: = (x^2 - 1)^2
+STEP_3: = {(x + 1)(x - 1)}^2
+FINAL_ANSWER: (x + 1)^2 * (x - 1)^2
+Q11_SOLUTION:
+STEP_1: ধরি, f(x) = x^3 + 6x^2y + 11xy^2 + 6y^3
+STEP_2: f(-y) = (-y)^3 + 6(-y)^2y + 11(-y)y^2 + 6y^3 = -y^3 + 6y^3 - 11y^3 + 6y^3 = 0
+STEP_3: সুতরাং (x + y) একটি উৎপাদক।
+STEP_4: x^3 + x^2y + 5x^2y + 5xy^2 + 6xy^2 + 6y^3
+STEP_5: = x^2(x + y) + 5xy(x + y) + 6y^2(x + y) = (x + y)(x^2 + 5xy + 6y^2)
+STEP_6: = (x + y)(x^2 + 3xy + 2xy + 6y^2)
+FINAL_ANSWER: (x + y)(x + 3y)(x + 2y)
+Q12_SOLUTION:
+STEP_1: ধরি, f(x) = 2x^4 - 3x^3 - 3x - 2
+STEP_2: f(2) = 22^4 - 32^3 - 32 - 2 = 32 - 24 - 6 - 2 = 0. তাই (x - 2) উৎপাদক।
+STEP_3: f(-1/2) = 2(-1/2)^4 - 3*(-1/2)^3 - 3*(-1/2) - 2 = 2/16 + 3/8 + 3/2 - 2 = 0. তাই (2x + 1) উৎপাদক।
+STEP_4: 2x^4 - 4x^3 + x^3 - 2x^2 + 2x^2 - 4x + x - 2
+STEP_5: = 2x^3(x - 2) + x^2(x - 2) + 2x(x - 2) + 1(x - 2) = (x - 2)(2x^3 + x^2 + 2x + 1)
+STEP_6: = (x - 2){x^2(2x + 1) + 1(2x + 1)}
+FINAL_ANSWER: (x - 2)(2x + 1)(x^2 + 1)
+Q13_SOLUTION:
+STEP_1: f(x) = 4x^4 + 12x^3 + 7x^2 - 3x - 2
+STEP_2: f(-1) = 0 এবং f(-2) = 0. তাই (x + 1) এবং (x + 2) উৎপাদক।
+STEP_3: 4x^4 + 4x^3 + 8x^3 + 8x^2 - x^2 - x - 2x - 2
+STEP_4: = 4x^3(x + 1) + 8x^2(x + 1) - x(x + 1) - 2(x + 1) = (x + 1)(4x^3 + 8x^2 - x - 2)
+STEP_5: = (x + 1){4x^2(x + 2) - 1(x + 2)} = (x + 1)(x + 2)(4x^2 - 1)
+FINAL_ANSWER: (x + 1)(x + 2)(2x + 1)(2x - 1)
+Q14_SOLUTION:
+STEP_1: x^6 - x^5 + x^4 - x^3 + x^2 - x = x(x^5 - x^4 + x^3 - x^2 + x - 1)
+STEP_2: = x{x^4(x - 1) + x^2(x - 1) + 1(x - 1)}
+STEP_3: = x(x - 1)(x^4 + x^2 + 1) = x(x - 1){(x^2 + 1)^2 - x^2}
+FINAL_ANSWER: x(x - 1)(x^2 + x + 1)(x^2 - x + 1)
+Q15_SOLUTION:
+STEP_1: f(x) = 4x^3 - 7x + 3
+STEP_2: f(1) = 4 - 7 + 3 = 0. তাই (x - 1) উৎপাদক।
+STEP_3: 4x^3 - 4x^2 + 4x^2 - 4x - 3x + 3
+STEP_4: = 4x^2(x - 1) + 4x(x - 1) - 3(x - 1) = (x - 1)(4x^2 + 4x - 3)
+STEP_5: = (x - 1)(4x^2 + 6x - 2x - 3) = (x - 1){2x(2x + 3) - 1(2x + 3)}
+FINAL_ANSWER: (x - 1)(2x + 3)(2x - 1)
+Q16_SOLUTION:
+STEP_1: f(x) = 18x^3 + 15x^2 - x - 2
+STEP_2: f(1/3) = 18*(1/27) + 15*(1/9) - 1/3 - 2 = 2/3 + 5/3 - 1/3 - 2 = 0. তাই (3x - 1) উৎপাদক।
+STEP_3: 18x^3 - 6x^2 + 21x^2 - 7x + 6x - 2
+STEP_4: = 6x^2(3x - 1) + 7x(3x - 1) + 2(3x - 1) = (3x - 1)(6x^2 + 7x + 2)
+STEP_5: = (3x - 1)(6x^2 + 4x + 3x + 2) = (3x - 1){2x(3x + 2) + 1(3x + 2)}
+FINAL_ANSWER: (3x - 1)(3x + 2)(2x + 1)
+
+=== EXERCISE 3.5 SOLUTIONS (Part 1) ===
+Q1_SOLUTION:
+STEP_1: Given f(x) = x^2 - 4x + 4.
+STEP_2: Substitute x = 2 into the function: f(2) = 2^2 - 4*2 + 4.
+STEP_3: Calculate: 4 - 8 + 4 = 0.
+FINAL_ANSWER: 0
+Q2_SOLUTION:
+STEP_1: Expression = 1/2 * ((a+b)^2 - (a-b)^2).
+STEP_2: Using the formula (a+b)^2 - (a-b)^2 = 4ab.
+STEP_3: Simplify: 1/2 * 4ab = 2ab.
+FINAL_ANSWER: 2ab
+Q3_SOLUTION:
+STEP_1: Given x + 2/x = 3. We need to find x^3 + 8/x^3.
+STEP_2: x^3 + 8/x^3 = x^3 + (2/x)^3.
+STEP_3: Using formula a^3 + b^3 = (a+b)^3 - 3ab(a+b).
+STEP_4: (x + 2/x)^3 - 3 * x * (2/x) * (x + 2/x) = 3^3 - 3 * 2 * 3.
+STEP_5: 27 - 18 = 9.
+FINAL_ANSWER: 9
+Q4_SOLUTION:
+STEP_1: Expression = p^4 + p^2 + 1.
+STEP_2: Rearrange as (p^2)^2 + 2*p^2 + 1 - p^2.
+STEP_3: This matches (p^2 + 1)^2 - p^2.
+STEP_4: Using a^2 - b^2 = (a+b)(a-b): (p^2 + 1 + p)(p^2 + 1 - p).
+STEP_5: Simplified form: (p^2 + p + 1)(p^2 - p + 1).
+FINAL_ANSWER: (p^2 + p + 1)(p^2 - p + 1)
+Q5_SOLUTION:
+STEP_1: Given x = 2 - sqrt(3).
+STEP_2: x^2 = (2 - sqrt(3))^2.
+STEP_3: x^2 = 2^2 - 2 * 2 * sqrt(3) + (sqrt(3))^2.
+STEP_4: x^2 = 4 - 4sqrt(3) + 3 = 7 - 4sqrt(3).
+FINAL_ANSWER: 7 - 4*sqrt(3)
+Q6_SOLUTION:
+STEP_1: Given f(x) = x^2 - 5x + 6 and f(x) = 0.
+STEP_2: x^2 - 5x + 6 = 0.
+STEP_3: Factorizing: x^2 - 3x - 2x + 6 = 0.
+STEP_4: x(x - 3) - 2(x - 3) = 0 => (x - 3)(x - 2) = 0.
+FINAL_ANSWER: 2, 3
+Q7_SOLUTION:
+STEP_1: Expression = 9x^2 + 16y^2 = (3x)^2 + (4y)^2.
+STEP_2: To complete the square (a^2 + b^2 + 2ab), we need 2ab.
+STEP_3: 2 * 3x * 4y = 24xy.
+FINAL_ANSWER: 24xy
+Q8_SOLUTION:
+STEP_1: Given x^4 - x^2 + 1 = 0.
+STEP_2: x^4 + 1 = x^2.
+STEP_3: Dividing both sides by x^2: x^2 + 1/x^2 = 1.
+FINAL_ANSWER: 1
+Q9_SOLUTION:
+STEP_1: From x^2 + 1/x^2 = 1, we need (x + 1/x)^2.
+STEP_2: (x + 1/x)^2 = x^2 + 1/x^2 + 2 = 1 + 2 = 3.
+FINAL_ANSWER: 3
+Q10_SOLUTION:
+STEP_1: x^3 + 1/x^3 = (x + 1/x)(x^2 - 1 + 1/x^2).
+STEP_2: From Q8, we know x^2 + 1/x^2 = 1.
+STEP_3: Formula becomes (x + 1/x)(1 - 1) = 0.
+FINAL_ANSWER: 0
+Q11_SOLUTION:
+STEP_1: Given a^2 + b^2 = 9, ab = 3.
+STEP_2: (i) (a-b)^2 = a^2 + b^2 - 2ab = 9 - 6 = 3 (Correct).
+STEP_3: (ii) (a+b)^2 = a^2 + b^2 + 2ab = 9 + 6 = 15 (Correct).
+STEP_4: (iii) a^2 + b^2 + a^2*b^2 = 9 + 3^2 = 9 + 9 = 18 (Correct).
+FINAL_ANSWER: i, ii, iii (Choice ঘ)
+Q12_SOLUTION:
+STEP_1: Given 3a^5 - 6a^4 + 3a + 14.
+STEP_2: (i) Variable is 'a' (Correct).
+STEP_3: (ii) Degree is 5 (Correct).
+STEP_4: (iii) Coeff of a^4 is -6, not 6 (Incorrect).
+FINAL_ANSWER: i, ii (Choice ক)
+Q13_SOLUTION:
+STEP_1: p^3 - 1/64 = p^3 - (1/4)^3.
+STEP_2: Factors: (p - 1/4)(p^2 + p/4 + 1/16).
+STEP_3: (i) is correct, (ii) is incorrect (should be 1/16), (iii) is correct.
+FINAL_ANSWER: i, iii (Choice খ)
+Q14_SOLUTION:
+STEP_1: K in p days, Kh in 2p days. Rates: 1/p and 1/2p.
+STEP_2: Together in 1 day: 1/p + 1/2p = 3/2p.
+STEP_3: Let they work x days together. Work = 3x/2p.
+STEP_4: Remaining work = 1 - 3x/2p = (2p-3x)/2p.
+STEP_5: Kh finishes in r days: (2p-3x)/2p = r*(1/2p) => 2p - 3x = r => x = (2p-r)/3.
+STEP_6: Total time = x + r = (2p - r)/3 + r = (2p + 2r)/3.
+FINAL_ANSWER: 2(p+r)/3
+Q15_SOLUTION:
+STEP_1: Total work in person-hours = 10 persons * 7 days * 6 hours = 420.
+STEP_2: New case: 14 persons * 6 days * h hours = 420.
+STEP_3: 84h = 420 => h = 5.
+FINAL_ANSWER: 5 hours
+Q16_SOLUTION:
+STEP_1: Mita 1 day: 1/10. Rita 1 day: 1/15.
+STEP_2: Together 1 day: 1/10 + 1/15 = 5/30 = 1/6.
+STEP_3: Time = 1 / (1/6) = 6 days.
+FINAL_ANSWER: 6 days
+Q17_SOLUTION:
+STEP_1: Rent = 5700. Let x people supposed to go. Fare = 5700/x.
+STEP_2: (x-5) went. Fare = 5700/(x-5).
+STEP_3: 5700/(x-5) - 5700/x = 3.
+STEP_4: Solving: 5700*5 = 3x(x-5) => x^2 - 5x - 9500 = 0.
+STEP_5: (x-100)(x+95) = 0 => x = 100.
+STEP_6: Actually went: 100 - 5 = 95.
+FINAL_ANSWER: 95
+Q18_SOLUTION:
+STEP_1: Boat speed x, current speed y.
+STEP_2: Upstream speed: x - y = d/p.
+STEP_3: Downstream speed: x + y = d/q.
+STEP_4: Adding: 2x = d/p + d/q => x = d(p+q)/2pq.
+STEP_5: Subtracting: 2y = d/q - d/p => y = d(p-q)/2pq.
+FINAL_ANSWER: Boat speed = d(p+q)/2pq, current speed = d(p-q)/2pq
+Q19_SOLUTION:
+STEP_1: Total time = 15/(x+y) + 15/(x-y) = 4.
+STEP_2: Distances 5 and 3 in same time: 5/(x+y) = 3/(x-y) => 2x = 8y => x = 4y.
+STEP_3: 15/5y + 15/3y = 4 => 3/y + 5/y = 4 => 8/y = 4 => y = 2.
+STEP_4: x = 4 * 2 = 8.
+FINAL_ANSWER: Boat speed = 8 km/h, current speed = 2 km/h
+Q20_SOLUTION:
+STEP_1: 1st fills 1/t1 portion in 1 min. 2nd empties 1/t2 portion in 1 min.
+STEP_2: Combined rate = 1/t1 - 1/t2 = (t2 - t1)/(t1t2).
+STEP_3: Total time to fill = (t1t2)/(t2 - t1).
+FINAL_ANSWER: (t1*t2)/(t2 - t1)
+
+
+=== EXERCISE 3.5 SOLUTIONS (Part 2) ===
+অনুশীলনী ৩.৫ এর প্রশ্ন ২১ থেকে ৩৮ এর সমাধান নিচে দেওয়া হলো:
+Q21_SOLUTION:
+STEP_1: dhori, choubacchatar mot ayoton = V liter.
+STEP_2: 1m nol die 12 minute-e purno hoy, tai 1m noler purno korar har = V/12 liter/minute.
+STEP_3: 2m nol die 1 minute-e ber hoy 15 liter, tai 2m noler khali korar har = 15 liter/minute.
+STEP_4: duiti nol ekshathe khola thakle 48 minute-e purno hoy, tai shommolito har = V/48 liter/minute.
+STEP_5: proshnanushare, V/12 - 15 = V/48.
+STEP_6: ba, V/12 - V/48 = 15.
+STEP_7: ba, (4V - V) / 48 = 15.
+STEP_8: ba, 3V / 48 = 15.
+STEP_9: ba, V / 16 = 15.
+STEP_10: ba, V = 15 * 16 = 240.
+FINAL_ANSWER: choubacchate mot 240 liter pani dhore।
+Q22_SOLUTION:
+STEP_1: dhori, ko, kho ebong go pabe jothakrome a, b ebong c taka.
+STEP_2: deoya ache, a + b + c = 260.
+STEP_3: proshnanushare, 2a = 3b = 4*c = x (dhori).
+STEP_4: eikhan theke, a = x/2, b = x/3, c = x/4.
+STEP_5: man gulo boshie pai, x/2 + x/3 + x/4 = 260.
+STEP_6: ba, (6x + 4x + 3x) / 12 = 260.
+STEP_7: ba, 13x / 12 = 260.
+STEP_8: ba, 13x = 260 * 12 = 3120.
+STEP_9: ba, x = 3120 / 13 = 240.
+STEP_10: ekhon, ko pabe = 240/2 = 120 taka, kho pabe = 240/3 = 80 taka, ebong go pabe = 240/4 = 60 taka.
+FINAL_ANSWER: ko 120 taka, kho 80 taka ebong go 60 taka pabe।
+Q23_SOLUTION:
+STEP_1: dhori, drobbo-tir kroymulyo = C taka.
+STEP_2: x% khotite bikroymulyo = C * (1 - x/100) taka.
+STEP_3: 3x% labhe bikroymulyo = C * (1 + 3x/100) taka.
+STEP_4: bikroymulyor parthokkyo = C * (1 + 3x/100) - C * (1 - x/100) = 18x.
+STEP_5: ba, C * (1 + 3x/100 - 1 + x/100) = 18x.
+STEP_6: ba, C * (4x / 100) = 18x.
+STEP_7: ba, C * (x / 25) = 18x.
+STEP_8: ba, C / 25 = 18.
+STEP_9: ba, C = 18 * 25 = 450.
+FINAL_ANSWER: drobbo-tir kroymulyo 450 taka।
+Q24_SOLUTION:
+STEP_1: dhori, kolom-tir kroymulyo = x taka.
+STEP_2: 10% labhe bikroymulyo = x + (x * 10/100) = 1.1x taka.
+STEP_3: proshnanushare, 1.1x = 11.
+STEP_4: ba, x = 11 / 1.1 = 10.
+FINAL_ANSWER: kolom-tir kroymulyo 10 taka।
+Q25_SOLUTION:
+STEP_1: dhori, khata-tir kroymulyo = x taka.
+STEP_2: 36 takay bikroy korle khoti hoy = (x - 36) taka.
+STEP_3: 72 takay bikroy korle labh hoy = (72 - x) taka.
+STEP_4: proshnanushare, labh = 2 * khoti.
+STEP_5: ba, 72 - x = 2 * (x - 36).
+STEP_6: ba, 72 - x = 2x - 72.
+STEP_7: ba, 3x = 144.
+STEP_8: ba, x = 144 / 3 = 48.
+FINAL_ANSWER: khata-tir kroymulyo 48 taka।
+Q26_SOLUTION:
+STEP_1: dhori, munafar har = r.
+STEP_2: 300 takar 4 bochorer munafa I1 = 300 * 4 * r = 1200r.
+STEP_3: 400 takar 5 bochorer munafa I2 = 400 * 5 * r = 2000r.
+STEP_4: proshnanushare, I1 + I2 = 128.
+STEP_5: ba, 1200r + 2000r = 128.
+STEP_6: ba, 3200r = 128.
+STEP_7: ba, r = 128 / 3200 = 4 / 100 = 4%.
+FINAL_ANSWER: munafar har 4%।
+Q27_SOLUTION:
+STEP_1: deoya ache, r = 4% = 4/100, bochor n = 2, parthokkyo = 1 taka.
+STEP_2: dhori, muldhon = P.
+STEP_3: shorol munafa SI = P * n * r = P * 2 * 0.04 = 0.08P.
+STEP_4: chokrobridhi munafa CI = P * (1 + r)^n - P = P * (1.04)^2 - P = 1.0816P - P = 0.0816P.
+STEP_5: parthokkyo = 0.0816P - 0.08P = 0.0016P.
+STEP_6: proshnanushare, 0.0016P = 1.
+STEP_7: ba, P = 1 / 0.0016 = 10000 / 16 = 625.
+FINAL_ANSWER: muldhon 625 taka।
+Q28_SOLUTION:
+STEP_1: dhori, ashol = P ebong har = r.
+STEP_2: 3 bochorer shobridhimul = P + 3Pr = 460. (Shorol munafa dhora hoyeche)
+STEP_3: 5 bochorer shobridhimul = P + 5Pr = 600.
+STEP_4: biyog kore pai, (P + 5Pr) - (P + 3Pr) = 600 - 460.
+STEP_5: ba, 2Pr = 140, tai Pr = 70.
+STEP_6: P = 460 - 3*(70) = 460 - 210 = 250.
+STEP_7: Pr = 70 theke পাই, 250 * r = 70.
+STEP_8: ba, r = 70 / 250 = 7 / 25 = 28 / 100 = 28%.
+FINAL_ANSWER: ashol 250 taka ebong munafar har 28%।
+Q29_SOLUTION:
+STEP_1: deoya ache, r = 5% = 5/100, n = 13, A = 990 taka.
+STEP_2: formula: A = P * (1 + n*r).
+STEP_3: ba, 990 = P * (1 + 13 * 5/100).
+STEP_4: ba, 990 = P * (1 + 65/100) = P * (165/100).
+STEP_5: ba, P = (990 * 100) / 165 = 6 * 100 = 600.
+FINAL_ANSWER: ashol 600 taka।
+Q30_SOLUTION:
+STEP_1: deoya ache, r = 5% = 5/100, n = 12, A = 1280 taka.
+STEP_2: formula: A = P * (1 + n*r).
+STEP_3: ba, 1280 = P * (1 + 12 * 5/100).
+STEP_4: ba, 1280 = P * (1 + 60/100) = P * (160/100).
+STEP_5: ba, P = (1280 * 100) / 160 = 8 * 100 = 800.
+FINAL_ANSWER: ashol 800 taka।
+Q31_SOLUTION:
+STEP_1: deoya ache, P = 8000, n = 3, r = 5% = 0.05.
+STEP_2: shorol munafa SI = Pnr = 8000 * 3 * 0.05 = 1200 taka.
+STEP_3: chokrobridhi munafa CI = P * (1+r)^n - P = 8000 * (1.157625) - 8000 = 9261 - 8000 = 1261 taka.
+STEP_4: parthokkyo = 1261 - 1200 = 61.
+FINAL_ANSWER: munafar parthokkyo 61 taka।
+Q32_SOLUTION:
+STEP_1: deoya ache, x = 15, P = 2300.
+STEP_2: dhori, bikroymulyo (VAT chhara) = S.
+STEP_3: VAT shoh bikroymulyo P = S + S * (x/100) = S * (1 + x/100).
+STEP_4: ba, 2300 = S * (1 + 15/100) = S * (115/100).
+STEP_5: ba, S = (2300 * 100) / 115 = 20 * 100 = 2000.
+STEP_6: VAT er poriman = P - S = 2300 - 2000 = 300.
+FINAL_ANSWER: VAT er poriman 300 taka।
+Q33_SOLUTION:
+(ko) STEP_1: x + 1/x = 3. ba, (x^2 + 1) / x = 3. ba, x^2 + 1 = 3x. ba, x^2 - 3x + 1 = 0.
+(kho) STEP_1: (x - 1/x)^2 = (x + 1/x)^2 - 4 = 3^2 - 4 = 5. tai, x - 1/x = sqrt(5).
+(kho) STEP_2: x^3 - 1/x^3 = (x - 1/x)^3 + 3*(x - 1/x) = (sqrt(5))^3 + 3sqrt(5) = 5sqrt(5) + 3sqrt(5) = 8sqrt(5).
+(go) STEP_1: x^2 + 1/x^2 = (x + 1/x)^2 - 2 = 9 - 2 = 7.
+(go) STEP_2: x^3 + 1/x^3 = (x + 1/x)^3 - 3*(x + 1/x) = 27 - 9 = 18.
+(go) STEP_3: (x^2 + 1/x^2)(x^3 + 1/x^3) = x^5 + 1/x + x + 1/x^5.
+(go) STEP_4: ba, 7 * 18 = x^5 + 1/x^5 + (x + 1/x). ba, 126 = x^5 + 1/x^5 + 3.
+(go) STEP_5: ba, x^5 + 1/x^5 = 123.
+FINAL_ANSWER: (ko) x^2 - 3x + 1 = 0, (kho) 8sqrt(5), (go) x^5 + 1/x^5 = 123 promanito।
+Q34_SOLUTION:
+(ko) STEP_1: x = shodoshyo shonkhya.
+(ko) STEP_2: joton shodoshyo, protteke tar 100-gun chanda dey, tai protteker chanda = 100x taka.
+(ko) STEP_3: mot chanda A = x * (100x) = 100x^2 taka.
+(kho) STEP_1: 4 jon chanda na deoyay shodoshyo holo (x-4).
+(kho) STEP_2: proshnanushare, mot chanda A / (x-4) = (100x + 500).
+(kho) STEP_3: ba, 100x^2 = (100x + 500)(x-4) = 100x^2 - 400x + 500x - 2000.
+(kho) STEP_4: ba, 100*x = 2000. ba, x = 20.
+(kho) STEP_5: A = 100 * (20)^2 = 40000 taka.
+(go) STEP_1: P1 = 40000 / 4 = 10000. SI1 = 10000 * 2 * 0.05 = 1000.
+(go) STEP_2: P2 = 40000 - 10000 = 30000. SI2 = 30000 * 2 * 0.04 = 2400.
+(go) STEP_3: Total SI = 1000 + 2400 = 3400.
+FINAL_ANSWER: (ko) A = 100x^2, (kho) x = 20, A = 40000 taka, (go) mot munafa 3400 taka।
+Q35_SOLUTION:
+(ko) STEP_1: dhori mot shonkhya = x. Rent per head = 2400/x.
+(ko) STEP_2: 10 jon na asay per head = 2400/(x-10).
+(ko) STEP_3: proshnanushare, 2400/(x-10) - 2400/x = 8. Solv kore pai x = 60.
+(ko) STEP_4: Mathapichu bridhi 8 taka holo na asha jatri shonkhya (10) er kototuku? (8/10)100 = 80%.
+(kho) STEP_1: attendees = 60 - 10 = 50 jon.
+(kho) STEP_2: Rent paid = 2400 / 50 = 48 taka.
+(go) STEP_1: P = 2400, r = 0.05, n = 13. SI = 2400130.05 = 1560.
+(go) STEP_2: CI = 2400(1.05)^13 - 2400 = 2400*1.8856 - 2400 = 4525.44 - 2400 = 2125.44.
+(go) STEP_3: Diff = 2125.44 - 1560 = 565.44 (Approx).
+FINAL_ANSWER: (ko) 80%, (kho) 48 taka, (go) munafar parthokkyo 565.44 taka pray।
+Q36_SOLUTION:
+STEP_1: shrot na thakle shomoy t0 = 2d / v.
+STEP_2: shrot thakle jete shomoy t1 = d / (v+u), firte shomoy t2 = d / (v-u).
+STEP_3: mot shomoy t = d/(v+u) + d/(v-u) = d*(v-u+v+u) / (v^2 - u^2) = 2dv / (v^2 - u^2).
+STEP_4: t / t0 = (2dv / (v^2 - u^2)) / (2d / v) = v^2 / (v^2 - u^2).
+STEP_5: jehetu v > u, tai v^2 > v^2 - u^2, fole t / t0 > 1. ortho t > t0.
+FINAL_ANSWER: shrot thakle shomoy beshi lagbe।
+Q37_SOLUTION:
+STEP_1: dhori ghash ache G ebong bridhi g per day. cow eats c per day.
+STEP_2: G + 30g = 1730c = 510c. G + 24g = 1924c = 456c.
+STEP_3: biyog kore, 6g = 54c => g = 9c. tai G = 510c - 270c = 240c.
+STEP_4: dhori shurute x ti goru chilo. 6 din ghsh khay => consumed = 6xc.
+STEP_5: 4 ti bikroyer por (x-4) jon 2 din khay => consumed = 2*(x-4)c.
+STEP_6: mot consumption = initial ghash + 8 diner growth = 240c + 89c = 312c.
+STEP_7: equation: 6x + 2x - 8 = 312. ba, 8x = 320. ba, x = 40.
+FINAL_ANSWER: shurute dolti-te 40-ti goru chilo।
+Q38_SOLUTION:
+STEP_1: dhori, x ki.mi distance 1m bhai ghoray chore jay, tarpork ghora rakhye walks kor.
+STEP_2: 2m bhai walk kore giye ghorata pick kore rode kore fair-e pouchay.
+STEP_3: shomoy kom lage jodi tara ekshathe pouchay.
+STEP_4: speed: walk = 4, horse = 10. distance = 20.
+STEP_5: calculation anushare, horse share factor kaj korle tara 34/11 ghontay pouchate pare.
+STEP_6: total time = (14/11) [ride] + (6/11) [horse empty return setup] + (14/11) [ride] = 34/11 hours.
+FINAL_ANSWER: tara mot 34/11 ghontay (pray 3.09 ghonta) fair-e pouchate parbe।
+
+========================================
