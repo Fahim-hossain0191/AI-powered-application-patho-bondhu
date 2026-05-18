@@ -692,7 +692,7 @@ function CTASection({ onEnter }) {
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 14, alignItems: "center" }}>
-          <Link href="/pages/home">
+          <Link href="/home">
           <button 
             style={{
               padding: "18px 52px", borderRadius: 999, fontWeight: 800, fontSize: 17,
@@ -713,7 +713,8 @@ function CTASection({ onEnter }) {
           </button>
           
           </Link>
-
+          <Link href={'/signin'}>
+          
           <button 
             style={{
               padding: "16px 52px", borderRadius: 999, fontWeight: 700, fontSize: 16,
@@ -733,6 +734,7 @@ function CTASection({ onEnter }) {
             }}>
             🔑 &nbsp; লগইন করুন — Sign In
           </button>
+          </Link>
         </div>
 
         <div style={{ width: 1, height: 50, background: "linear-gradient(180deg, #FFD700, transparent)",

@@ -3,7 +3,8 @@ const { v4: uuidv4 } = require('uuid');
 const authModel = require('./auth.model');
 const jwtUtils = require('../../utils/jwt.utils');
 
-const register = async ({ name, email, password, class_level, gender, phone_number }) => {
+const register = async (userData) => {
+  const { full_name, email, password, class: user_class, phone, school_name, board_name, profile_image_url } = userData;
   // Email already আছে কিনা check
   const existing = await authModel.findUserByEmail(email);
   if (existing) {
@@ -15,13 +16,9 @@ const register = async ({ name, email, password, class_level, gender, phone_numb
 
   // User তৈরি করো
   const userId = await authModel.createUser({
-    name, email, password_hash, class_level, gender, phone_number,
+    full_name, email, password_hash, class: user_class, phone, school_name, board_name, profile_image_url
   });
-  await Promise.all([
-    authModel.saveUserHobbies(userId, hobbies),
-    authModel.saveUserFavSubjects(userId, favourite_subjects),
-    authModel.saveUserLearnStyles(userId, learning_styles),
-  ]);
+
   // Tokens তৈরি করো
   const payload = { id: userId, email };
   const accessToken  = jwtUtils.generateAccessToken(payload);

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import IntroPage from "./intro/page";
+
+import Intro from "./(main)/intro/page";
 
 export default function Home() {
   return (
@@ -61,7 +62,7 @@ export default function Home() {
           </a>
         </div>
       </main> */}
-      <IntroPage></IntroPage>
+      <Intro></Intro>
     </div>
   );
 }

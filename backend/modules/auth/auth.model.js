@@ -4,24 +4,28 @@ const findUserByEmail = async (email) => {
   const [rows] = await db.query(
     'SELECT * FROM users WHERE email = ? LIMIT 1', [email]
   );
+  if (rows[0]) {
+    rows[0].id = rows[0].user_id;
+  }
   return rows[0] || null;
 };
 
 const findUserById = async (id) => {
   const [rows] = await db.query(
-    `SELECT id, name, email, class_level, gender, phone_number,
-            medium, avatar_url, total_points, streak_days, created_at
-     FROM users WHERE id = ? LIMIT 1`, [id]
+    `SELECT user_id as id, full_name, email, class, phone,
+            school_name, board_name, profile_image_url, created_at
+     FROM users WHERE user_id = ? LIMIT 1`, [id]
   );
   return rows[0] || null;
 };
 
-const createUser = async ({ name, email, password_hash, class_level, gender, phone_number, medium }) => {
+const createUser = async (userData) => {
+  const { full_name, email, password_hash, class: user_class, phone, school_name, board_name, profile_image_url } = userData;
   const [result] = await db.query(
     `INSERT INTO users 
-     (name, email, password_hash, class_level, gender, phone_number, medium)
-     VALUES (?, ?, ?, ?, ?, ?, ?)`,
-    [name, email, password_hash, class_level, gender || null, phone_number || null, medium || null]
+     (full_name, email, password_hash, class, phone, school_name, board_name, profile_image_url)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [full_name, email, password_hash, user_class, phone || null, school_name || null, board_name || null, profile_image_url || null]
   );
   return result.insertId;
 };
@@ -89,8 +93,8 @@ const findOrCreateGoogleUser = async ({ name, email, avatar_url }) => {
   let user = await findUserByEmail(email);
   if (!user) {
     const [result] = await db.query(
-      `INSERT INTO users (name, email, password_hash, class_level, avatar_url, is_verified)
-       VALUES (?, ?, 'GOOGLE_AUTH', 6, ?, true)`,
+      `INSERT INTO users (full_name, email, password_hash, class, profile_image_url)
+       VALUES (?, ?, 'GOOGLE_AUTH', '9-10', ?)`,
       [name, email, avatar_url]
     );
     user = await findUserById(result.insertId);

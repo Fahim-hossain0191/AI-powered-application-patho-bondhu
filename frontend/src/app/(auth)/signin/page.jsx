@@ -2,11 +2,51 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
- 
-export default function LoginPage() {
+export default function SignIn() {
+  const router = useRouter();
   const [showPw, setShowPw] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ contact: "", password: "" });
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (!form.contact || !form.password) {
+      alert("Please enter email and password");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: form.contact, // the backend expects 'email'
+          password: form.password
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        // Save user data and token to localStorage
+        localStorage.setItem("user", JSON.stringify(data.data.user));
+        localStorage.setItem("accessToken", data.data.accessToken);
+        
+        // Redirect to home
+        router.push("/home");
+        // Force refresh to update Navbar state
+        router.refresh();
+      } else {
+        alert(data.message || "Login failed");
+      }
+    } catch (err) {
+      alert("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
  
   const dots = [
     { top: "12%", left: "8%", color: "#4fc3f7", size: 10 },
@@ -99,10 +139,14 @@ export default function LoginPage() {
         </div>
  
         {/* Login button */}
-        <Link href="/pages/home">
-        
-        <button style={s.loginBtn}>লগইন করি</button>
-        </Link>
+        {/* Login button */}
+        <button 
+          style={s.loginBtn} 
+          onClick={handleLogin}
+          disabled={loading}
+        >
+          {loading ? "লগইন হচ্ছে..." : "লগইন করি"}
+        </button>
  
         {/* Create account button */}
         <button style={s.createBtn}>
