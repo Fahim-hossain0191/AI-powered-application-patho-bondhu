@@ -1,0 +1,521 @@
+========================================
+CHAPTER: অধ্যায় ৩ — বীজগাণিতিক রাশি
+========================================
+
+=== CONCEPTS ===
+বইটিতে দেওয়া অধ্যায় ৩ "বীজগাণিতিক রাশি" এর সকল তত্ত্বীয় ধারণা (Concepts) নিচে দেওয়া হলো:
+CONCEPT_1_TITLE: বীজগাণিতিক রাশি, ধ্রুবক ও চলক
+CONCEPT_1_CONTENT: সংখ্যা নির্দেশক প্রতীক এবং প্রক্রিয়া চিহ্ন এর অর্থবোধক বিন্যাসকে বীজগাণিতিক রাশি বলা হয়। যেমন- 2a + 3b - 4c একটি বীজগাণিতিক রাশি। বীজগাণিতিক রাশিতে ব্যবহৃত সংখ্যাগুলো ধ্রুবক (constant), এদের মান নির্দিষ্ট। আর অক্ষর প্রতীকগুলো চলক (variables), এদের মান নির্দিষ্ট নয়, এরা বিভিন্ন মান ধারণ করতে পারে।
+CONCEPT_1_EXAMPLE: 2a + 3b - 4c রাশিতে 2, 3, 4 সহগ এবং a, b, c চলক হিসেবে ব্যবহৃত হতে পারে।
+CONCEPT_1_IMPORTANCE: high
+CONCEPT_1_REASON: বীজগণিতের একদম প্রাথমিক ধারণা হিসেবে এটি অত্যন্ত গুরুত্বপূর্ণ। রাশির গঠন ও পদের পার্থক্য বুঝতে এটি লাগে।
+CONCEPT_2_TITLE: বর্গের সূত্রাবলী — (a+b)^2 এবং (a-b)^2
+CONCEPT_2_CONTENT: বীজগাণিতিক প্রতীক দ্বারা প্রকাশিত যেকোনো সাধারণ নিয়ম বা সিদ্ধান্তকে বীজগাণিতিক সূত্র বলা হয়।
+সূত্র ১. (a+b)^2 = a^2 + 2ab + b^2
+সূত্র ২. (a-b)^2 = a^2 - 2ab + b^2
+CONCEPT_2_EXAMPLE: উদাহরণ ১. (4x + 5y) এর বর্গ কত? সমাধান: (4x + 5y)^2 = (4x)^2 + 2*(4x)*(5y) + (5y)^2 = 16x^2 + 40xy + 25y^2
+CONCEPT_2_IMPORTANCE: high
+CONCEPT_2_REASON: এই সূত্র দুটি বোর্ড পরীক্ষায় মান নির্ণয় ও সরলীকরণের অংকে সরাসরি ব্যবহৃত হয়।
+CONCEPT_3_TITLE: বর্গের অনুসিদ্ধান্তসমূহ
+CONCEPT_3_CONTENT: সূত্র থেকে প্রাপ্ত সিদ্ধান্তকে অনুসিদ্ধান্ত বলা হয়।
+১. a^2 + b^2 = (a+b)^2 - 2ab
+২. a^2 + b^2 = (a-b)^2 + 2ab
+৩. (a+b)^2 = (a-b)^2 + 4ab
+৪. (a-b)^2 = (a+b)^2 - 4ab
+৫. a^2 + b^2 = ((a+b)^2 + (a-b)^2) / 2
+৬. ab = ((a+b)/2)^2 - ((a-b)/2)^2
+CONCEPT_3_EXAMPLE: উদাহরণ ৫. সরল কর: (5x + 7y + 3z)^2 + 2(7x - 7y - 3z)(5x + 7y + 3z) + (7x - 7y - 3z)^2। এখানে (a+b)^2 সূত্র ব্যবহার করে মান পাওয়া যায় (12x)^2 = 144x^2।
+CONCEPT_3_IMPORTANCE: high
+CONCEPT_3_REASON: সৃজনশীল প্রশ্নের (খ) ও (গ) অংশে মান নির্ণয়ের অংক করার জন্য এই অনুসিদ্ধান্তগুলো অপরিহার্য।
+CONCEPT_4_TITLE: দুই রাশির বর্গের অন্তর এবং গুণফল সূত্র
+CONCEPT_4_CONTENT:
+সূত্র ৩. a^2 - b^2 = (a+b)(a-b)
+অর্থাৎ, দুইটি রাশির বর্গের বিয়োগফল = রাশি দুইটির যোগফল * রাশি দুইটির বিয়োগফল।
+সূত্র ৪. (x+a)(x+b) = x^2 + (a+b)x + ab
+CONCEPT_4_EXAMPLE: উদাহরণ ১১. (2x + 3y)(4x - 5y) কে দুইটি বর্গের বিয়োগফলরূপে প্রকাশ কর। সমাধান: সূত্র ab = ((a+b)/2)^2 - ((a-b)/2)^2 ব্যবহার করে পাওয়া যায় (3x-y)^2 - (4y-x)^2।
+CONCEPT_4_IMPORTANCE: medium
+CONCEPT_4_REASON: উৎপাদকে বিশ্লেষণ এবং 'বর্গের অন্তর' হিসেবে প্রকাশের অংকে এটি প্রায়ই আসে।
+CONCEPT_5_TITLE: তিন রাশির বর্গের সূত্র — (a+b+c)^2
+CONCEPT_5_CONTENT:
+সূত্র ৫. (a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca
+অনুসিদ্ধান্ত ৭. a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab+bc+ca)
+অনুসিদ্ধান্ত ৮. 2(ab+bc+ca) = (a+b+c)^2 - (a^2+b^2+c^2)
+CONCEPT_5_EXAMPLE: উদাহরণ ৯. a + b + c = 15 এবং a^2 + b^2 + c^2 = 83 হলে, ab + bc + ca এর মান কত? সমাধান: 2(ab + bc + ca) = (15)^2 - 83 = 225 - 83 = 142। সুতরাং ab + bc + ca = 71।
+CONCEPT_5_IMPORTANCE: high
+CONCEPT_5_REASON: তিনটি রাশির যোগফল বা বর্গ দেওয়া থাকলে তৃতীয় মানটি বের করার জন্য এটি বোর্ড পরীক্ষার অত্যন্ত কমন একটি প্রশ্ন।
+CONCEPT_6_TITLE: ঘনের সূত্রাবলী — (a+b)^3 এবং (a-b)^3
+CONCEPT_6_CONTENT:
+সূত্র ৬. (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 = a^3 + b^3 + 3ab(a+b)
+সূত্র ৭. (a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3 = a^3 - b^3 - 3ab(a-b)
+CONCEPT_6_EXAMPLE: উদাহরণ ১২. 2x + 3y এর ঘন নির্ণয় কর। সমাধান: (2x + 3y)^3 = (2x)^3 + 3(2x)^2(3y) + 3(2x)(3y)^2 + (3y)^3 = 8x^3 + 36x^2y + 54xy^2 + 27*y^3
+CONCEPT_6_IMPORTANCE: high
+CONCEPT_6_REASON: অনুশীলনী ৩.২ এর ঘন নির্ণয় এবং সরলীকরণের অংকে এটি প্রধান সূত্র।
+CONCEPT_7_TITLE: ঘনের অনুসিদ্ধান্তসমূহ
+CONCEPT_7_CONTENT:
+১. a^3 + b^3 = (a+b)^3 - 3ab(a+b)
+২. a^3 - b^3 = (a-b)^3 + 3ab(a-b)
+CONCEPT_7_EXAMPLE: উদাহরণ ১৬. a = sqrt(3) + sqrt(2) হলে প্রমাণ কর যে, a^3 + 1/a^3 = 18*sqrt(3)। সমাধান: a + 1/a বের করে ওপরের অনুসিদ্ধান্ত ব্যবহার করে প্রমাণ করা হয়েছে।
+CONCEPT_7_IMPORTANCE: high
+CONCEPT_7_REASON: বোর্ড পরীক্ষায় ঘনের মান নির্ণয়ের ক্ষেত্রে এই অনুসিদ্ধান্তগুলো সবচেয়ে বেশি ব্যবহৃত হয়।
+CONCEPT_8_TITLE: a^3 + b^3 এবং a^3 - b^3 এর উৎপাদক সূত্র
+CONCEPT_8_CONTENT: উৎপাদকে বিশ্লেষণের সময় ঘনের এই রূপগুলো ব্যবহৃত হয়:
+সূত্র ৮. a^3 + b^3 = (a+b)(a^2 - ab + b^2)
+সূত্র ৯. a^3 - b^3 = (a-b)(a^2 + ab + b^2)
+CONCEPT_8_EXAMPLE: উদাহরণ ২৮. উৎপাদকে বিশ্লেষণ কর: 8a^3 + 27b^3। সমাধান: (2a)^3 + (3b)^3 = (2a + 3b)((2a)^2 - (2a)(3b) + (3b)^2) = (2a + 3b)(4a^2 - 6ab + 9b^2)।
+CONCEPT_8_IMPORTANCE: high
+CONCEPT_8_REASON: উৎপাদকে বিশ্লেষণ করার জন্য এই দুটি সূত্র মুখস্থ থাকা আবশ্যক।
+CONCEPT_9_TITLE: উৎপাদকে বিশ্লেষণ (Factorization) এবং এর পদ্ধতিসমূহ
+CONCEPT_9_CONTENT: কোনো রাশি দুই বা ততোধিক রাশির গুণফলের সমান হলে, শেষোক্ত রাশিগুলোর প্রত্যেকটিকে প্রথমোক্ত রাশির উৎপাদক বা গুণনীয়ক বলা হয়। পদ্ধতিগুলো হলো:
+১. সাধারণ উৎপাদক (Common factor) বের করা।
+২. পূর্ণবর্গাকারে প্রকাশ করা।
+৩. দুইটি বর্গের অন্তররূপে প্রকাশ করে a^2 - b^2 সূত্র প্রয়োগ।
+৪. মধ্যপদ বিভক্তিকরণ (Middle term splitting)।
+৫. ঘন আকারে প্রকাশ।
+CONCEPT_9_EXAMPLE: উদাহরণ ১৮. 3a^2b + 6ab^2 + 12a^2b^2 = 3ab(a + 2b + 4ab) [সাধারণ উৎপাদক পদ্ধতিতে]
+CONCEPT_9_IMPORTANCE: high
+CONCEPT_9_REASON: সৃজনশীল প্রশ্নের (ক) মার্কের জন্য উৎপাদকে বিশ্লেষণ প্রায় সবসময়ই আসে।
+CONCEPT_10_TITLE: মধ্যপদ বিভক্তিকরণ (Middle term splitting)
+CONCEPT_10_CONTENT: x^2 + (a+b)x + ab = (x+a)(x+b) এই সূত্রের ভিত্তিতে মাঝখানের পদটিকে এমনভাবে দুই ভাগে ভাগ করা হয় যেন তাদের যোগফল মাঝখানের সহগের সমান এবং গুণফল প্রান্তীয় রাশিগুলোর গুণফলের সমান হয়।
+CONCEPT_10_EXAMPLE: উদাহরণ ২৪. x^2 + 12x + 35। সমাধান: x^2 + (5+7)x + 5*7 = x^2 + 5x + 7x + 35 = x(x+5) + 7(x+5) = (x+5)(x+7)।
+CONCEPT_10_IMPORTANCE: high
+CONCEPT_10_REASON: প্রায় সব ধরনের বীজগণিতীয় সমীকরণ সমাধানে এই পদ্ধতিটি সবচেয়ে বেশি কাজে লাগে।
+CONCEPT_11_TITLE: ভাগশেষ উপপাদ্য (Remainder Theorem)
+CONCEPT_11_CONTENT: যদি f(x) কে (x - a) দ্বারা ভাগ করা হয়, তবে ভাগশেষ হয় f(a)। অর্থাৎ, ভাজক x - a হলে x = a বসালে যা পাওয়া যায় তাই ভাগশেষ।
+CONCEPT_11_EXAMPLE: উদাহরণ ৩০. x^3 - x - 6 কে উৎপাদকে বিশ্লেষণ কর। এখানে f(2) = 2^3 - 2 - 6 = 0, তাই (x - 2) একটি উৎপাদক।
+CONCEPT_11_IMPORTANCE: medium
+CONCEPT_11_REASON: উচ্চঘাতের বহুপদী রাশির ভাগশেষ বের করতে বা উৎপাদক নির্ণয়ে এটি ব্যবহৃত হয়।
+CONCEPT_12_TITLE: উৎপাদক উপপাদ্য (Factor Theorem)
+CONCEPT_12_CONTENT: যদি f(a) = 0 হয়, তবে (x - a) রাশি f(x) এর একটি উৎপাদক হবে। একে শূন্যায়ন পদ্ধতি (Vanishing method) বলা হয়।
+CONCEPT_12_EXAMPLE: উদাহরণ ৩৩. g(a) = a^3 + a^2 + 10a - 8 হলে g(a) কে (a - 2) দ্বারা ভাগ করলে ভাগশেষ কত? সমাধান: ভাগশেষ হবে g(2) = 2^3 + 2^2 + 10(2) - 8 = 24।
+CONCEPT_12_IMPORTANCE: high
+CONCEPT_12_REASON: জটিল রাশির উৎপাদকে বিশ্লেষণের জন্য এটি একটি শক্তিশালী পদ্ধতি।
+CONCEPT_13_TITLE: বাস্তব সমস্যা সমাধানে বীজগাণিতিক সূত্র গঠন (Method Explanation)
+CONCEPT_13_CONTENT: বাস্তব সমস্যা সমাধানে ধাপগুলো হলো:
+১. সমস্যাটি পর্যবেক্ষণ করে অজ্ঞাত রাশি চিহ্নিত করা।
+২. অজ্ঞাত রাশিকে চলক (যেমন x) হিসেবে ধরা।
+৩. প্রদত্ত শর্ত ব্যবহার করে সমস্যাটিকে সমীকরণে প্রকাশ করা।
+৪. সমীকরণটি সমাধান করে অজ্ঞাত রাশির মান নির্ণয় করা।
+CONCEPT_13_EXAMPLE: উদাহরণ ৩৪. সমিতি সদস্যদের চাঁদা বৃদ্ধি বিষয়ক সমস্যা সমাধান।
+CONCEPT_13_IMPORTANCE: high
+CONCEPT_13_REASON: সৃজনশীল প্রশ্নের বাস্তবভিত্তিক অংকগুলো এই নিয়ম অনুযায়ী করতে হয়।
+CONCEPT_14_TITLE: সরল মুনাফা ও চক্রবৃদ্ধি মুনাফার সূত্র
+CONCEPT_14_CONTENT:
+সরল মুনাফা: I = Pnr
+যেখানে P = মূলধন, n = সময়, r = মুনাফার হার। সমূল মূলধন A = P + I = P(1 + nr)।
+চক্রবৃদ্ধি মুনাফা: C = P(1 + r)^n
+যেখানে C = চক্রবৃদ্ধি মূলধন।
+CONCEPT_14_EXAMPLE: উদাহরণ ৪০. সরল মুনাফা সংক্রান্ত। এবং উদাহরণ ৪১. চক্রবৃদ্ধি মুনাফা সংক্রান্ত।
+CONCEPT_14_IMPORTANCE: medium
+CONCEPT_14_REASON: এই চ্যাপ্টারের শেষ অনুশীলনী ৩.৫ এ এই সূত্রগুলো ব্যবহার করে অংক থাকে।
+CONCEPT_15_TITLE: কাজ, সময়, দূরত্ব ও গতিবেগ সূত্রাবলী
+CONCEPT_15_CONTENT:
+১. কাজ ও সময়: W = qnx [W = মোট কাজ, q = হার, n = জনশক্তি, x = মোট সময়]
+২. দূরত্ব ও গতিবেগ: d = vt [d = দূরত্ব, v = গতিবেগ, t = সময়]
+৩. চৌবাচ্চা ও নল: Q(t) = Q0 +/- qt [Q0 = শুরুর পরিমাণ, q = প্রবেশের হার, t = সময়]
+CONCEPT_15_EXAMPLE: উদাহরণ ৩৫. রফিক ও শফিক একত্রে কত দিনে একটি কাজ শেষ করতে পারবে। সমীকরণ: d/10 + d/15 = 1।
+CONCEPT_15_IMPORTANCE: medium
+CONCEPT_15_REASON: বাস্তবমুখী গাণিতিক সমস্যা সমাধানে বিশেষ করে সৃজনশীল প্রশ্নের শেষের দিকে এই সূত্রগুলো দরকার হয়।
+
+=== FORMULAS ===
+ইয়ের অধ্যায় ৩ "বীজগাণিতিক রাশি" থেকে সংগৃহীত সব সূত্র নিচে দেওয়া হলো:
+বর্গ সংবলিত সূত্রাবলি ও অনুসিদ্ধান্ত:
+FORMULA_1: (a+b)^2 = a^2 + 2ab + b^2
+FORMULA_1_WHEN: দুটি রাশির যোগফলের বর্গ নির্ণয়ে
+FORMULA_1_VARIABLES: a এবং b হলো যেকোনো দুটি বীজগাণিতিক রাশি
+FORMULA_1_IMPORTANCE: high
+FORMULA_2: (a-b)^2 = a^2 - 2ab + b^2
+FORMULA_2_WHEN: দুটি রাশির বিয়োগফলের বর্গ নির্ণয়ে
+FORMULA_2_VARIABLES: a এবং b হলো যেকোনো দুটি বীজগাণিতিক রাশি
+FORMULA_2_IMPORTANCE: high
+FORMULA_3: a^2 + b^2 = (a+b)^2 - 2ab
+FORMULA_3_WHEN: রাশির বর্গের সমষ্টির মান নির্ণয়ে (যখন যোগফল ও গুণফল জানা থাকে)
+FORMULA_3_VARIABLES: a এবং b দুটি রাশি
+FORMULA_3_IMPORTANCE: high
+FORMULA_4: a^2 + b^2 = (a-b)^2 + 2ab
+FORMULA_4_WHEN: রাশির বর্গের সমষ্টির মান নির্ণয়ে (যখন বিয়োগফল ও গুণফল জানা থাকে)
+FORMULA_4_VARIABLES: a এবং b দুটি রাশি
+FORMULA_4_IMPORTANCE: high
+FORMULA_5: (a+b)^2 = (a-b)^2 + 4ab
+FORMULA_5_WHEN: যোগফলের বর্গের মান নির্ণয়ে যখন বিয়োগফল ও গুণফল জানা থাকে
+FORMULA_5_VARIABLES: a এবং b দুটি রাশি
+FORMULA_5_IMPORTANCE: medium
+FORMULA_6: (a-b)^2 = (a+b)^2 - 4ab
+FORMULA_6_WHEN: বিয়োগফলের বর্গের মান নির্ণয়ে যখন যোগফল ও গুণফল জানা থাকে
+FORMULA_6_VARIABLES: a এবং b দুটি রাশি
+FORMULA_6_IMPORTANCE: medium
+FORMULA_7: a^2 + b^2 = ((a+b)^2 + (a-b)^2) / 2
+FORMULA_7_WHEN: বর্গের সমষ্টি নির্ণয়ে যখন যোগফল ও বিয়োগফল জানা থাকে
+FORMULA_7_VARIABLES: a এবং b দুটি রাশি
+FORMULA_7_IMPORTANCE: medium
+FORMULA_8: ab = ((a+b)/2)^2 - ((a-b)/2)^2
+FORMULA_8_WHEN: দুটি রাশির গুণফলকে দুটি বর্গের অন্তররূপে প্রকাশ করতে
+FORMULA_8_VARIABLES: a ও b দুটি রাশি
+FORMULA_8_IMPORTANCE: high
+FORMULA_9: a^2 - b^2 = (a+b)(a-b)
+FORMULA_9_WHEN: দুটি বর্গের অন্তর বা রাশির উৎপাদকে বিশ্লেষণে
+FORMULA_9_VARIABLES: a এবং b দুটি রাশি
+FORMULA_9_IMPORTANCE: high
+FORMULA_10: (x+a)(x+b) = x^2 + (a+b)x + ab
+FORMULA_10_WHEN: দুটি দ্বিপদী রাশির গুণফল নির্ণয়ে
+FORMULA_10_VARIABLES: x সাধারণ চলক, a ও b ধ্রুবক
+FORMULA_10_IMPORTANCE: high
+FORMULA_11: (a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca
+FORMULA_11_WHEN: তিনটি রাশির যোগফলের বর্গ নির্ণয়ে
+FORMULA_11_VARIABLES: a, b, c তিনটি ভিন্ন রাশি
+FORMULA_11_IMPORTANCE: high
+FORMULA_12: a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab + bc + ca)
+FORMULA_12_WHEN: তিনটি রাশির বর্গের সমষ্টির মান নির্ণয়ে
+FORMULA_12_VARIABLES: a, b, c তিনটি রাশি
+FORMULA_12_IMPORTANCE: high
+FORMULA_13: 2(ab + bc + ca) = (a+b+c)^2 - (a^2 + b^2 + c^2)
+FORMULA_13_WHEN: দুটি করে রাশির গুণফলের সমষ্টির মান নির্ণয়ে
+FORMULA_13_VARIABLES: a, b, c তিনটি রাশি
+FORMULA_13_IMPORTANCE: medium
+ঘন সংবলিত সূত্রাবলি ও অনুসিদ্ধান্ত:
+FORMULA_14: (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+FORMULA_14_WHEN: দুটি রাশির যোগফলের ঘন নির্ণয়ে
+FORMULA_14_VARIABLES: a ও b দুটি রাশি
+FORMULA_14_IMPORTANCE: high
+FORMULA_15: (a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+FORMULA_15_WHEN: দুটি রাশির বিয়োগফলের ঘন নির্ণয়ে
+FORMULA_15_VARIABLES: a ও b দুটি রাশি
+FORMULA_15_IMPORTANCE: high
+FORMULA_16: a^3 + b^3 = (a+b)^3 - 3ab(a+b)
+FORMULA_16_WHEN: ঘনের সমষ্টির মান নির্ণয়ে
+FORMULA_16_VARIABLES: a ও b দুটি রাশি
+FORMULA_16_IMPORTANCE: high
+FORMULA_17: a^3 - b^3 = (a-b)^3 + 3ab(a-b)
+FORMULA_17_WHEN: ঘনের অন্তরের মান নির্ণয়ে
+FORMULA_17_VARIABLES: a ও b দুটি রাশি
+FORMULA_17_IMPORTANCE: high
+FORMULA_18: a^3 + b^3 = (a+b)(a^2 - ab + b^2)
+FORMULA_18_WHEN: ঘনের সমষ্টির উৎপাদকে বিশ্লেষণে
+FORMULA_18_VARIABLES: a ও b দুটি রাশি
+FORMULA_18_IMPORTANCE: high
+FORMULA_19: a^3 - b^3 = (a-b)(a^2 + ab + b^2)
+FORMULA_19_WHEN: ঘনের অন্তরের উৎপাদকে বিশ্লেষণে
+FORMULA_19_VARIABLES: a ও b দুটি রাশি
+FORMULA_19_IMPORTANCE: high
+ভাগশেষ ও উৎপাদক উপপাদ্য:
+FORMULA_20: f(a) = r
+FORMULA_20_WHEN: ভাগশেষ উপপাদ্য অনুযায়ী কোনো বহুপদীকে (x-a) দ্বারা ভাগের ভাগশেষ নির্ণয়ে
+FORMULA_20_VARIABLES: f(x) একটি বহুপদী, a একটি ধ্রুবক, r ভাগশেষ
+FORMULA_20_IMPORTANCE: high
+বাস্তব সমস্যা সমাধানে ব্যবহৃত সূত্রাবলি:
+FORMULA_21: A = qn
+FORMULA_21_WHEN: জনপ্রতি টাকা এবং লোকসংখ্যা থেকে মোট টাকা নির্ণয়ে
+FORMULA_21_VARIABLES: A মোট টাকা, q জনপ্রতি টাকা, n লোকসংখ্যা
+FORMULA_21_IMPORTANCE: medium
+FORMULA_22: W = qnx
+FORMULA_22_WHEN: সময়ের কাজে কাজের পরিমাণ নির্ণয়ে
+FORMULA_22_VARIABLES: W কাজ, q কাজের হার, n জন সংখ্যা, x সময়
+FORMULA_22_IMPORTANCE: low
+FORMULA_23: d = vt
+FORMULA_23_WHEN: সময় ও দূরত্ব বিষয়ক অংকে মোট দূরত্ব নির্ণয়ে
+FORMULA_23_VARIABLES: d দূরত্ব, v গতিবেগ, t সময়
+FORMULA_23_IMPORTANCE: high
+FORMULA_24: I = Pnr
+FORMULA_24_WHEN: সরল মুনাফা নির্ণয়ে
+FORMULA_24_VARIABLES: I মুনাফা, P মূলধন, n সময় (বছর), r মুনাফার হার
+FORMULA_24_IMPORTANCE: high
+FORMULA_25: A = P(1+nr)
+FORMULA_25_WHEN: সরল মুনাফাসহ আসল (সবৃদ্বিমূল) নির্ণয়ে
+FORMULA_25_VARIABLES: A সবৃদ্বিমূল, P মূলধন, n সময়, r মুনাফার হার
+FORMULA_25_IMPORTANCE: high
+FORMULA_26: C = P(1+r)^n
+FORMULA_26_WHEN: চক্রবৃদ্ধি মুনাফায় সবৃদ্বিমূল নির্ণয়ে
+FORMULA_26_VARIABLES: C চক্রবৃদ্ধি সবৃদ্বিমূল, P মূলধন, r মুনাফার হার, n সময়
+FORMULA_26_IMPORTANCE: high
+
+=== EXERCISE 3.1 ===
+অধ্যায় ৩-এর অনুশীলনী ৩.১ থেকে সব প্রশ্ন নিচে দেওয়া হলো:
+Q1_TEXT: সূত্রের সাহায্যে বর্গ নির্ণয় কর:
+ক) 2a + 3b
+খ) x^2 + 2/y^2
+গ) 4y - 5x
+ঘ) 5x^2 - y
+ঙ) 3b - 5c - 2a
+চ) ax - by - cz
+ছ) 2a + 3x - 2y - 5z
+জ) 1007
+Q1_PATTERN: FIND_VALUE
+Q2_TEXT: সরল কর:
+ক) (7p + 3q - 5r)^2 - 2(7p + 3q - 5r)(8p - 4q - 5r) + (8p - 4q - 5r)^2
+খ) (2m + 3n - p)^2 + (2m - 3n + p)^2 - 2(2m + 3n - p)(2m - 3n + p)
+গ) 6.35 * 6.35 + 2 * 6.35 * 3.65 + 3.65 * 3.65
+ঘ) (2345 * 2345 - 759 * 759) / (2345 - 759)
+Q2_PATTERN: SIMPLIFY
+Q3_TEXT: a - b = 4 এবং ab = 60 হলে, a + b এর মান কত?
+Q3_PATTERN: FIND_VALUE
+Q4_TEXT: a + b = 9m এবং ab = 18m^2 হলে, a - b এর মান কত?
+Q4_PATTERN: FIND_VALUE
+Q5_TEXT: x - 1/x = 4 হলে, প্রমাণ কর যে, x^4 + 1/x^4 = 322
+Q5_PATTERN: PROVE
+Q6_TEXT: 2x + 2/x = 3 হলে, x^2 + 1/x^2 এর মান কত?
+Q6_PATTERN: FIND_VALUE
+Q7_TEXT: a + 1/a = 2 হলে, দেখাও যে, a^2 + 1/a^2 = a^4 + 1/a^4
+Q7_PATTERN: PROVE
+Q8_TEXT: a + b = sqrt(7) এবং a - b = sqrt(5) হলে, প্রমাণ কর যে, 8ab(a^2 + b^2) = 24
+Q8_PATTERN: PROVE
+Q9_TEXT: a + b + c = 9 এবং ab + bc + ca = 31 হলে, a^2 + b^2 + c^2 এর মান নির্ণয় কর।
+Q9_PATTERN: FIND_VALUE
+Q10_TEXT: a^2 + b^2 + c^2 = 9 এবং ab + bc + ca = 8 হলে, (a + b + c)^2 এর মান কত?
+Q10_PATTERN: FIND_VALUE
+Q11_TEXT: a + b + c = 6 এবং a^2 + b^2 + c^2 = 14 হলে, (a - b)^2 + (b - c)^2 + (c - a)^2 = কত?
+Q11_PATTERN: FIND_VALUE
+Q12_TEXT: x = 3, y = 4 এবং z = 5 হলে, 9x^2 + 16y^2 + 4z^2 - 24xy - 16yz + 12zx = কত?
+Q12_PATTERN: FIND_VALUE
+Q13_TEXT: (a + 2b)(3a + 2c) কে দুইটি বর্গের বিয়োগফলরূপে প্রকাশ কর।
+Q13_PATTERN: OTHER
+Q14_TEXT: x^2 + 10x + 24 কে দুইটি বর্গের বিয়োগফলরূপে প্রকাশ কর।
+Q14_PATTERN: OTHER
+Q15_TEXT: a^4 + a^2*b^2 + b^4 = 8 এবং a^2 + ab + b^2 = 4 হলে,
+ক) a^2 + b^2 এর মান কত?
+খ) ab এর মান কত?
+Q15_PATTERN: FIND_VALUE
+
+=== EXERCISE 3.2 ===
+অনুশীলনী ৩.২ (বীজগাণিতিক রাশি) থেকে সব প্রশ্ন নিচে দেওয়া হলো:
+Q1_TEXT: ১. সূত্রের সাহায্যে ঘন নির্ণয় কর:
+ক) 2x^2 + 3y^2
+খ) 7m^2 - 2n
+গ) 2a - b - 3c
+Q1_PATTERN: FIND_VALUE
+Q2_TEXT: ২. সরল কর:
+ক) (7x + 3b)^3 - (5x + 3b)^3 - 6x*(7x + 3b)(5x + 3b)
+খ) (a + b + c)^3 - (a - b - c)^3 - 6(b + c){a^2 - (b + c)^2}
+গ) (m + n)^6 - (m - n)^6 - 12mn(m^2 - n^2)^2
+ঘ) (x + y)(x^2 - xy + y^2) + (y + z)(y^2 - yz + z^2) + (z + x)(z^2 - zx + x^2)
+ঙ) (2x + 3y - 4z)^3 + (2x - 3y + 4z)^3 + 12x*{4x^2 - (3y - 4z)^2}
+Q2_PATTERN: SIMPLIFY
+Q3_TEXT: ৩. a - b = 5 এবং ab = 36 হলে, a^3 - b^3 এর মান কত?
+Q3_PATTERN: FIND_VALUE
+Q4_TEXT: ৪. যদি a^3 - b^3 = 513 এবং a - b = 3 হয়, তবে ab এর মান কত?
+Q4_PATTERN: FIND_VALUE
+Q5_TEXT: ৫. x = 19 এবং y = -12 হলে, 8x^3 + 36x^2y + 54xy^2 + 27y^3 এর মান নির্ণয় কর।
+Q5_PATTERN: FIND_VALUE
+Q6_TEXT: ৬. যদি a = 15 হয়, তবে 8a^3 + 60a^2 + 150a + 130 এর মান কত?
+Q6_PATTERN: FIND_VALUE
+Q7_TEXT: ৭. যদি a + b = m, a^2 + b^2 = n এবং a^3 + b^3 = p^3 হয়, তবে দেখাও যে, m^3 + 2p^3 = 3mn
+Q7_PATTERN: PROVE
+Q8_TEXT: ৮. a + b = 3 এবং ab = 2 হলে,
+(ক) a^2 - ab + b^2 এবং
+(খ) a^3 + b^3 এর মান নির্ণয় কর।
+Q8_PATTERN: FIND_VALUE
+Q9_TEXT: ৯. a - b = 5 এবং ab = 36 হলে,
+(ক) a^2 + ab + b^2 এবং
+(খ) a^3 - b^3 এর মান নির্ণয় কর।
+Q9_PATTERN: FIND_VALUE
+Q10_TEXT: ১০. m + 1/m = a হলে, m^3 + 1/m^3 এর মান নির্ণয় কর।
+Q10_PATTERN: FIND_VALUE
+Q11_TEXT: ১১. x - 1/x = p হলে, x^3 - 1/x^3 এর মান নির্ণয় কর।
+Q11_PATTERN: FIND_VALUE
+Q12_TEXT: ১২. যদি a - 1/a = 1 হয়, তবে দেখাও যে, a^3 - 1/a^3 = 4
+Q12_PATTERN: PROVE
+Q13_TEXT: ১৩. যদি a + b + c = 0 হয়, তবে দেখাও যে,
+(ক) a^3 + b^3 + c^3 = 3abc
+(খ) (b + c)^2 / (3bc) + (c + a)^2 / (3ca) + (a + b)^2 / (3ab) = 1
+Q13_PATTERN: PROVE
+Q14_TEXT: ১৪. p - q = r হলে, দেখাও যে, p^3 - q^3 - r^3 = 3pqr
+Q14_PATTERN: PROVE
+Q15_TEXT: ১৫. 2x - 2/x = 3 হলে, দেখাও যে, 8*(x^3 - 1/x^3) = 63
+Q15_PATTERN: PROVE
+Q16_TEXT: ১৬. a = sqrt(6) + sqrt(5) হলে, (a^6 - 1) / a^3 এর মান নির্ণয় কর।
+Q16_PATTERN: FIND_VALUE
+Q17_TEXT: ১৭. x - 1/x = sqrt(3) যেখানে x != 0
+(ক) প্রমাণ কর যে, x^2 - sqrt(3)x = 1
+(খ) প্রমাণ কর যে, 23*(x^2 + 1/x^2) = 5*(x^4 + 1/x^4)
+(গ) x^6 + 1/x^6 এর মান নির্ণয় কর।
+Q17_PATTERN: PROVE
+
+=== EXERCISE 3.3 ===
+এই PDF এর অধ্যায় ৩-এর অনুশীলনী ৩.৩ থেকে সব প্রশ্ন নিচে দেওয়া হলো:
+উৎপাদকে বিশ্লেষণ কর (১ - ৩০):
+Q1_TEXT: ab(x - y) - bc(x - y)
+Q1_PATTERN: FACTORIZE
+Q2_TEXT: 9x^2 + 24x + 16
+Q2_PATTERN: FACTORIZE
+Q3_TEXT: a^4 - 27a^2 + 1
+Q3_PATTERN: FACTORIZE
+Q4_TEXT: x^4 - 6x^2*y^2 + y^4
+Q4_PATTERN: FACTORIZE
+Q5_TEXT: (a^2 - b^2)(x^2 - y^2) + 4abxy
+Q5_PATTERN: FACTORIZE
+Q6_TEXT: 4a^2 - 12ab + 9b^2 - 4c^2
+Q6_PATTERN: FACTORIZE
+Q7_TEXT: a^2 + 6a + 8 - y^2 + 2y
+Q7_PATTERN: FACTORIZE
+Q8_TEXT: 16x^2 - 25y^2 - 8xz + 10yz
+Q8_PATTERN: FACTORIZE
+Q9_TEXT: x^2 + 13x + 36
+Q9_PATTERN: FACTORIZE
+Q10_TEXT: x^4 + x^2 - 20
+Q10_PATTERN: FACTORIZE
+Q11_TEXT: a^2 - 30a + 216
+Q11_PATTERN: FACTORIZE
+Q12_TEXT: a^8 - a^4 - 2
+Q12_PATTERN: FACTORIZE
+Q13_TEXT: x^2 - 37x - 650
+Q13_PATTERN: FACTORIZE
+Q14_TEXT: 9x^2y^2 - 5x*y^2 - 14y^2
+Q14_PATTERN: FACTORIZE
+Q15_TEXT: 4x^4 - 27x^2 - 81
+Q15_PATTERN: FACTORIZE
+Q16_TEXT: ax^2 + (a^2 + 1)x + a
+Q16_PATTERN: FACTORIZE
+Q17_TEXT: 3(a^2 + 2a)^2 - 22(a^2 + 2a) + 40
+Q17_PATTERN: FACTORIZE
+Q18_TEXT: (a - 1)x^2 + a^2xy + (a + 1)y^2
+Q18_PATTERN: FACTORIZE
+Q19_TEXT: x^3 + 3x^2 + 3x + 2
+Q19_PATTERN: FACTORIZE
+Q20_TEXT: a^3 - 6a^2 + 12a - 9
+Q20_PATTERN: FACTORIZE
+Q21_TEXT: a^3 - 9b^3 + (a + b)^3
+Q21_PATTERN: FACTORIZE
+Q22_TEXT: 8x^3 + 12x^2 + 6x - 63
+Q22_PATTERN: FACTORIZE
+Q23_TEXT: 8a^3 + b^3 / 27
+Q23_PATTERN: FACTORIZE
+Q24_TEXT: a^6 / 27 - b^6
+Q24_PATTERN: FACTORIZE
+Q25_TEXT: 4a^2 + 1 / (4a^2) - 2 + 4a - 1/a
+Q25_PATTERN: FACTORIZE
+Q26_TEXT: (3a + 1)^3 - (2a - 3)^3
+Q26_PATTERN: FACTORIZE
+Q27_TEXT: (x + 2)(x + 3)(x + 4)(x + 5) - 48
+Q27_PATTERN: FACTORIZE
+Q28_TEXT: (x - 1)(x - 3)(x - 5)(x - 7) - 65
+Q28_PATTERN: FACTORIZE
+Q29_TEXT: 2b^2c^2 + 2c^2a^2 + 2a^2b^2 - a^4 - b^4 - c^4
+Q29_PATTERN: FACTORIZE
+Q30_TEXT: 14(x + z)^2 - 29(x + z)(x + 1) - 15(x + 1)^2
+Q30_PATTERN: FACTORIZE
+Q31_TEXT: দেখাও যে, (x + 1)(x + 2)(3x - 1)(3x - 4) = (3x^2 + 2x - 1)(3x^2 + 2x - 8)
+Q31_PATTERN: PROVE
+
+=== EXERCISE 3.4 ===
+অনুশীলনী ৩.৪ থেকে সব প্রশ্ন নিচে দেওয়া হলো:
+উৎপাদকে বিশ্লেষণ কর (১ - ১৬):
+Q1_TEXT: 3a^3 + 2a + 5
+Q1_PATTERN: FACTORIZE
+Q2_TEXT: x^3 - 7xy^2 - 6y^3
+Q2_PATTERN: FACTORIZE
+Q3_TEXT: x^3 + 2x^2 - 5x - 6
+Q3_PATTERN: FACTORIZE
+Q4_TEXT: x^3 + 4x^2 + x - 6
+Q4_PATTERN: FACTORIZE
+Q5_TEXT: a^3 + 3a + 36
+Q5_PATTERN: FACTORIZE
+Q6_TEXT: a^4 - 4a + 3
+Q6_PATTERN: FACTORIZE
+Q7_TEXT: a^3 - a^2 - 10a - 8
+Q7_PATTERN: FACTORIZE
+Q8_TEXT: x^3 - 3x^2 + 4x - 4
+Q8_PATTERN: FACTORIZE
+Q9_TEXT: a^3 - 7a^2b + 7ab^2 - b^3
+Q9_PATTERN: FACTORIZE
+Q10_TEXT: x^3 - x - 24
+Q10_PATTERN: FACTORIZE
+Q11_TEXT: x^3 + 6x^2 + 11x + 6
+Q11_PATTERN: FACTORIZE
+Q12_TEXT: 2x^4 - 3x^3 - 3x - 2
+Q12_PATTERN: FACTORIZE
+Q13_TEXT: 4x^4 + 12x^3 + 7x^2 - 3x - 2
+Q13_PATTERN: FACTORIZE
+Q14_TEXT: x^6 - x^5 + x^4 - x^3 + x^2 - x
+Q14_PATTERN: FACTORIZE
+Q15_TEXT: 4x^3 - 5x^2 + 5x - 1
+Q15_PATTERN: FACTORIZE
+Q16_TEXT: 18x^3 + 15x^2 - x - 2
+Q16_PATTERN: FACTORIZE
+
+=== EXERCISE 3.5 ===
+অনুশীলনী ৩.৫ থেকে ১ থেকে ২০ নম্বর প্রশ্ন নিচে দেওয়া হলো:
+Q1_TEXT: f(x) = x^2 - 4x + 4 হলে, f(2) এর মান নিচের কোনটি? (ক) 4 (খ) 2 (গ) 1 (ঘ) 0
+Q1_PATTERN: FIND_VALUE
+Q2_TEXT: 1/2 * {(a+b)^2 - (a-b)^2} এর মান নিচের কোনটি? (ক) 2(a^2 + b^2) (খ) a^2 + b^2 (গ) 2ab (ঘ) 4ab
+Q2_PATTERN: FIND_VALUE
+Q3_TEXT: x + 2/x = 3 হলে, x^3 + 8/x^3 এর মান কত? (ক) 1 (খ) 8 (গ) 9 (ঘ) 16
+Q3_PATTERN: FIND_VALUE
+Q4_TEXT: p^4 + p^2 + 1 এর উৎপাদকে বিশ্লেষিত রূপ নিচের কোনটি? (ক) (p^2 - p + 1)(p^2 + p - 1) (খ) (p^2 - p - 1)(p^2 + p + 1) (গ) (p^2 + p + 1)(p^2 + p + 1) (ঘ) (p^2 + p + 1)(p^2 - p + 1)
+Q4_PATTERN: FACTORIZE
+Q5_TEXT: যদি x = 2 - sqrt(3) হয়, তবে x^2 এর মান কত? (ক) 1 (খ) 7 - 4*sqrt(3) (গ) 2 + sqrt(3) (ঘ) 1 / (2 - sqrt(3))
+Q5_PATTERN: FIND_VALUE
+Q6_TEXT: f(x) = x^2 - 5x + 6 এবং f(x) = 0 হলে, x = কত? (ক) 2, 3 (খ) -5, 1 (গ) -2, 3 (ঘ) 1, -5
+Q6_PATTERN: SOLVE
+Q7_TEXT: 9x^2 + 16y^2 এর সাথে কত যোগ করলে যোগফল পূর্ণবর্গ রাশি হবে? (ক) 6xy (খ) 12xy (গ) 24xy (ঘ) 144xy
+Q7_PATTERN: OTHER
+Q8_TEXT: x^4 - x^2 + 1 = 0 হলে, x^2 + 1/x^2 এর মান কত? (ক) 4 (খ) 2 (গ) 1 (ঘ) 0
+Q8_PATTERN: FIND_VALUE
+Q9_TEXT: x^4 - x^2 + 1 = 0 হলে, (x + 1/x)^2 এর মান কত? (ক) 4 (খ) 3 (গ) 2 (ঘ) 0
+Q9_PATTERN: FIND_VALUE
+Q10_TEXT: x^4 - x^2 + 1 = 0 হলে, x^3 + 1/x^3 এর মান কত? (ক) 3 (খ) 2 (গ) 1 (ঘ) 0
+Q10_PATTERN: FIND_VALUE
+Q11_TEXT: a^2 + b^2 = 9 এবং ab = 3 হলে (i) (a - b)^2 = 3 (ii) (a + b)^2 = 15 (iii) a^2 + b^2 + a^2*b^2 = 18. নিচের কোনটি সঠিক? (ক) i, ii (খ) i, iii (গ) ii, iii (ঘ) i, ii ও iii
+Q11_PATTERN: OTHER
+Q12_TEXT: 3a^5 - 6a^4 + 3a + 14 একটি বীজগাণিতিক রাশি হলে- (i) রাশিটির চলক a (ii) রাশিটির মাত্রা 5 (iii) a^4 এর সহগ 6. নিচের কোনটি সঠিক? (ক) i, ii (খ) i, iii (গ) ii, iii (ঘ) i, ii ও iii
+Q12_PATTERN: OTHER
+Q13_TEXT: p^3 - 1/64 এর উৎপাদক- (i) p - 1/4 (ii) p^2 + p/4 + 1/8 (iii) p^2 + p/4 + 1/16. নিচের কোনটি সঠিক? (ক) i, ii (খ) i, iii (গ) ii, iii (ঘ) i, ii ও iii
+Q13_PATTERN: FACTORIZE
+Q14_TEXT: ক একটি কাজ p দিনে করে এবং খ, 2p দিনে করে। তারা একটি কাজ আরম্ভ করে এবং কয়েকদিন পর ক কাজটি অসমাপ্ত রেখে চলে গেল। বাকি কাজটুকু খ r দিনে শেষ করে। কাজটি কত দিনে শেষ হয়েছিল?
+Q14_PATTERN: OTHER
+Q15_TEXT: দৈনিক 6 ঘণ্টা পরিশ্রম করে 10 জন লোক একটি কাজ 7 দিনে করতে পারে। দৈনিক কত ঘণ্টা পরিশ্রম করে 14 জনে 6 দিনে ঐ কাজটি করতে পারবে?
+Q15_PATTERN: SOLVE
+Q16_TEXT: মিতা একটি কাজ 10 দিনে করতে পারে। রিতা সে কাজ 15 দিনে করতে পারে। তারা একত্রে কত দিনে কাজটি শেষ করতে পারবে?
+Q16_PATTERN: SOLVE
+Q17_TEXT: বনভোজনে যাওয়ার জন্য 5700 টাকায় একটি বাস ভাড়া করা হলো এবং শর্ত হলো যে, প্রত্যেক যাত্রী সমান ভাড়া বহন করবে। 5 জন যাত্রী না যাওয়ায় মাথাপিছু ভাড়া 3 টাকা বৃদ্ধি পেল। বাসে কতজন যাত্রী গিয়েছিল?
+Q17_PATTERN: SOLVE
+Q18_TEXT: একজন মাঝি স্রোতের প্রতিকূলে p ঘণ্টায় d কি.মি. যেতে পারে। স্রোতের অনুকূলে ঐ পথ যেতে তার q ঘণ্টা লাগে। স্রোতের বেগ ও নৌকার বেগ কত?
+Q18_PATTERN: SOLVE
+Q19_TEXT: একজন মাঝির দাঁড় বেয়ে 15 কি.মি. যেতে এবং সেখান থেকে ফিরে আসতে 4 ঘণ্টা সময় লাগে। সে স্রোতের অনুকূলে যতক্ষণে 5 কি.মি. যায়, স্রোতের প্রতিকূলে ততক্ষণে 3 কি.মি. যায়। দাঁড়ের বেগ ও স্রোতের বেগ নির্ণয় কর।
+Q19_PATTERN: SOLVE
+Q20_TEXT: একটি চৌবাচ্চায় দুইটি নল সংযুক্ত আছে। প্রথম নল দ্বারা চৌবাচ্চাটি t1 মিনিটে পূর্ণ হয় এবং দ্বিতীয় নল দ্বারা t2 মিনিটে খালি হয়। নল দুইটি একত্রে খুলে দিলে খালি চৌবাচ্চাটি কতক্ষণে পূর্ণ হবে? (এখানে t2 > t1)
+Q20_PATTERN: SOLVE
+Q21_TEXT: একটি নল দ্বারা 12 মিনিটে একটি চৌবাচ্চা পূর্ণ হয়। অপর একটি নল দ্বারা 1 মিনিটে তা থেকে 15 লিটার পানি বের করে দেয়। চৌবাচ্চাটি খালি থাকা অবস্থায় দুইটি নল এক সাথে খুলে দেওয়া হয় এবং চৌবাচ্চাটি 48 মিনিটে পূর্ণ হয়। চৌবাচ্চাটিতে কত লিটার পানি ধরে?
+Q21_PATTERN: FIND_VALUE
+Q22_TEXT: ক, খ ও গ এর মধ্যে 260 টাকা এরূপে ভাগ করে দাও যেন ক এর অংশের 2 গুণ, খ এর অংশের 3 গুণ এবং গ এর অংশের 4 গুণ পরস্পর সমান হয়।
+Q22_PATTERN: FIND_VALUE
+Q23_TEXT: একটি দ্রব্য x% ক্ষতিতে বিক্রয় করলে যে মূল্য পাওয়া যায়, 3x% লাভে বিক্রয় করলে তার চেয়ে 18x টাকা বেশি পাওয়া যায়। দ্রব্যটির ক্রয়মূল্য কত ছিল?
+Q23_PATTERN: FIND_VALUE
+Q24_TEXT: একটি কলম 11 টাকায় বিক্রয় করলে 10% লাভ হয়। কলমটির ক্রয়মূল্য কত?
+Q24_PATTERN: FIND_VALUE
+Q25_TEXT: একটি খাতা 36 টাকায় বিক্রয় করায় যত ক্ষতি হলো, 72 টাকায় বিক্রয় করলে তার দ্বিগুণ লাভ হতো, খাতাটির ক্রয়মূল্য কত?
+Q25_PATTERN: FIND_VALUE
+Q26_TEXT: মুনাফার একই হারে 300 টাকার 4 বছরের সরল মুনাফা ও 400 টাকার 5 বছরের সরল মুনাফা একত্রে 128 টাকা হলে, শতকরা মুনাফার হার কত?
+Q26_PATTERN: FIND_VALUE
+Q27_TEXT: 4% হার মুনাফায় কোনো টাকার 2 বছরের সরল মুনাফা ও চক্রবৃদ্ধি মুনাফার পার্থক্য 1 টাকা হলে, মূলধন কত?
+Q27_PATTERN: FIND_VALUE
+Q28_TEXT: কোনো আসল 3 বছরে সরল মুনাফাসহ 460 টাকা এবং 5 বছরে সরল মুনাফাসহ 600 টাকা হলে, শতকরা মুনাফার হার কত?
+Q28_PATTERN: FIND_VALUE
+Q29_TEXT: শতকরা বার্ষিক 5 টাকা হার সরল মুনাফায় কত টাকা 13 বছরে সবৃদ্ধিমূল 990 টাকা হবে?
+Q29_PATTERN: FIND_VALUE
+Q30_TEXT: শতকরা বার্ষিক 5 টাকা হার মুনাফায় কত টাকা 12 বছরে সবৃদ্ধিমূল 1280 টাকা হবে?
+Q30_PATTERN: FIND_VALUE
+Q31_TEXT: 5% হার মুনাফায় 8000 টাকার 3 বছরের সরল মুনাফা ও চক্রবৃদ্ধি মুনাফার পার্থক্য নির্ণয় কর।
+Q31_PATTERN: FIND_VALUE
+Q32_TEXT: মিষ্টির উপর মূল্য সংযোজন কর (VAT) x%। একজন বিক্রেতা ভ্যাটসহ P টাকার মিষ্টি বিক্রয় করলে তাকে কত ভ্যাট দিতে হবে? x = 15, P = 2300 হলে, ভ্যাটের পরিমাণ কত?
+Q32_PATTERN: FIND_VALUE
+Q33_TEXT: কোনো সংখ্যা ও ঐ সংখ্যার গুণাত্মক বিপরীত সংখ্যার সমষ্টি 3।
+ক) সংখ্যাটিকে x চলকে প্রকাশ করে উপরের তথ্যকে সমীকরণের মাধ্যমে প্রকাশ কর।
+খ) x^3 - 1/x^3 এর মান নির্ণয় কর।
+গ) প্রমাণ কর যে, x^5 + 1/x^5 = 123
+Q33_PATTERN: PROVE
+Q34_TEXT: কোনো সমিতির সদস্যগণ প্রত্যেকেই সদস্য সংখ্যার 100 গুণ চাঁদা দেওয়ার সিদ্ধান্ত নিলেন। কিন্তু 4 জন সদস্য চাঁদা না দেওয়ায় প্রত্যেকের চাঁদার পরিমাণ পূর্বের চেয়ে 500 টাকা বেড়ে গেল।
+ক) সমিতির সদস্য সংখ্যা x এবং মোট চাঁদার পরিমাণ A হলে, এদের মধ্যে সম্পর্ক নির্ণয় কর।
+খ) সমিতির সদস্য সংখ্যা ও মোট চাঁদার পরিমাণ নির্ণয় কর।
+গ) মোট চাঁদার 1/4 অংশ 5% হারে এবং অবশিষ্ট টাকা 4% হারে 2 বছরের জন্য সরল মুনাফায় বিনিয়োগ করা হলো। মোট মুনাফা নির্ণয় কর।
+Q34_PATTERN: FIND_VALUE
+Q35_TEXT: বনভোজনে যাওয়ার জন্য একটি বাস 2400 টাকায় ভাড়া করা হলো এবং শর্ত হলো যে, প্রত্যেক যাত্রী সমান ভাড়া বহন করবে। 10 জন যাত্রী না আসায় মাথাপিছু ভাড়া 8 (আট) টাকা বৃদ্ধি পেল।
+ক) মাথাপিছু বর্ধিত ভাড়ার পরিমাণ, না আসা যাত্রী সংখ্যার শতকরা কত তা নির্ণয় কর।
+খ) বাসে যাওয়া যাত্রীর মাথাপিছু ভাড়া নির্ণয় কর।
+গ) বাস ভাড়ার সমপরিমাণ টাকার 5% হার মুনাফায় 13 বছরের সরল মুনাফা ও চক্রবৃদ্ধি মুনাফার পার্থক্য নির্ণয় কর।
+Q35_PATTERN: FIND_VALUE
+Q36_TEXT: দাঁড় বেয়ে একটি খালের A বিন্দু থেকে B বিন্দুতে গিয়ে ফিরে আসতে হবে। দাঁড়ের বেগ ধ্রুব হলে স্রোত থাকলে সময় বেশি লাগবে না স্রোত না থাকলে সময় বেশি লাগবে?
+Q36_PATTERN: OTHER
+Q37_TEXT: একটি মাঠে ধ্রুব হারে ঘাস বৃদ্ধি পায়। 17টি গরু 30 দিনে সব ঘাস খেয়ে ফেলতে পারে। তবে 19টি গরুর লাগে 24 দিন। একদল গরু 6 দিন ঘাস খাওয়ার পর 4টি গরু বিক্রয় করা হলে ঘাস খাওয়া শেষ করতে আরও 2 দিন লাগলো। দলটিতে শুরুতে কতগুলো গরু ছিল?
+Q37_PATTERN: FIND_VALUE
+Q38_TEXT: দুই ভাইয়ের একটি প্রশিক্ষিত ঘোড়া ছিল যা যেকোনো নির্দেশই পালন করতে পারে। দুই ভাই একই সময়ে বাসা থেকে রওয়ানা হয়ে 20 মাইল দূরে একটি বৈশাখী মেলায় যেতে চায়। ঘোড়া যেকোনো মুহূর্তে মাত্র একজন ভাইকে বহন করতে পারে। ভাইদের বেগ ঘণ্টায় 4 মাইল এবং ঘোড়ার বেগ ঘণ্টায় (মানুষসহ কিংবা ছাড়া) 10 মাইল হলে সর্বনিম্ন কত সময়ে তারা মেলায় পৌঁছাতে পারবে? প্রত্যেক ভাই কতটা পথ হাঁটবে?
+Q38_PATTERN: FIND_VALUE
+
+========================================
