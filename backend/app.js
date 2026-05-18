@@ -9,6 +9,7 @@ const errorHandler = require('./middlewares/error.middleware');
 
 // Routes
 const authRoutes = require('./modules/auth/auth.routes');
+const mathRoutes = require('./modules/math/math.routes');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(passport.initialize());
 
 // API Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/math', mathRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
