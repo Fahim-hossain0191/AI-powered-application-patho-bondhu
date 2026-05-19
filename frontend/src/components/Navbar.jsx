@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { auth } from "../services/api";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -20,7 +21,12 @@ const Navbar = () => {
     }
   }, [pathname]); // Re-run when route changes
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await auth.logout();
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
     localStorage.removeItem("user");
     localStorage.removeItem("accessToken");
     setUser(null);
@@ -56,11 +62,13 @@ const Navbar = () => {
    {/* <Image src={Img1} alt="Logo"  width={70} height={20} ></Image> */}
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-        <Link href="/pages/home" className={linkClass("/pages/home")}>
+    <ul className="menu menu-horizontal px-1 gap-2">
+        <Link href="/home" className={linkClass("/home")}>
               পাঠ্যবই
             </Link>
-      <li className="text-black"><a>প্রাকটিস</a></li>
+        <Link href="/math" className={linkClass("/math")}>
+              প্রাকটিস ও যাচাই
+            </Link>
       <li className="text-black"><a>প্রগ্রেস</a></li>
       <li className="text-black"><a>অলিম্পিয়াড</a></li>
       <li>

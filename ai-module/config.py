@@ -17,7 +17,8 @@ DB_CONFIG = {
     "user": os.getenv("DB_USER", "root"),
     "password": os.getenv("DB_PASSWORD", ""),
     "database": os.getenv("DB_NAME", "pathobondhu"),
-    "charset": "utf8mb4"
+    "charset": "utf8mb4",
+    "use_pure": True
 }
 
 # App

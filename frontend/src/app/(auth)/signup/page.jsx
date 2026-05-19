@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { auth } from "../../../services/api";
 
 const SignUp = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     full_name: "",
     email: "",
@@ -29,25 +32,15 @@ const SignUp = () => {
     try {
       setLoading(true);
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(formData),
-});
+      const data = await auth.register(formData);
 
-      const data = await res.json();
-
-      if (res.ok) {
-        alert("Account created successfully!");
-        console.log(data);
-      } else {
-        alert(data.message || "Signup failed");
-      }
+      alert("Account created successfully!");
+      console.log(data);
+      router.push("/signin"); // Redirect to login page after successful registration
+      
     } catch (error) {
       console.error(error);
-      alert("Something went wrong");
+      alert(error.message || "Signup failed");
     } finally {
       setLoading(false);
     }

@@ -1,8 +1,8 @@
 'use client'
-
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { auth } from "../../../services/api";
 
 export default function SignIn() {
   const router = useRouter();
@@ -19,30 +19,21 @@ export default function SignIn() {
 
     try {
       setLoading(true);
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: form.contact, // the backend expects 'email'
-          password: form.password
-        }),
+      const data = await auth.login({
+        email: form.contact,
+        password: form.password
       });
 
-      const data = await res.json();
-      if (res.ok) {
-        // Save user data and token to localStorage
-        localStorage.setItem("user", JSON.stringify(data.data.user));
-        localStorage.setItem("accessToken", data.data.accessToken);
-        
-        // Redirect to home
-        router.push("/home");
-        // Force refresh to update Navbar state
-        router.refresh();
-      } else {
-        alert(data.message || "Login failed");
-      }
+      // Save user data and token to localStorage
+      localStorage.setItem("user", JSON.stringify(data.data.user));
+      localStorage.setItem("accessToken", data.data.accessToken);
+      
+      // Redirect to home
+      router.push("/home");
+      // Force refresh to update Navbar state
+      router.refresh();
     } catch (err) {
-      alert("Something went wrong");
+      alert(err.message || "Something went wrong");
     } finally {
       setLoading(false);
     }
