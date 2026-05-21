@@ -106,6 +106,20 @@ def check_answer_text(exercise_id: int, student_answer: str) -> dict:
         student_answer=student_answer,
     )
 
+<<<<<<< HEAD
+    # Step 3: Gemini কে দাও (শুধু text)
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            response_mime_type="application/json",
+            response_schema=AnswerCheckResponse,
+        )
+    )
+
+    # Step 4: Parse করো
+    return _parse_response(response.text)
+=======
     # Step 3: Gemini কে দাও & Step 4: Parse করো
     try:
         response = client.models.generate_content(
@@ -147,6 +161,7 @@ def check_answer_text(exercise_id: int, student_answer: str) -> dict:
             "full_solution": exercise.get("solution_steps", ""),
             "points": 10 if is_correct else 0
         }
+>>>>>>> origin/main
 
 
 # ================================================
@@ -186,6 +201,33 @@ def check_answer_image(
         formulas=formulas,
     )
 
+<<<<<<< HEAD
+    # Step 3: Gemini Vision কে prompt + image একসাথে দাও
+    image_bytes = base64.b64decode(image_base64)
+
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=[
+            types.Content(
+                role="user",
+                parts=[
+                    types.Part.from_text(text=prompt),
+                    types.Part.from_bytes(
+                        data=image_bytes,
+                        mime_type=image_mime
+                    ),
+                ]
+            )
+        ],
+        config=types.GenerateContentConfig(
+            response_mime_type="application/json",
+            response_schema=AnswerCheckResponse,
+        )
+    )
+
+    # Step 4: Parse করো
+    return _parse_response(response.text)
+=======
     # Step 3: Gemini Vision কে prompt + image একসাথে দাও & Step 4: Parse করো
     image_bytes = base64.b64decode(image_base64)
     try:
@@ -223,3 +265,4 @@ def check_answer_image(
             "full_solution": exercise.get("solution_steps", ""),
             "points": 0
         }
+>>>>>>> origin/main

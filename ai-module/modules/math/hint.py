@@ -84,6 +84,16 @@ def get_hint(exercise_id: int, phase: int) -> dict:
         phase=phase,
     )
 
+<<<<<<< HEAD
+    # Step 4: Gemini কে দাও
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=prompt
+    )
+
+    # Step 5: Parse করো
+    result = _parse_response(response.text)
+=======
     # Step 4: Gemini কে দাও & Step 5: Parse করো
     try:
         response = client.models.generate_content(
@@ -106,6 +116,7 @@ def get_hint(exercise_id: int, phase: int) -> dict:
         result = {
             "hint": fallback_hint
         }
+>>>>>>> origin/main
 
     # Extra info যোগ করো
     result["exercise_id"] = exercise_id

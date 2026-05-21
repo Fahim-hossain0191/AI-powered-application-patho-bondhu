@@ -1,19 +1,41 @@
 const bcrypt = require('bcryptjs');
-const { v4: uuidv4 } = require('uuid');
-const authModel = require('./auth.model');
-const jwtUtils = require('../../utils/jwt.utils');
+const jwt = require('jsonwebtoken');
+const db = require('../../config/database');
 
+<<<<<<< HEAD
+/**
+ * Register — নতুন user তৈরি করো
+ */
+async function register({ full_name, email, phone, password }) {
+  // Email বা phone already আছে কিনা check করো
+  const [existing] = await db.execute(
+    'SELECT user_id FROM users WHERE email = ? OR phone = ?',
+    [email || null, phone || null]
+  );
+
+  if (existing.length > 0) {
+    throw new Error('Email বা phone number ইতোমধ্যে registered');
+=======
 const register = async (userData) => {
   const { full_name, email, password, class: user_class, phone, school_name, board_name, profile_image_url } = userData;
   // Email already আছে কিনা check
   const existing = await authModel.findUserByEmail(email);
   if (existing) {
     throw new Error('এই email দিয়ে আগেই account খোলা হয়েছে');
+>>>>>>> origin/main
   }
 
   // Password hash করো
-  const password_hash = await bcrypt.hash(password, 12);
+  const password_hash = await bcrypt.hash(password, 10);
 
+<<<<<<< HEAD
+  // DB তে insert করো
+  const [result] = await db.execute(
+    `INSERT INTO users (full_name, email, phone, password_hash)
+     VALUES (?, ?, ?, ?)`,
+    [full_name, email || null, phone || null, password_hash]
+  );
+=======
   // User তৈরি করো
   const userId = await authModel.createUser({
     full_name, email, password_hash, class: user_class, phone, school_name, board_name, profile_image_url
@@ -23,82 +45,49 @@ const register = async (userData) => {
   const payload = { id: userId, email };
   const accessToken  = jwtUtils.generateAccessToken(payload);
   const refreshToken = jwtUtils.generateRefreshToken(payload);
+>>>>>>> origin/main
 
-  // Refresh token save করো
-  await authModel.saveRefreshToken(userId, refreshToken);
+  return { user_id: result.insertId, full_name, email, phone };
+}
 
-  const user = await authModel.findUserById(userId);
-  return { user, accessToken, refreshToken };
-};
-
-const login = async ({ email, password, deviceType, browser }) => {
+/**
+ * Login — email বা phone দিয়ে login করো
+ */
+async function login({ email, phone, password }) {
   // User খোঁজো
-  const user = await authModel.findUserByEmail(email);
-  if (!user) {
-    throw new Error('Email বা password ভুল');
+  const [users] = await db.execute(
+    'SELECT * FROM users WHERE email = ? OR phone = ?',
+    [email || null, phone || null]
+  );
+
+  if (users.length === 0) {
+    throw new Error('User পাওয়া যায়নি');
   }
 
-  // Google এ register করা user email/password দিয়ে login করতে পারবে না
-  if (user.password_hash === 'GOOGLE_AUTH') {
-    throw new Error('এই account টি Google দিয়ে তৈরি। Google দিয়ে login করো।');
-  }
+  const user = users[0];
 
   // Password check করো
   const isMatch = await bcrypt.compare(password, user.password_hash);
   if (!isMatch) {
-    throw new Error('Email বা password ভুল');
+    throw new Error('Password সঠিক নয়');
   }
 
-  // Tokens তৈরি করো
-  const payload = { id: user.id, email: user.email };
-  const accessToken  = jwtUtils.generateAccessToken(payload);
-  const refreshToken = jwtUtils.generateRefreshToken(payload);
+  // JWT token বানাও
+  const token = jwt.sign(
+    { user_id: user.user_id, full_name: user.full_name },
+    process.env.JWT_SECRET || process.env.JWT_ACCESS_SECRET || 'secret',
+    { expiresIn: '7d' }
+  );
 
-  // Refresh token save করো
-  await authModel.saveRefreshToken(user.id, refreshToken);
+  return {
+    token,
+    user: {
+      user_id: user.user_id,
+      full_name: user.full_name,
+      email: user.email,
+      phone: user.phone,
+    },
+  };
+}
 
-  // Device track করো
-  const deviceToken = uuidv4();
-  await authModel.saveUserDevice(user.id, deviceToken, deviceType || 'desktop', browser || 'unknown');
-
-  // Password বাদ দিয়ে user data পাঠাও
-  const { password_hash, ...safeUser } = user;
-  return { user: safeUser, accessToken, refreshToken, deviceToken };
-};
-
-const refreshAccessToken = async (refreshToken) => {
-  // Token verify করো
-  const decoded = jwtUtils.verifyRefreshToken(refreshToken);
-
-  // Database এ আছে কিনা check করো
-  const stored = await authModel.findRefreshToken(refreshToken);
-  if (!stored) {
-    throw new Error('Invalid refresh token');
-  }
-
-  // নতুন access token দাও
-  const accessToken = jwtUtils.generateAccessToken({
-    id: decoded.id,
-    email: decoded.email,
-  });
-
-  return { accessToken };
-};
-
-const logout = async (refreshToken) => {
-  await authModel.deleteRefreshToken(refreshToken);
-};
-
-const handleGoogleAuth = async (googleUser) => {
-  const user = await authModel.findOrCreateGoogleUser(googleUser);
-
-  const payload = { id: user.id, email: user.email };
-  const accessToken  = jwtUtils.generateAccessToken(payload);
-  const refreshToken = jwtUtils.generateRefreshToken(payload);
-
-  await authModel.saveRefreshToken(user.id, refreshToken);
-
-  return { user, accessToken, refreshToken };
-};
-
-module.exports = { register, login, refreshAccessToken, logout, handleGoogleAuth };
+module.exports = { register, login };

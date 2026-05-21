@@ -7,7 +7,11 @@ load_dotenv(dotenv_path=os.path.join(BASE_DIR, ".env"))
 
 # Gemini API
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+<<<<<<< HEAD
+raw_model = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+=======
 raw_model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+>>>>>>> origin/main
 GEMINI_MODEL = raw_model.strip("'\"") if raw_model else "gemini-2.5-flash"
 
 # Database
@@ -17,8 +21,12 @@ DB_CONFIG = {
     "user": os.getenv("DB_USER", "root"),
     "password": os.getenv("DB_PASSWORD", ""),
     "database": os.getenv("DB_NAME", "pathobondhu"),
+<<<<<<< HEAD
+    "charset": "utf8mb4"
+=======
     "charset": "utf8mb4",
     "use_pure": True
+>>>>>>> origin/main
 }
 
 # App

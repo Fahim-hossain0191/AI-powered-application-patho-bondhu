@@ -87,8 +87,13 @@ CONCEPT_11_REASON: উচ্চঘাতের বহুপদী রাশি�
 CONCEPT_12_TITLE: উৎপাদক উপপাদ্য (Factor Theorem)
 CONCEPT_12_CONTENT: যদি f(a) = 0 হয়, তবে (x - a) রাশি f(x) এর একটি উৎপাদক হবে। একে শূন্যায়ন পদ্ধতি (Vanishing method) বলা হয়।
 CONCEPT_12_EXAMPLE: উদাহরণ ৩৩. g(a) = a^3 + a^2 + 10a - 8 হলে g(a) কে (a - 2) দ্বারা ভাগ করলে ভাগশেষ কত? সমাধান: ভাগশেষ হবে g(2) = 2^3 + 2^2 + 10(2) - 8 = 24।
+<<<<<<< HEAD
+CONCEPT_1_IMPORTANCE: high
+CONCEPT_1_REASON: জটিল রাশির উৎপাদকে বিশ্লেষণের জন্য এটি একটি শক্তিশালী পদ্ধতি।
+=======
 CONCEPT_12_IMPORTANCE: high
 CONCEPT_12_REASON: জটিল রাশির উৎপাদকে বিশ্লেষণের জন্য এটি একটি শক্তিশালী পদ্ধতি।
+>>>>>>> origin/main
 CONCEPT_13_TITLE: বাস্তব সমস্যা সমাধানে বীজগাণিতিক সূত্র গঠন (Method Explanation)
 CONCEPT_13_CONTENT: বাস্তব সমস্যা সমাধানে ধাপগুলো হলো:
 ১. সমস্যাটি পর্যবেক্ষণ করে অজ্ঞাত রাশি চিহ্নিত করা।

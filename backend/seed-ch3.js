@@ -18,7 +18,11 @@ async function seedData() {
 
   // File পড়ো
   const filePath = path.join(__dirname, '../data/raw/ch3_MASTER.txt');
+<<<<<<< HEAD
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+=======
   const fileContent = fs.readFileSync(filePath, 'utf8').replace(/\r/g, '');
+>>>>>>> origin/main
 
   // ================================================
   // HELPER: importance string → number
@@ -83,6 +87,8 @@ async function seedData() {
     const c = conceptMap[id];
     if (!c.TITLE) continue;
 
+<<<<<<< HEAD
+=======
     // Check if already exists
     const [existing] = await db.execute(
       'SELECT 1 FROM math_concepts WHERE chapter_id = ? AND module_title = ?',
@@ -94,6 +100,7 @@ async function seedData() {
       continue;
     }
 
+>>>>>>> origin/main
     await db.execute(
       `INSERT INTO math_concepts 
        (chapter_id, module_title, content, examples, importance_rank, source, display_order) 
@@ -151,6 +158,8 @@ async function seedData() {
     const f = formulaMap[id];
     if (!f.VALUE) continue;
 
+<<<<<<< HEAD
+=======
     // Check if already exists
     const [existing] = await db.execute(
       'SELECT 1 FROM math_formulas WHERE chapter_id = ? AND formula_text = ?',
@@ -162,6 +171,7 @@ async function seedData() {
       continue;
     }
 
+>>>>>>> origin/main
     await db.execute(
       `INSERT INTO math_formulas 
        (chapter_id, formula_text, when_to_use, variables_explanation, importance_rank, source, display_order) 
@@ -230,6 +240,8 @@ async function seedData() {
       const q = questionMap[qId];
       if (!q.TEXT) continue;
 
+<<<<<<< HEAD
+=======
       // Check if already exists
       const [existing] = await db.execute(
         'SELECT 1 FROM math_exercises WHERE chapter_id = ? AND exercise_number = ? AND question_text = ?',
@@ -241,6 +253,7 @@ async function seedData() {
         continue;
       }
 
+>>>>>>> origin/main
       await db.execute(
         `INSERT INTO math_exercises 
          (chapter_id, exercise_number, question_text, question_pattern,

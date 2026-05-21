@@ -51,6 +51,30 @@ def generate_mcq(chapter_id: int, count: int = 20, previously_generated: list = 
         previously_generated=previously_generated or []
     )
 
+<<<<<<< HEAD
+    # Step 3: Gemini কে দাও
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            response_mime_type="application/json",
+            response_schema=MCQResponse,
+        )
+    )
+    raw_text = response.text.strip()
+
+    # Step 4: JSON parse করো
+    if raw_text.startswith("```"):
+        lines = raw_text.split("\n")
+        lines = [l for l in lines if not l.strip().startswith("```")]
+        raw_text = "\n".join(lines).strip()
+
+    try:
+        data = json.loads(raw_text)
+        mcqs = data.get("mcqs", [])
+    except json.JSONDecodeError as e:
+        raise ValueError(f"JSON parse হয়নি: {e}\n\nOutput:\n{raw_text}")
+=======
     # Step 3: Gemini কে দাও & Step 4: JSON parse করো
     try:
         response = client.models.generate_content(
@@ -105,6 +129,7 @@ def generate_mcq(chapter_id: int, count: int = 20, previously_generated: list = 
                 "explanation": "a^3 - b^3 এর উৎপাদক সূত্র হলো (a-b)(a^2 + ab + b^2)।"
             }
         ]
+>>>>>>> origin/main
 
     # Step 5: Validate
     validated = []
