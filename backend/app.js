@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 require('dotenv').config();
-=======
 const express      = require('express');
 const cors         = require('cors');
 const helmet       = require('helmet');
@@ -16,13 +14,11 @@ const errorHandler = require('./middlewares/error.middleware');
 // Routes
 const authRoutes = require('./modules/auth/auth.routes');
 const mathRoutes = require('./modules/math/math.routes');
->>>>>>> origin/main
 
 const app = express();
 
 // Middleware
 app.use(helmet());
-<<<<<<< HEAD
 app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(express.json({ limit: '10mb' })); // ছবির জন্য limit বাড়ানো
 app.use(express.urlencoded({ extended: true }));
@@ -37,7 +33,6 @@ app.use('/api/math', require('./modules/math/exercise/exercise.routes'));
 app.use('/api/math/hint', require('./modules/math/hint/hint.routes'));
 app.use('/api/math', require('./modules/math/mcq/mcq.routes'));
 app.use('/api/math/jachai', require('./modules/math/jachai/jachai.routes'));
-=======
 app.use(cors(corsOptions));
 app.use(morgan('dev'));
 app.use(express.json({ limit: '10mb' }));
@@ -48,7 +43,6 @@ app.use(passport.initialize());
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/math', mathRoutes);
->>>>>>> origin/main
 
 // Health check
 app.get('/', (req, res) => {
