@@ -1,0 +1,52 @@
+অনুশীলনী ৩.২ (বীজগাণিতিক রাশি) থেকে সব প্রশ্ন নিচে দেওয়া হলো:
+Q1_TEXT: ১. সূত্রের সাহায্যে ঘন নির্ণয় কর:
+ক) 2x^2 + 3y^2
+খ) 7m^2 - 2n
+গ) 2a - b - 3c
+Q1_PATTERN: FIND_VALUE
+Q2_TEXT: ২. সরল কর:
+ক) (7x + 3b)^3 - (5x + 3b)^3 - 6x*(7x + 3b)(5x + 3b)
+খ) (a + b + c)^3 - (a - b - c)^3 - 6(b + c){a^2 - (b + c)^2}
+গ) (m + n)^6 - (m - n)^6 - 12mn(m^2 - n^2)^2
+ঘ) (x + y)(x^2 - xy + y^2) + (y + z)(y^2 - yz + z^2) + (z + x)(z^2 - zx + x^2)
+ঙ) (2x + 3y - 4z)^3 + (2x - 3y + 4z)^3 + 12x*{4x^2 - (3y - 4z)^2}
+Q2_PATTERN: SIMPLIFY
+Q3_TEXT: ৩. a - b = 5 এবং ab = 36 হলে, a^3 - b^3 এর মান কত?
+Q3_PATTERN: FIND_VALUE
+Q4_TEXT: ৪. যদি a^3 - b^3 = 513 এবং a - b = 3 হয়, তবে ab এর মান কত?
+Q4_PATTERN: FIND_VALUE
+Q5_TEXT: ৫. x = 19 এবং y = -12 হলে, 8x^3 + 36x^2y + 54xy^2 + 27y^3 এর মান নির্ণয় কর।
+Q5_PATTERN: FIND_VALUE
+Q6_TEXT: ৬. যদি a = 15 হয়, তবে 8a^3 + 60a^2 + 150a + 130 এর মান কত?
+Q6_PATTERN: FIND_VALUE
+Q7_TEXT: ৭. যদি a + b = m, a^2 + b^2 = n এবং a^3 + b^3 = p^3 হয়, তবে দেখাও যে, m^3 + 2p^3 = 3mn
+Q7_PATTERN: PROVE
+Q8_TEXT: ৮. a + b = 3 এবং ab = 2 হলে,
+(ক) a^2 - ab + b^2 এবং
+(খ) a^3 + b^3 এর মান নির্ণয় কর।
+Q8_PATTERN: FIND_VALUE
+Q9_TEXT: ৯. a - b = 5 এবং ab = 36 হলে,
+(ক) a^2 + ab + b^2 এবং
+(খ) a^3 - b^3 এর মান নির্ণয় কর।
+Q9_PATTERN: FIND_VALUE
+Q10_TEXT: ১০. m + 1/m = a হলে, m^3 + 1/m^3 এর মান নির্ণয় কর।
+Q10_PATTERN: FIND_VALUE
+Q11_TEXT: ১১. x - 1/x = p হলে, x^3 - 1/x^3 এর মান নির্ণয় কর।
+Q11_PATTERN: FIND_VALUE
+Q12_TEXT: ১২. যদি a - 1/a = 1 হয়, তবে দেখাও যে, a^3 - 1/a^3 = 4
+Q12_PATTERN: PROVE
+Q13_TEXT: ১৩. যদি a + b + c = 0 হয়, তবে দেখাও যে,
+(ক) a^3 + b^3 + c^3 = 3abc
+(খ) (b + c)^2 / (3bc) + (c + a)^2 / (3ca) + (a + b)^2 / (3ab) = 1
+Q13_PATTERN: PROVE
+Q14_TEXT: ১৪. p - q = r হলে, দেখাও যে, p^3 - q^3 - r^3 = 3pqr
+Q14_PATTERN: PROVE
+Q15_TEXT: ১৫. 2x - 2/x = 3 হলে, দেখাও যে, 8*(x^3 - 1/x^3) = 63
+Q15_PATTERN: PROVE
+Q16_TEXT: ১৬. a = sqrt(6) + sqrt(5) হলে, (a^6 - 1) / a^3 এর মান নির্ণয় কর।
+Q16_PATTERN: FIND_VALUE
+Q17_TEXT: ১৭. x - 1/x = sqrt(3) যেখানে x != 0
+(ক) প্রমাণ কর যে, x^2 - sqrt(3)x = 1
+(খ) প্রমাণ কর যে, 23*(x^2 + 1/x^2) = 5*(x^4 + 1/x^4)
+(গ) x^6 + 1/x^6 এর মান নির্ণয় কর।
+Q17_PATTERN: PROVE

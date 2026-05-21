@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const db = require('../../config/database');
 
+<<<<<<< HEAD
 /**
  * Register — নতুন user তৈরি করো
  */
@@ -14,17 +15,37 @@ async function register({ full_name, email, phone, password }) {
 
   if (existing.length > 0) {
     throw new Error('Email বা phone number ইতোমধ্যে registered');
+=======
+const register = async (userData) => {
+  const { full_name, email, password, class: user_class, phone, school_name, board_name, profile_image_url } = userData;
+  // Email already আছে কিনা check
+  const existing = await authModel.findUserByEmail(email);
+  if (existing) {
+    throw new Error('এই email দিয়ে আগেই account খোলা হয়েছে');
+>>>>>>> origin/main
   }
 
   // Password hash করো
   const password_hash = await bcrypt.hash(password, 10);
 
+<<<<<<< HEAD
   // DB তে insert করো
   const [result] = await db.execute(
     `INSERT INTO users (full_name, email, phone, password_hash)
      VALUES (?, ?, ?, ?)`,
     [full_name, email || null, phone || null, password_hash]
   );
+=======
+  // User তৈরি করো
+  const userId = await authModel.createUser({
+    full_name, email, password_hash, class: user_class, phone, school_name, board_name, profile_image_url
+  });
+
+  // Tokens তৈরি করো
+  const payload = { id: userId, email };
+  const accessToken  = jwtUtils.generateAccessToken(payload);
+  const refreshToken = jwtUtils.generateRefreshToken(payload);
+>>>>>>> origin/main
 
   return { user_id: result.insertId, full_name, email, phone };
 }

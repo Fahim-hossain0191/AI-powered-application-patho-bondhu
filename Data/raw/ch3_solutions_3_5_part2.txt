@@ -1,0 +1,166 @@
+অনুশীলনী ৩.৫ এর প্রশ্ন ২১ থেকে ৩৮ এর সমাধান নিচে দেওয়া হলো:
+Q21_SOLUTION:
+STEP_1: dhori, choubacchatar mot ayoton = V liter.
+STEP_2: 1m nol die 12 minute-e purno hoy, tai 1m noler purno korar har = V/12 liter/minute.
+STEP_3: 2m nol die 1 minute-e ber hoy 15 liter, tai 2m noler khali korar har = 15 liter/minute.
+STEP_4: duiti nol ekshathe khola thakle 48 minute-e purno hoy, tai shommolito har = V/48 liter/minute.
+STEP_5: proshnanushare, V/12 - 15 = V/48.
+STEP_6: ba, V/12 - V/48 = 15.
+STEP_7: ba, (4V - V) / 48 = 15.
+STEP_8: ba, 3V / 48 = 15.
+STEP_9: ba, V / 16 = 15.
+STEP_10: ba, V = 15 * 16 = 240.
+FINAL_ANSWER: choubacchate mot 240 liter pani dhore।
+Q22_SOLUTION:
+STEP_1: dhori, ko, kho ebong go pabe jothakrome a, b ebong c taka.
+STEP_2: deoya ache, a + b + c = 260.
+STEP_3: proshnanushare, 2a = 3b = 4*c = x (dhori).
+STEP_4: eikhan theke, a = x/2, b = x/3, c = x/4.
+STEP_5: man gulo boshie pai, x/2 + x/3 + x/4 = 260.
+STEP_6: ba, (6x + 4x + 3x) / 12 = 260.
+STEP_7: ba, 13x / 12 = 260.
+STEP_8: ba, 13x = 260 * 12 = 3120.
+STEP_9: ba, x = 3120 / 13 = 240.
+STEP_10: ekhon, ko pabe = 240/2 = 120 taka, kho pabe = 240/3 = 80 taka, ebong go pabe = 240/4 = 60 taka.
+FINAL_ANSWER: ko 120 taka, kho 80 taka ebong go 60 taka pabe।
+Q23_SOLUTION:
+STEP_1: dhori, drobbo-tir kroymulyo = C taka.
+STEP_2: x% khotite bikroymulyo = C * (1 - x/100) taka.
+STEP_3: 3x% labhe bikroymulyo = C * (1 + 3x/100) taka.
+STEP_4: bikroymulyor parthokkyo = C * (1 + 3x/100) - C * (1 - x/100) = 18x.
+STEP_5: ba, C * (1 + 3x/100 - 1 + x/100) = 18x.
+STEP_6: ba, C * (4x / 100) = 18x.
+STEP_7: ba, C * (x / 25) = 18x.
+STEP_8: ba, C / 25 = 18.
+STEP_9: ba, C = 18 * 25 = 450.
+FINAL_ANSWER: drobbo-tir kroymulyo 450 taka।
+Q24_SOLUTION:
+STEP_1: dhori, kolom-tir kroymulyo = x taka.
+STEP_2: 10% labhe bikroymulyo = x + (x * 10/100) = 1.1x taka.
+STEP_3: proshnanushare, 1.1x = 11.
+STEP_4: ba, x = 11 / 1.1 = 10.
+FINAL_ANSWER: kolom-tir kroymulyo 10 taka।
+Q25_SOLUTION:
+STEP_1: dhori, khata-tir kroymulyo = x taka.
+STEP_2: 36 takay bikroy korle khoti hoy = (x - 36) taka.
+STEP_3: 72 takay bikroy korle labh hoy = (72 - x) taka.
+STEP_4: proshnanushare, labh = 2 * khoti.
+STEP_5: ba, 72 - x = 2 * (x - 36).
+STEP_6: ba, 72 - x = 2x - 72.
+STEP_7: ba, 3x = 144.
+STEP_8: ba, x = 144 / 3 = 48.
+FINAL_ANSWER: khata-tir kroymulyo 48 taka।
+Q26_SOLUTION:
+STEP_1: dhori, munafar har = r.
+STEP_2: 300 takar 4 bochorer munafa I1 = 300 * 4 * r = 1200r.
+STEP_3: 400 takar 5 bochorer munafa I2 = 400 * 5 * r = 2000r.
+STEP_4: proshnanushare, I1 + I2 = 128.
+STEP_5: ba, 1200r + 2000r = 128.
+STEP_6: ba, 3200r = 128.
+STEP_7: ba, r = 128 / 3200 = 4 / 100 = 4%.
+FINAL_ANSWER: munafar har 4%।
+Q27_SOLUTION:
+STEP_1: deoya ache, r = 4% = 4/100, bochor n = 2, parthokkyo = 1 taka.
+STEP_2: dhori, muldhon = P.
+STEP_3: shorol munafa SI = P * n * r = P * 2 * 0.04 = 0.08P.
+STEP_4: chokrobridhi munafa CI = P * (1 + r)^n - P = P * (1.04)^2 - P = 1.0816P - P = 0.0816P.
+STEP_5: parthokkyo = 0.0816P - 0.08P = 0.0016P.
+STEP_6: proshnanushare, 0.0016P = 1.
+STEP_7: ba, P = 1 / 0.0016 = 10000 / 16 = 625.
+FINAL_ANSWER: muldhon 625 taka।
+Q28_SOLUTION:
+STEP_1: dhori, ashol = P ebong har = r.
+STEP_2: 3 bochorer shobridhimul = P + 3Pr = 460. (Shorol munafa dhora hoyeche)
+STEP_3: 5 bochorer shobridhimul = P + 5Pr = 600.
+STEP_4: biyog kore pai, (P + 5Pr) - (P + 3Pr) = 600 - 460.
+STEP_5: ba, 2Pr = 140, tai Pr = 70.
+STEP_6: P = 460 - 3*(70) = 460 - 210 = 250.
+STEP_7: Pr = 70 theke পাই, 250 * r = 70.
+STEP_8: ba, r = 70 / 250 = 7 / 25 = 28 / 100 = 28%.
+FINAL_ANSWER: ashol 250 taka ebong munafar har 28%।
+Q29_SOLUTION:
+STEP_1: deoya ache, r = 5% = 5/100, n = 13, A = 990 taka.
+STEP_2: formula: A = P * (1 + n*r).
+STEP_3: ba, 990 = P * (1 + 13 * 5/100).
+STEP_4: ba, 990 = P * (1 + 65/100) = P * (165/100).
+STEP_5: ba, P = (990 * 100) / 165 = 6 * 100 = 600.
+FINAL_ANSWER: ashol 600 taka।
+Q30_SOLUTION:
+STEP_1: deoya ache, r = 5% = 5/100, n = 12, A = 1280 taka.
+STEP_2: formula: A = P * (1 + n*r).
+STEP_3: ba, 1280 = P * (1 + 12 * 5/100).
+STEP_4: ba, 1280 = P * (1 + 60/100) = P * (160/100).
+STEP_5: ba, P = (1280 * 100) / 160 = 8 * 100 = 800.
+FINAL_ANSWER: ashol 800 taka।
+Q31_SOLUTION:
+STEP_1: deoya ache, P = 8000, n = 3, r = 5% = 0.05.
+STEP_2: shorol munafa SI = Pnr = 8000 * 3 * 0.05 = 1200 taka.
+STEP_3: chokrobridhi munafa CI = P * (1+r)^n - P = 8000 * (1.157625) - 8000 = 9261 - 8000 = 1261 taka.
+STEP_4: parthokkyo = 1261 - 1200 = 61.
+FINAL_ANSWER: munafar parthokkyo 61 taka।
+Q32_SOLUTION:
+STEP_1: deoya ache, x = 15, P = 2300.
+STEP_2: dhori, bikroymulyo (VAT chhara) = S.
+STEP_3: VAT shoh bikroymulyo P = S + S * (x/100) = S * (1 + x/100).
+STEP_4: ba, 2300 = S * (1 + 15/100) = S * (115/100).
+STEP_5: ba, S = (2300 * 100) / 115 = 20 * 100 = 2000.
+STEP_6: VAT er poriman = P - S = 2300 - 2000 = 300.
+FINAL_ANSWER: VAT er poriman 300 taka।
+Q33_SOLUTION:
+(ko) STEP_1: x + 1/x = 3. ba, (x^2 + 1) / x = 3. ba, x^2 + 1 = 3x. ba, x^2 - 3x + 1 = 0.
+(kho) STEP_1: (x - 1/x)^2 = (x + 1/x)^2 - 4 = 3^2 - 4 = 5. tai, x - 1/x = sqrt(5).
+(kho) STEP_2: x^3 - 1/x^3 = (x - 1/x)^3 + 3*(x - 1/x) = (sqrt(5))^3 + 3sqrt(5) = 5sqrt(5) + 3sqrt(5) = 8sqrt(5).
+(go) STEP_1: x^2 + 1/x^2 = (x + 1/x)^2 - 2 = 9 - 2 = 7.
+(go) STEP_2: x^3 + 1/x^3 = (x + 1/x)^3 - 3*(x + 1/x) = 27 - 9 = 18.
+(go) STEP_3: (x^2 + 1/x^2)(x^3 + 1/x^3) = x^5 + 1/x + x + 1/x^5.
+(go) STEP_4: ba, 7 * 18 = x^5 + 1/x^5 + (x + 1/x). ba, 126 = x^5 + 1/x^5 + 3.
+(go) STEP_5: ba, x^5 + 1/x^5 = 123.
+FINAL_ANSWER: (ko) x^2 - 3x + 1 = 0, (kho) 8sqrt(5), (go) x^5 + 1/x^5 = 123 promanito।
+Q34_SOLUTION:
+(ko) STEP_1: x = shodoshyo shonkhya.
+(ko) STEP_2: joton shodoshyo, protteke tar 100-gun chanda dey, tai protteker chanda = 100x taka.
+(ko) STEP_3: mot chanda A = x * (100x) = 100x^2 taka.
+(kho) STEP_1: 4 jon chanda na deoyay shodoshyo holo (x-4).
+(kho) STEP_2: proshnanushare, mot chanda A / (x-4) = (100x + 500).
+(kho) STEP_3: ba, 100x^2 = (100x + 500)(x-4) = 100x^2 - 400x + 500x - 2000.
+(kho) STEP_4: ba, 100*x = 2000. ba, x = 20.
+(kho) STEP_5: A = 100 * (20)^2 = 40000 taka.
+(go) STEP_1: P1 = 40000 / 4 = 10000. SI1 = 10000 * 2 * 0.05 = 1000.
+(go) STEP_2: P2 = 40000 - 10000 = 30000. SI2 = 30000 * 2 * 0.04 = 2400.
+(go) STEP_3: Total SI = 1000 + 2400 = 3400.
+FINAL_ANSWER: (ko) A = 100x^2, (kho) x = 20, A = 40000 taka, (go) mot munafa 3400 taka।
+Q35_SOLUTION:
+(ko) STEP_1: dhori mot shonkhya = x. Rent per head = 2400/x.
+(ko) STEP_2: 10 jon na asay per head = 2400/(x-10).
+(ko) STEP_3: proshnanushare, 2400/(x-10) - 2400/x = 8. Solv kore pai x = 60.
+(ko) STEP_4: Mathapichu bridhi 8 taka holo na asha jatri shonkhya (10) er kototuku? (8/10)100 = 80%.
+(kho) STEP_1: attendees = 60 - 10 = 50 jon.
+(kho) STEP_2: Rent paid = 2400 / 50 = 48 taka.
+(go) STEP_1: P = 2400, r = 0.05, n = 13. SI = 2400130.05 = 1560.
+(go) STEP_2: CI = 2400(1.05)^13 - 2400 = 2400*1.8856 - 2400 = 4525.44 - 2400 = 2125.44.
+(go) STEP_3: Diff = 2125.44 - 1560 = 565.44 (Approx).
+FINAL_ANSWER: (ko) 80%, (kho) 48 taka, (go) munafar parthokkyo 565.44 taka pray।
+Q36_SOLUTION:
+STEP_1: shrot na thakle shomoy t0 = 2d / v.
+STEP_2: shrot thakle jete shomoy t1 = d / (v+u), firte shomoy t2 = d / (v-u).
+STEP_3: mot shomoy t = d/(v+u) + d/(v-u) = d*(v-u+v+u) / (v^2 - u^2) = 2dv / (v^2 - u^2).
+STEP_4: t / t0 = (2dv / (v^2 - u^2)) / (2d / v) = v^2 / (v^2 - u^2).
+STEP_5: jehetu v > u, tai v^2 > v^2 - u^2, fole t / t0 > 1. ortho t > t0.
+FINAL_ANSWER: shrot thakle shomoy beshi lagbe।
+Q37_SOLUTION:
+STEP_1: dhori ghash ache G ebong bridhi g per day. cow eats c per day.
+STEP_2: G + 30g = 1730c = 510c. G + 24g = 1924c = 456c.
+STEP_3: biyog kore, 6g = 54c => g = 9c. tai G = 510c - 270c = 240c.
+STEP_4: dhori shurute x ti goru chilo. 6 din ghsh khay => consumed = 6xc.
+STEP_5: 4 ti bikroyer por (x-4) jon 2 din khay => consumed = 2*(x-4)c.
+STEP_6: mot consumption = initial ghash + 8 diner growth = 240c + 89c = 312c.
+STEP_7: equation: 6x + 2x - 8 = 312. ba, 8x = 320. ba, x = 40.
+FINAL_ANSWER: shurute dolti-te 40-ti goru chilo।
+Q38_SOLUTION:
+STEP_1: dhori, x ki.mi distance 1m bhai ghoray chore jay, tarpork ghora rakhye walks kor.
+STEP_2: 2m bhai walk kore giye ghorata pick kore rode kore fair-e pouchay.
+STEP_3: shomoy kom lage jodi tara ekshathe pouchay.
+STEP_4: speed: walk = 4, horse = 10. distance = 20.
+STEP_5: calculation anushare, horse share factor kaj korle tara 34/11 ghontay pouchate pare.
+STEP_6: total time = (14/11) [ride] + (6/11) [horse empty return setup] + (14/11) [ride] = 34/11 hours.
+FINAL_ANSWER: tara mot 34/11 ghontay (pray 3.09 ghonta) fair-e pouchate parbe।

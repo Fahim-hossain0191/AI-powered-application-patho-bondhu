@@ -84,6 +84,7 @@ def get_hint(exercise_id: int, phase: int) -> dict:
         phase=phase,
     )
 
+<<<<<<< HEAD
     # Step 4: Gemini কে দাও
     response = client.models.generate_content(
         model=GEMINI_MODEL,
@@ -92,6 +93,30 @@ def get_hint(exercise_id: int, phase: int) -> dict:
 
     # Step 5: Parse করো
     result = _parse_response(response.text)
+=======
+    # Step 4: Gemini কে দাও & Step 5: Parse করো
+    try:
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=prompt
+        )
+        result = _parse_response(response.text)
+    except Exception as e:
+        print(f"Gemini API rate limit or error in get_hint: {e}. Falling back to database solution steps.")
+        sol_steps = exercise.get("solution_steps", "")
+        fallback_hint = f"ধাপ {phase}: বীজগণিতীয় অনুসিদ্ধান্ত প্রয়োগ করার চেষ্টা করুন।"
+        
+        if sol_steps:
+            lines = [line.strip() for line in sol_steps.split("\n") if line.strip()]
+            num_lines = len(lines)
+            if num_lines > 0:
+                idx = min(int((phase - 1) * (num_lines / 5)), num_lines - 1)
+                fallback_hint = f"ধাপ {phase}: {lines[idx]}\n\n(নোট: Gemini এআই কোটা লিমিটের কারণে ডাটাবেজ সমাধান থেকে সরাসরি সংকেত দেওয়া হয়েছে।)"
+        
+        result = {
+            "hint": fallback_hint
+        }
+>>>>>>> origin/main
 
     # Extra info যোগ করো
     result["exercise_id"] = exercise_id

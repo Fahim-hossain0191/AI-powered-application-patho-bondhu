@@ -2,6 +2,10 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
+<<<<<<< HEAD
+=======
+import traceback
+>>>>>>> origin/main
 
 from config import APP_HOST, APP_PORT, DEBUG
 from modules.math.mcq import generate_mcq
@@ -50,8 +54,15 @@ def mcq_generate(req: MCQRequest):
         )
         return result
     except ValueError as e:
+<<<<<<< HEAD
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+=======
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        traceback.print_exc()
+>>>>>>> origin/main
         raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 
@@ -83,8 +94,15 @@ def answer_check_text(req: AnswerTextRequest):
         )
         return result
     except ValueError as e:
+<<<<<<< HEAD
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+=======
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        traceback.print_exc()
+>>>>>>> origin/main
         raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 
@@ -104,8 +122,15 @@ def answer_check_image(req: AnswerImageRequest):
         )
         return result
     except ValueError as e:
+<<<<<<< HEAD
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+=======
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        traceback.print_exc()
+>>>>>>> origin/main
         raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 
@@ -135,8 +160,15 @@ def hint(req: HintRequest):
         )
         return result
     except ValueError as e:
+<<<<<<< HEAD
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+=======
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        traceback.print_exc()
+>>>>>>> origin/main
         raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 
@@ -169,8 +201,15 @@ def jachai_solve(req: JachaiSolveRequest):
         )
         return result
     except ValueError as e:
+<<<<<<< HEAD
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+=======
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        traceback.print_exc()
+>>>>>>> origin/main
         raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 
@@ -189,8 +228,15 @@ def jachai_check(req: JachaiCheckRequest):
         )
         return result
     except ValueError as e:
+<<<<<<< HEAD
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+=======
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        traceback.print_exc()
+>>>>>>> origin/main
         raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 
@@ -208,8 +254,15 @@ def jachai_image(req: JachaiImageRequest):
         )
         return result
     except ValueError as e:
+<<<<<<< HEAD
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+=======
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        traceback.print_exc()
+>>>>>>> origin/main
         raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 

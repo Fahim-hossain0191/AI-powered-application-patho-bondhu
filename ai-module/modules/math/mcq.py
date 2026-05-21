@@ -51,6 +51,7 @@ def generate_mcq(chapter_id: int, count: int = 20, previously_generated: list = 
         previously_generated=previously_generated or []
     )
 
+<<<<<<< HEAD
     # Step 3: Gemini কে দাও
     response = client.models.generate_content(
         model=GEMINI_MODEL,
@@ -73,6 +74,62 @@ def generate_mcq(chapter_id: int, count: int = 20, previously_generated: list = 
         mcqs = data.get("mcqs", [])
     except json.JSONDecodeError as e:
         raise ValueError(f"JSON parse হয়নি: {e}\n\nOutput:\n{raw_text}")
+=======
+    # Step 3: Gemini কে দাও & Step 4: JSON parse করো
+    try:
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=MCQResponse,
+            )
+        )
+        raw_text = response.text.strip()
+        if raw_text.startswith("```"):
+            lines = raw_text.split("\n")
+            lines = [l for l in lines if not l.strip().startswith("```")]
+            raw_text = "\n".join(lines).strip()
+        data = json.loads(raw_text)
+        mcqs = data.get("mcqs", [])
+    except Exception as e:
+        print(f"Gemini API rate limit or error in generate_mcq: {e}. Falling back to structured local MCQs.")
+        mcqs = [
+            {
+                "question": "x + y = 5 এবং x - y = 3 হলে, x^2 - y^2 এর মান কত?",
+                "options": {
+                    "ক": "8",
+                    "খ": "15",
+                    "গ": "16",
+                    "ঘ": "2"
+                },
+                "correct": "খ",
+                "explanation": "x^2 - y^2 = (x+y)(x-y) = 5 × 3 = 15।"
+            },
+            {
+                "question": "a + 1/a = 2 হলে, a^2 + 1/a^2 এর মান কত?",
+                "options": {
+                    "ক": "2",
+                    "খ": "4",
+                    "গ": "6",
+                    "ঘ": "0"
+                },
+                "correct": "ক",
+                "explanation": "a^2 + 1/a^2 = (a + 1/a)^2 - 2 = 2^2 - 2 = 2।"
+            },
+            {
+                "question": "a^3 - b^3 এর সঠিক উৎপাদক বিশ্লেষণ সূত্র কোনটি?",
+                "options": {
+                    "ক": "(a-b)(a^2 + ab + b^2)",
+                    "খ": "(a-b)(a^2 - ab + b^2)",
+                    "গ": "(a+b)(a^2 - ab + b^2)",
+                    "ঘ": "(a-b)^3 + 3ab(a-b)"
+                },
+                "correct": "ক",
+                "explanation": "a^3 - b^3 এর উৎপাদক সূত্র হলো (a-b)(a^2 + ab + b^2)।"
+            }
+        ]
+>>>>>>> origin/main
 
     # Step 5: Validate
     validated = []
