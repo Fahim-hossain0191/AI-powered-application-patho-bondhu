@@ -1,23 +1,27 @@
-const jwtUtils = require('../utils/jwt.utils');
-const { sendError } = require('../utils/response.utils');
+const jwt = require('jsonwebtoken');
+const { error } = require('../utils/response');
 
-const protect = (req, res, next) => {
+/**
+ * JWT token verify করে।
+ * Protected routes এ এই middleware লাগবে।
+ * Token valid হলে req.user এ user info set করবে।
+ */
+const authMiddleware = (req, res, next) => {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return error(res, 'Authorization token missing', 401);
+  }
+
+  const token = authHeader.split(' ')[1];
+
   try {
-    // Header থেকে token নাও
-    const authHeader = req.headers.authorization;
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return sendError(res, 'Login করো', 401);
-    }
-
-    const token = authHeader.split(' ')[1];
-    const decoded = jwtUtils.verifyAccessToken(token);
-
-    // Request এ user info যোগ করো
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || process.env.JWT_ACCESS_SECRET || 'secret');
     req.user = decoded;
     next();
   } catch (err) {
-    return sendError(res, 'Token মেয়াদ শেষ বা ভুল, আবার login করো', 401);
+    return error(res, 'Invalid or expired token', 401);
   }
 };
 
-module.exports = { protect };
+module.exports = authMiddleware;
