@@ -3,11 +3,44 @@
 import Link from "next/link";
 import { useState } from "react";
 
- 
 export default function LoginPage() {
   const [showPw, setShowPw] = useState(false);
   const [form, setForm] = useState({ contact: "", password: "" });
- 
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async () => {
+    if (!form.contact || !form.password) {
+      alert('Email এবং Password দাও');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: form.contact,
+          password: form.password,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem('accessToken', data.data.token);
+        localStorage.setItem('pathyabandhu_visited', 'true');
+        window.location.href = '/pages/home';
+      } else {
+        alert(data.message || 'Email বা password ভুল');
+      }
+    } catch (err) {
+      alert('Server এর সাথে connect করা যাচ্ছে না');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const dots = [
     { top: "12%", left: "8%", color: "#4fc3f7", size: 10 },
     { top: "30%", left: "18%", color: "#66bb6a", size: 8 },
@@ -15,15 +48,9 @@ export default function LoginPage() {
     { top: "70%", left: "22%", color: "#ef5350", size: 7 },
     { top: "80%", left: "38%", color: "#ab47bc", size: 8 },
   ];
- 
+
   return (
     <div style={s.page}>
-      {/* <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-      /> */}
- 
-      {/* Decorative dots */}
       {dots.map((d, i) => (
         <span
           key={i}
@@ -39,8 +66,7 @@ export default function LoginPage() {
           }}
         />
       ))}
- 
-      {/* Staircase illustration (bottom-left) */}
+
       <div style={s.stairWrap}>
         {[...Array(6)].map((_, i) => (
           <div
@@ -56,15 +82,13 @@ export default function LoginPage() {
           />
         ))}
       </div>
- 
-      {/* Login Card */}
+
       <div style={s.card}>
         <h1 style={s.title}>ফিরে আসার জন্য স্বাগতম</h1>
         <p style={s.subtitle}>
           তোমার শেখার যাত্রা এখন আরো সহজ। চল শুরু করি।
         </p>
- 
-        {/* Contact field */}
+
         <div style={s.fieldGroup}>
           <label style={s.label}>মোবাইল নম্বর / ইমেইল</label>
           <input
@@ -75,8 +99,7 @@ export default function LoginPage() {
             onChange={(e) => setForm({ ...form, contact: e.target.value })}
           />
         </div>
- 
-        {/* Password field */}
+
         <div style={s.fieldGroup}>
           <label style={s.label}>পাসওয়ার্ড</label>
           <div style={s.pwWrap}>
@@ -97,19 +120,19 @@ export default function LoginPage() {
             </a>
           </div>
         </div>
- 
-        {/* Login button */}
-        <Link href="/pages/home">
-        
-        <button style={s.loginBtn}>লগইন করি</button>
-        </Link>
- 
-        {/* Create account button */}
+
+        <button
+          style={s.loginBtn}
+          onClick={handleLogin}
+          disabled={loading}
+        >
+          {loading ? 'লোড হচ্ছে...' : 'লগইন করি'}
+        </button>
+
         <button style={s.createBtn}>
           নতুন এসেছো নাকি? — একাউন্ট তৈরি করতে চাও
         </button>
- 
-        {/* Footer note */}
+
         <p style={s.footerNote}>
           নতুন এখানে?{" "}
           <a href="#" style={s.footerLink}>
@@ -117,15 +140,14 @@ export default function LoginPage() {
           </a>
         </p>
       </div>
- 
-      {/* Bottom disclaimer */}
+
       <p style={s.disclaimer}>
         তোমার তথ্য সম্পূর্ণ নিরাপদে থাকবে 🔒
       </p>
     </div>
   );
 }
- 
+
 const s = {
   page: {
     fontFamily: "'Hind Siliguri', 'Noto Sans Bengali', sans-serif",

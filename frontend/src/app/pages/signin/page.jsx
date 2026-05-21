@@ -158,25 +158,58 @@ export default function SignupPage() {
       return next;
     });
   };
-  const handleSignup = async () => {
-  const res = await fetch("/api/auth/register", {
+const handleSignup = async () => {
+  // Basic validation
+  if (!form.name || !form.contact || !form.password || !form.cls) {
+    alert('নাম, ইমেইল, পাসওয়ার্ড এবং ক্লাস দেওয়া আবশ্যক');
+    return;
+  }
+
+  // বাংলা class number কে English এ convert করো
+  const classMap = { 'ক্লাস ৬': 6, 'ক্লাস ৭': 7, 'ক্লাস ৮': 8, 'ক্লাস ৯': 9, 'ক্লাস ১০': 10 };
+  const classNumber = classMap[`ক্লাস ${form.cls}`] || parseInt(form.cls) || 6;
+
+  const res = await fetch("http://localhost:5000/api/auth/register", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      name: form.name,
-      email: form.contact,
-      password: form.password,
+      full_name:          form.name,
+      email:              form.contact,
+      password:           form.password,
+      class_level:        classNumber,
+      medium:             form.medium || null,
+      favourite_subjects: Array.from(selectedSubjects),   // ['math', 'english']
+      hobbies:            Array.from(selectedHobbies),    // ['games', 'books']
+      learning_styles:    Array.from(selectedLearn),      // ['visual']
     }),
   });
 
   const data = await res.json();
 
   if (res.ok) {
-    alert("Account created!");
+    try {
+      // সফলভাবে রেজিস্ট্রেশনের পর স্বয়ংক্রিয় লগইন করো
+      const loginRes = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: form.contact,
+          password: form.password,
+        }),
+      });
+      const loginData = await loginRes.json();
+      if (loginRes.ok) {
+        localStorage.setItem('accessToken', loginData.data.token);
+        localStorage.setItem('pathyabandhu_visited', 'true');
+        window.location.href = '/pages/home';
+      } else {
+        window.location.href = '/pages/login';
+      }
+    } catch (e) {
+      window.location.href = '/pages/login';
+    }
   } else {
-    alert(data.error || "Something went wrong");
+    alert(data.message || 'কিছু একটা সমস্যা হয়েছে');
   }
 };
   return (
