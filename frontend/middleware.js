@@ -1,26 +1,23 @@
 import { NextResponse } from "next/server";
-import jwt from "jsonwebtoken";
 
 export function middleware(req) {
-  const token = req.cookies.get("token")?.value;
+  const { pathname } = req.nextUrl;
 
-  // allow public routes
-  if (req.nextUrl.pathname === "/") {
-    return NextResponse.next();
+  if (pathname === "/pages/signin") {
+    return NextResponse.redirect(new URL("/signin", req.url));
   }
 
-  if (!token) {
-    return NextResponse.redirect(new URL("/", req.url));
+  if (pathname === "/pages/home") {
+    return NextResponse.redirect(new URL("/home", req.url));
   }
 
-  try {
-    jwt.verify(token, process.env.JWT_SECRET);
-    return NextResponse.next();
-  } catch {
-    return NextResponse.redirect(new URL("/", req.url));
+  if (pathname === "/pages/math" || pathname.startsWith("/pages/math/")) {
+    return NextResponse.redirect(new URL("/math", req.url));
   }
+
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ["/pages/:path*"],
 };

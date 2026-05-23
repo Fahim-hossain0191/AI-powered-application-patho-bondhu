@@ -8,73 +8,53 @@ from prompts.math.hint_prompt import build_hint_prompt
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 
-# ================================================
-# HELPER: Gemini output parse করো
-# ================================================
 def _parse_response(raw_text: str) -> dict:
     raw_text = raw_text.strip()
-
     if raw_text.startswith("```"):
         lines = raw_text.split("\n")
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        raw_text = "\n".join(lines).strip()
+        raw_text = "\n".join(line for line in lines if not line.strip().startswith("```")).strip()
 
     try:
         return json.loads(raw_text)
     except json.JSONDecodeError:
         raw_text = raw_text.replace("\\\\", "\\")
-        try:
-            return json.loads(raw_text)
-        except json.JSONDecodeError as e:
-            raise ValueError(
-                f"Gemini এর output parse হয়নি: {e}\n\nOutput:\n{raw_text}"
-            )
+        return json.loads(raw_text)
 
 
-# ================================================
-# GET HINT
-# ================================================
+def _fallback_hint(exercise: dict, phase: int) -> dict:
+    solution_steps = exercise.get("solution_steps", "")
+    lines = [line.strip() for line in solution_steps.split("\n") if line.strip()]
+    phase_names = {
+        1: "চিন্তার দিক",
+        2: "ব্যবহার্য টুল",
+        3: "প্রথম পদক্ষেপ",
+        4: "প্রায় সম্পূর্ণ পথ",
+        5: "সম্পূর্ণ সমাধান",
+    }
+
+    if lines:
+        idx = min(int((phase - 1) * (len(lines) / 5)), len(lines) - 1)
+        hint = f"{phase_names[phase]}: {lines[idx]}"
+    else:
+        hint = f"{phase_names[phase]}: প্রশ্নের pattern এবং দেওয়া তথ্য থেকে শুরু করো।"
+
+    return {"hint": hint}
+
+
 def get_hint(exercise_id: int, phase: int) -> dict:
-    """
-    Student hint চাইলে এই function call হবে।
-
-    exercise_id → কোন exercise এর hint
-    phase       → 1 থেকে 5
-
-    Flow:
-    1. Phase validate (1-5 এর মধ্যে হতে হবে)
-    2. DB থেকে exercise + solution + formulas আনো
-    3. Prompt বানাও
-       - question_pattern দেখে tutor approach ঠিক করো
-       - phase দেখে কতটুকু বলবো ঠিক করো
-    4. Gemini কে দাও
-    5. Parse করো
-
-    Phase 1 → শুধু চিন্তার দিক, কোনো সূত্র না
-    Phase 2 → কোন approach, কোন সূত্র — কিন্তু apply না
-    Phase 3 → প্রথম step হাতে ধরে
-    Phase 4 → প্রায় সব, শেষটুকু বাকি
-    Phase 5 → সম্পূর্ণ solution + explanation
-    """
-
-    # Step 1: Phase validate
     if phase not in [1, 2, 3, 4, 5]:
         raise ValueError("Phase অবশ্যই 1 থেকে 5 এর মধ্যে হতে হবে")
 
-    # Step 2: DB থেকে data আনো
     exercise = get_exercise_by_id(exercise_id)
     if not exercise:
         raise ValueError(f"Exercise {exercise_id} পাওয়া যায়নি")
-
     if not exercise.get("solution_steps"):
         raise ValueError("এই exercise এর solution এখনো database এ নেই")
 
-    # "3.1" → chapter_id = 3
     ex_num = exercise.get("exercise_number", "3.1")
-    chapter_id = int(ex_num.split(".")[0])
+    chapter_id = int(str(ex_num).split(".")[0])
     formulas = get_formulas(chapter_id)
 
-    # Step 3: Prompt বানাও
     prompt = build_hint_prompt(
         question_text=exercise["question_text"],
         question_pattern=exercise["question_pattern"] or "OTHER",
@@ -84,43 +64,14 @@ def get_hint(exercise_id: int, phase: int) -> dict:
         phase=phase,
     )
 
-<<<<<<< HEAD
-    # Step 4: Gemini কে দাও
-    response = client.models.generate_content(
-        model=GEMINI_MODEL,
-        contents=prompt
-    )
-
-    # Step 5: Parse করো
-    result = _parse_response(response.text)
-=======
-    # Step 4: Gemini কে দাও & Step 5: Parse করো
     try:
-        response = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt
-        )
+        response = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
         result = _parse_response(response.text)
     except Exception as e:
-        print(f"Gemini API rate limit or error in get_hint: {e}. Falling back to database solution steps.")
-        sol_steps = exercise.get("solution_steps", "")
-        fallback_hint = f"ধাপ {phase}: বীজগণিতীয় অনুসিদ্ধান্ত প্রয়োগ করার চেষ্টা করুন।"
-        
-        if sol_steps:
-            lines = [line.strip() for line in sol_steps.split("\n") if line.strip()]
-            num_lines = len(lines)
-            if num_lines > 0:
-                idx = min(int((phase - 1) * (num_lines / 5)), num_lines - 1)
-                fallback_hint = f"ধাপ {phase}: {lines[idx]}\n\n(নোট: Gemini এআই কোটা লিমিটের কারণে ডাটাবেজ সমাধান থেকে সরাসরি সংকেত দেওয়া হয়েছে।)"
-        
-        result = {
-            "hint": fallback_hint
-        }
->>>>>>> origin/main
+        print(f"Gemini error in get_hint: {e}. Falling back to database hint.")
+        result = _fallback_hint(exercise, phase)
 
-    # Extra info যোগ করো
     result["exercise_id"] = exercise_id
     result["question_pattern"] = exercise["question_pattern"]
     result["has_more_hints"] = phase < 5
-
     return result
