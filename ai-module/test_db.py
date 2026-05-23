@@ -13,3 +13,4 @@ try:
     conn.close()
 except Exception as e:
     print("Database connection failed:", e)
+

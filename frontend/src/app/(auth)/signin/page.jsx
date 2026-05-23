@@ -1,341 +1,222 @@
-'use client'
-import Link from "next/link";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { auth } from "../../../services/api";
+"use client";
+/* eslint-disable react-hooks/set-state-in-effect */
 
-<<<<<<< HEAD:frontend/src/app/pages/login/page.jsx
-export default function LoginPage() {
-=======
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { auth, storeSession } from "../../../services/api";
+
 export default function SignIn() {
   const router = useRouter();
->>>>>>> origin/main:frontend/src/app/(auth)/signin/page.jsx
   const [showPw, setShowPw] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ contact: "", password: "" });
-<<<<<<< HEAD:frontend/src/app/pages/login/page.jsx
-  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [mounted, setMounted] = useState(false);
 
-  const handleLogin = async () => {
-    if (!form.contact || !form.password) {
-      alert('Email এবং Password দাও');
-      return;
-    }
-
-    setLoading(true);
-    try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: form.contact,
-          password: form.password,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        localStorage.setItem('accessToken', data.data.token);
-        localStorage.setItem('pathyabandhu_visited', 'true');
-        window.location.href = '/pages/home';
-      } else {
-        alert(data.message || 'Email বা password ভুল');
-      }
-    } catch (err) {
-      alert('Server এর সাথে connect করা যাচ্ছে না');
-=======
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
     if (!form.contact || !form.password) {
-      alert("Please enter email and password");
+      setErrorMessage("অনুগ্রহ করে মোবাইল নম্বর/ইমেইল এবং পাসওয়ার্ড দুটিই দিন।");
       return;
     }
-
     try {
       setLoading(true);
-      const data = await auth.login({
-        email: form.contact,
-        password: form.password
-      });
+      const contact = form.contact.trim();
+      const credentials = contact.includes("@")
+        ? { email: contact, password: form.password }
+        : { phone: contact, password: form.password };
+      const data = await auth.login(credentials);
 
-      // Save user data and token to localStorage
-      localStorage.setItem("user", JSON.stringify(data.data.user));
-      localStorage.setItem("accessToken", data.data.accessToken);
+      storeSession(data);
+      if (!localStorage.getItem("points")) localStorage.setItem("points", "100");
+      if (!localStorage.getItem("streak")) localStorage.setItem("streak", "1");
       
-      // Redirect to home
-      router.push("/home");
-      // Force refresh to update Navbar state
-      router.refresh();
+      setSuccessMessage("লগইন সফল! ড্যাশবোর্ডে নিয়ে যাচ্ছি...");
+      setTimeout(() => { 
+        router.push("/home"); 
+        router.refresh(); 
+      }, 800);
     } catch (err) {
-      alert(err.message || "Something went wrong");
->>>>>>> origin/main:frontend/src/app/(auth)/signin/page.jsx
+      setErrorMessage(err.message || "লগইন করতে ব্যর্থ হয়েছে। পুনরায় চেষ্টা করুন।");
     } finally {
       setLoading(false);
     }
   };
-<<<<<<< HEAD:frontend/src/app/pages/login/page.jsx
 
-=======
- 
->>>>>>> origin/main:frontend/src/app/(auth)/signin/page.jsx
-  const dots = [
-    { top: "12%", left: "8%", color: "#4fc3f7", size: 10 },
-    { top: "30%", left: "18%", color: "#66bb6a", size: 8 },
-    { top: "55%", left: "6%", color: "#ffa726", size: 10 },
-    { top: "70%", left: "22%", color: "#ef5350", size: 7 },
-    { top: "80%", left: "38%", color: "#ab47bc", size: 8 },
+  const particles = [
+    { top: "8%", left: "7%", size: 10, color: "bg-teal-500", delay: "0s" },
+    { top: "15%", right: "10%", size: 8, color: "bg-indigo-500", delay: "0.5s" },
+    { top: "70%", left: "5%", size: 14, color: "bg-emerald-500", delay: "1s" },
+    { top: "85%", right: "12%", size: 10, color: "bg-purple-500", delay: "1.5s" },
+    { top: "45%", left: "92%", size: 8, color: "bg-amber-500", delay: "0.8s" },
+    { top: "30%", left: "3%", size: 6, color: "bg-rose-500", delay: "1.2s" },
   ];
 
   return (
-    <div style={s.page}>
-      {dots.map((d, i) => (
-        <span
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden font-sans py-16 px-4 bg-slate-950">
+      
+      {/* Animated gradient space canvas */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(99,102,241,0.18)_0%,transparent_65%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(20,184,166,0.18)_0%,transparent_65%)]" />
+
+      {/* Cyber Grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:50px_50px]" />
+
+      {/* Floating high-fidelity particles */}
+      {mounted && particles.map((p, i) => (
+        <div
           key={i}
+          className={`absolute rounded-full ${p.color} opacity-30 blur-[1px] animate-bounce`}
           style={{
-            position: "absolute",
-            top: d.top,
-            left: d.left,
-            width: d.size,
-            height: d.size,
-            borderRadius: "50%",
-            background: d.color,
-            opacity: 0.85,
+            top: p.top, left: p.left, right: p.right,
+            width: p.size, height: p.size,
+            animationDelay: p.delay,
+            animationDuration: `${4 + i * 0.8}s`,
           }}
         />
       ))}
 
-      <div style={s.stairWrap}>
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            style={{
-              width: `${110 - i * 14}px`,
-              height: "18px",
-              background: "rgba(200,230,240,0.55)",
-              borderRadius: "4px",
-              marginBottom: "6px",
-              marginLeft: `${i * 14}px`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Futuristic Blur orbs */}
+      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[120px] animate-pulse" style={{ animationDuration: "10s" }} />
+      <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full bg-teal-500/10 blur-[100px] animate-pulse" style={{ animationDuration: "8s" }} />
 
-      <div style={s.card}>
-        <h1 style={s.title}>ফিরে আসার জন্য স্বাগতম</h1>
-        <p style={s.subtitle}>
-          তোমার শেখার যাত্রা এখন আরো সহজ। চল শুরু করি।
-        </p>
+      {/* Signin Portal Card Container */}
+      <div
+        className="relative z-10 w-full max-w-[450px] px-2 sm:px-0 transition-all duration-700"
+        style={{ opacity: mounted ? 1 : 0, transform: mounted ? "translateY(0)" : "translateY(30px)" }}
+      >
+        {/* Glow halo frame */}
+        <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-600 to-teal-400 rounded-[32px] blur-xl opacity-20 animate-pulse" />
+        
+        <div className="relative bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.4)] p-8 sm:p-10">
+          
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-teal-400 text-white text-3xl shadow-[0_8px_25px_rgba(99,102,241,0.3)] mb-5 animate-bounce" style={{ animationDuration: "3.5s" }}>
+              ⚡
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">পাঠবন্ধু পোর্টালে লগইন</h1>
+            <p className="text-xs sm:text-sm text-slate-400 mt-2 font-medium">
+              এআই কুইজ, কাস্টম সল্ভার ও ইন্টারেক্টিভ অনুশীলনী হাব
+            </p>
+          </div>
 
-        <div style={s.fieldGroup}>
-          <label style={s.label}>মোবাইল নম্বর / ইমেইল</label>
-          <input
-            style={s.input}
-            type="text"
-            placeholder="017... অথবা email@example.com"
-            value={form.contact}
-            onChange={(e) => setForm({ ...form, contact: e.target.value })}
-          />
-        </div>
+          {/* Feedback states */}
+          {errorMessage && (
+            <div className="mb-5 p-4 bg-rose-500/10 border border-rose-500/25 rounded-2xl text-rose-400 text-xs font-bold flex items-start gap-2.5 animate-fadeIn">
+              <span className="text-sm mt-0.5 shrink-0">⚠️</span>
+              <span className="leading-relaxed">{errorMessage}</span>
+            </div>
+          )}
+          {successMessage && (
+            <div className="mb-5 p-4 bg-teal-500/10 border border-teal-500/25 rounded-2xl text-teal-400 text-xs font-bold flex items-center gap-2.5 animate-fadeIn">
+              <span className="text-sm shrink-0">✅</span>
+              <span>{successMessage}</span>
+            </div>
+          )}
 
-        <div style={s.fieldGroup}>
-          <label style={s.label}>পাসওয়ার্ড</label>
-          <div style={s.pwWrap}>
-            <input
-              style={{ ...s.input, paddingRight: "42px" }}
-              type={showPw ? "text" : "password"}
-              placeholder="••••••••"
-              value={form.password}
-              onChange={(e) => setForm({ ...form, password: e.target.value })}
-            />
-            <button style={s.eyeBtn} onClick={() => setShowPw((p) => !p)}>
-              {showPw ? "🙈" : "👁"}
+          {/* Login Form */}
+          <form onSubmit={handleLogin} className="space-y-5">
+            
+            {/* Username/Email Input Block */}
+            <div className="space-y-2">
+              <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest block ml-1">
+                মোবাইল নম্বর / ইমেল
+              </label>
+              <div className="relative group">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-sm transition-colors group-focus-within:text-indigo-400">
+                  👤
+                </span>
+                <input
+                  type="text"
+                  id="signin-contact"
+                  placeholder="যেমন: email@example.com অথবা মোবাইল"
+                  value={form.contact}
+                  onChange={(e) => setForm({ ...form, contact: e.target.value })}
+                  className="w-full pl-11 pr-4 py-4 bg-slate-950/50 border border-white/10 focus:border-indigo-500/50 focus:bg-slate-950/80 focus:ring-4 focus:ring-indigo-500/10 rounded-2xl text-white text-xs sm:text-sm outline-none transition-all placeholder:text-slate-600 font-medium"
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Password Input Block */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center px-1">
+                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">পাসওয়ার্ড</label>
+                <a href="#" className="text-[10px] font-bold text-indigo-400 hover:text-indigo-300 transition-colors uppercase tracking-wider">ভুলে গেছেন?</a>
+              </div>
+              <div className="relative group">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-sm transition-colors group-focus-within:text-indigo-400">🔒</span>
+                <input
+                  type={showPw ? "text" : "password"}
+                  id="signin-password"
+                  placeholder="আপনার পাসওয়ার্ড লিখুন"
+                  value={form.password}
+                  onChange={(e) => setForm({ ...form, password: e.target.value })}
+                  className="w-full pl-11 pr-12 py-4 bg-slate-950/50 border border-white/10 focus:border-indigo-500/50 focus:bg-slate-950/80 focus:ring-4 focus:ring-indigo-500/10 rounded-2xl text-white text-xs sm:text-sm outline-none transition-all placeholder:text-slate-600 font-medium"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPw(!showPw)}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 text-sm transition-colors"
+                >
+                  {showPw ? "🙈" : "👁️"}
+                </button>
+              </div>
+            </div>
+
+            {/* Submit Trigger */}
+            <button
+              type="submit"
+              id="signin-submit"
+              disabled={loading}
+              className="w-full mt-3 py-4 bg-gradient-to-r from-indigo-500 via-purple-600 to-indigo-600 hover:scale-[1.01] text-white font-extrabold text-xs sm:text-sm rounded-2xl shadow-[0_8px_25px_rgba(99,102,241,0.25)] hover:shadow-[0_8px_30px_rgba(99,102,241,0.4)] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none transition-all duration-300 flex items-center justify-center gap-2.5 tracking-wider uppercase"
+            >
+              {loading ? (
+                <>
+                  <svg className="animate-spin w-4 h-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                  </svg>
+                  লগইন হচ্ছে...
+                </>
+              ) : (
+                <>প্রবেশ করি 🚀</>
+              )}
             </button>
+          </form>
+
+          {/* Social Divider */}
+          <div className="flex items-center gap-4 my-7">
+            <div className="flex-1 h-px bg-white/5" />
+            <span className="text-[9px] font-black text-slate-600 uppercase tracking-widest">অথবা</span>
+            <div className="flex-1 h-px bg-white/5" />
           </div>
-          <div style={{ textAlign: "right", marginTop: "6px" }}>
-            <a href="#" style={s.forgotLink}>
-              পাসওয়ার্ড ভুলে গেছো?
-            </a>
-          </div>
+
+          {/* Registration Link */}
+          <Link
+            href="/signup"
+            id="goto-signup"
+            className="flex items-center justify-center gap-2 w-full py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-indigo-500/30 text-slate-300 hover:text-white font-black text-xs rounded-2xl transition-all duration-300 uppercase tracking-wider shadow-inner"
+          >
+            ✨ নতুন শিক্ষার্থীর অ্যাকাউন্ট তৈরি
+          </Link>
+
+          {/* Bottom Security Capsule */}
+          <p className="text-center text-[9px] text-slate-600 mt-6 flex items-center justify-center gap-1.5 font-bold uppercase tracking-wider">
+            <span>🔒</span> আপনার তথ্য সম্পূর্ণরূপে নিরাপদ ও সংরক্ষিত
+          </p>
         </div>
-<<<<<<< HEAD:frontend/src/app/pages/login/page.jsx
-
-        <button
-          style={s.loginBtn}
-          onClick={handleLogin}
-          disabled={loading}
-        >
-          {loading ? 'লোড হচ্ছে...' : 'লগইন করি'}
-        </button>
-
-=======
- 
-        {/* Login button */}
-        {/* Login button */}
-        <button 
-          style={s.loginBtn} 
-          onClick={handleLogin}
-          disabled={loading}
-        >
-          {loading ? "লগইন হচ্ছে..." : "লগইন করি"}
-        </button>
- 
-        {/* Create account button */}
->>>>>>> origin/main:frontend/src/app/(auth)/signin/page.jsx
-        <button style={s.createBtn}>
-          নতুন এসেছো নাকি? — একাউন্ট তৈরি করতে চাও
-        </button>
-
-        <p style={s.footerNote}>
-          নতুন এখানে?{" "}
-          <a href="#" style={s.footerLink}>
-            একাউন্ট তৈরি করো
-          </a>
-        </p>
       </div>
-
-      <p style={s.disclaimer}>
-        তোমার তথ্য সম্পূর্ণ নিরাপদে থাকবে 🔒
-      </p>
     </div>
   );
 }
-
-const s = {
-  page: {
-    fontFamily: "'Hind Siliguri', 'Noto Sans Bengali', sans-serif",
-    minHeight: "100vh",
-    background: "linear-gradient(135deg, #e8f8f5 0%, #eaf6fb 40%, #f0f9ff 100%)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingRight: "8%",
-    position: "relative",
-    overflow: "hidden",
-  },
-  stairWrap: {
-    position: "absolute",
-    bottom: "60px",
-    left: "5%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-start",
-    opacity: 0.6,
-  },
-  card: {
-    background: "white",
-    borderRadius: "18px",
-    boxShadow: "0 8px 40px rgba(0,0,0,0.09)",
-    padding: "44px 40px 36px",
-    width: "100%",
-    maxWidth: "420px",
-    position: "relative",
-    zIndex: 2,
-  },
-  title: {
-    fontSize: "24px",
-    fontWeight: 700,
-    color: "#1a1a2e",
-    marginBottom: "8px",
-    lineHeight: 1.3,
-  },
-  subtitle: {
-    fontSize: "13px",
-    color: "#888",
-    marginBottom: "28px",
-    lineHeight: 1.6,
-  },
-  fieldGroup: {
-    marginBottom: "18px",
-  },
-  label: {
-    display: "block",
-    fontSize: "13px",
-    fontWeight: 600,
-    color: "#444",
-    marginBottom: "8px",
-  },
-  input: {
-    width: "100%",
-    padding: "12px 14px",
-    border: "1.5px solid #e0e0e0",
-    borderRadius: "10px",
-    fontFamily: "inherit",
-    fontSize: "13px",
-    color: "#333",
-    outline: "none",
-    boxSizing: "border-box",
-    transition: "border-color 0.2s",
-  },
-  pwWrap: {
-    position: "relative",
-  },
-  eyeBtn: {
-    position: "absolute",
-    right: "12px",
-    top: "50%",
-    transform: "translateY(-50%)",
-    background: "none",
-    border: "none",
-    cursor: "pointer",
-    fontSize: "16px",
-    color: "#aaa",
-    padding: 0,
-  },
-  forgotLink: {
-    fontSize: "12px",
-    color: "#29b6c8",
-    textDecoration: "none",
-    fontWeight: 500,
-  },
-  loginBtn: {
-    width: "100%",
-    padding: "14px",
-    background: "linear-gradient(90deg, #26c6a6, #29b6c8)",
-    border: "none",
-    borderRadius: "12px",
-    fontFamily: "inherit",
-    fontSize: "15px",
-    fontWeight: 600,
-    color: "white",
-    cursor: "pointer",
-    marginTop: "6px",
-    marginBottom: "14px",
-    boxShadow: "0 4px 16px rgba(41,182,200,0.35)",
-    transition: "opacity 0.2s",
-  },
-  createBtn: {
-    width: "100%",
-    padding: "13px",
-    background: "transparent",
-    border: "2px solid #26c6a6",
-    borderRadius: "12px",
-    fontFamily: "inherit",
-    fontSize: "13px",
-    fontWeight: 500,
-    color: "#26c6a6",
-    cursor: "pointer",
-    marginBottom: "20px",
-    transition: "all 0.2s",
-  },
-  footerNote: {
-    textAlign: "center",
-    fontSize: "13px",
-    color: "#888",
-  },
-  footerLink: {
-    color: "#29b6c8",
-    textDecoration: "none",
-    fontWeight: 600,
-  },
-  disclaimer: {
-    position: "absolute",
-    bottom: "16px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    fontSize: "12px",
-    color: "#aaa",
-    whiteSpace: "nowrap",
-  },
-};

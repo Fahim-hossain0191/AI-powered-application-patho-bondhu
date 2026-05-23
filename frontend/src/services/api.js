@@ -1,5 +1,34 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
+export const getStoredToken = () => {
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem("accessToken") || localStorage.getItem("token");
+};
+
+export const storeSession = (payload) => {
+  if (typeof window === "undefined") return;
+
+  const data = payload?.data || payload || {};
+  const token = data.token || data.accessToken;
+  const user = data.user || data;
+
+  if (token) {
+    localStorage.setItem("accessToken", token);
+    localStorage.setItem("token", token);
+  }
+
+  if (user && typeof user === "object") {
+    localStorage.setItem("user", JSON.stringify(user));
+  }
+};
+
+export const clearSession = () => {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem("accessToken");
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+};
+
 /**
  * Base fetch wrapper that handles authorization headers and JSON parsing.
  */
@@ -11,7 +40,7 @@ async function fetchAPI(endpoint, options = {}) {
 
   // Only run on the client side
   if (typeof window !== "undefined") {
-    const token = localStorage.getItem("accessToken");
+    const token = getStoredToken();
     if (token) {
       headers.Authorization = `Bearer ${token}`;
     }
@@ -28,47 +57,16 @@ async function fetchAPI(endpoint, options = {}) {
     throw new Error("সার্ভারে কানেক্ট করা সম্ভব হয়নি। অনুগ্রহ করে চেক করুন ব্যাকএন্ড চালু আছে কিনা।");
   }
 
-  // Handle unauthorized / expired tokens automatically
-  if (response.status === 401 && endpoint !== "/api/auth/login" && endpoint !== "/api/auth/refresh") {
-    try {
-      const refreshResult = await fetch(`${API_URL}/api/auth/refresh`, {
-        method: "POST",
-        credentials: "include",
-      });
-      
-      if (refreshResult.ok) {
-        const refreshData = await refreshResult.json();
-        const newAccessToken = refreshData.data?.accessToken || refreshData.accessToken;
-        
-        if (newAccessToken) {
-          localStorage.setItem("accessToken", newAccessToken);
-          headers.Authorization = `Bearer ${newAccessToken}`;
-          
-          const retryResponse = await fetch(`${API_URL}${endpoint}`, {
-            ...options,
-            headers,
-            credentials: "include",
-          });
-          
-          if (retryResponse.ok) {
-            return await retryResponse.json();
-          }
-        }
-      }
-    } catch (refreshErr) {
-      console.error("Silent refresh failed:", refreshErr);
-    }
-
-    // If silent refresh fails, clear user data and redirect to signin
+  if (response.status === 401 && endpoint !== "/api/auth/login") {
     if (typeof window !== "undefined") {
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("user");
+      clearSession();
       window.location.href = "/signin";
     }
     throw new Error("Token মেয়াদ শেষ বা ভুল, আবার login করো");
   }
 
-  const data = await response.json();
+  const text = await response.text();
+  const data = text ? JSON.parse(text) : {};
 
   if (!response.ok) {
     throw new Error(data.message || "An error occurred with the API request");
@@ -96,15 +94,12 @@ export const auth = {
   },
 
   logout: () => {
-    return fetchAPI("/api/auth/logout", {
-      method: "POST",
-    });
+    clearSession();
+    return Promise.resolve({ success: true });
   },
 
   refresh: () => {
-    return fetchAPI("/api/auth/refresh", {
-      method: "POST",
-    });
+    return Promise.resolve({ success: false });
   }
 };
 
@@ -172,5 +167,36 @@ export const math = {
     return fetchAPI(`/api/math/exercises?chapter_id=${chapterId}`, {
       method: "GET",
     });
+  },
+
+  getChapters: () => {
+    return fetchAPI("/api/math/chapters", {
+      method: "GET",
+    });
+  },
+
+  getChapter: (chapterId) => {
+    return fetchAPI(`/api/math/chapters/${chapterId}`, {
+      method: "GET",
+    });
+  },
+
+  getConcepts: (chapterId) => {
+    return fetchAPI(`/api/math/chapters/${chapterId}/concepts`, {
+      method: "GET",
+    });
+  },
+
+  getFormulas: (chapterId) => {
+    return fetchAPI(`/api/math/chapters/${chapterId}/formulas`, {
+      method: "GET",
+    });
+  },
+
+  getSrijonshil: (chapterId) => {
+    return fetchAPI(`/api/math/chapters/${chapterId}/srijonshil`, {
+      method: "GET",
+    });
   }
 };
+
