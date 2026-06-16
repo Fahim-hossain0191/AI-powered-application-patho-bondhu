@@ -8,15 +8,17 @@ import time
 driver = webdriver.Chrome()
 
 try:
-    # 1. Load your local dev environment
+    # 1. Load local dev environment
+    driver.maximize_window()
     driver.get("http://localhost:3000")
+    time.sleep(3)
 
     # 2. Find and click the Sign In link/button
     sign_in_link = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//a[@href='/signin']")) 
     )
     driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", sign_in_link)
-    time.sleep(1)
+    time.sleep(3)
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//a[@href='/signin']"))
     ).click()
@@ -38,29 +40,31 @@ try:
     math_card = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//a[@href='/math']"))
     )
+    time.sleep(3)
     math_card.click()
     print("Entered the Math workspace.")
 
-    # 5. Click the "Open" button
+    # 5. Click the Open button
     open_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//span[text()='Open']"))
     )
     open_button.click()
 
-    # 6. Scroll down and click the Practice (অনুশীলনী প্রশ্ন) button
+    # 6. Scroll down and click the Practice button
     practice_btn = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//button[.//span[contains(text(), 'অনুশীলনী প্রশ্ন')]]"))
     )
     driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", practice_btn)
     time.sleep(1) 
     practice_btn.click()
+    time.sleep(3)
 
     # 7. Scroll to the specific math question and click it
     question_span = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//span[contains(text(), 'x + y = 5')]"))
     )
     driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", question_span)
-    time.sleep(1)
+    time.sleep(3)
     question_span.click()
     print("Selected the math problem.")
 
@@ -72,8 +76,7 @@ try:
     answer_textarea.send_keys(solution_text)
     print(f"Typed the solution: {solution_text}")
 
-    # 9. Click the final Submit button
-    # We target the button precisely by its inner text
+    # 9. Click the final Submit
     final_submit_btn = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//button[text()='Submit']"))
     )
@@ -84,6 +87,6 @@ except Exception as e:
     print(f"An error occurred during execution: {e}")
 
 finally:
-    # Keeps the browser open for a few seconds so you can verify the final submission
     time.sleep(4) 
     driver.quit()
+
